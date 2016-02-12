@@ -1,0 +1,382 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-inner {
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+    background: lightgrey;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.herrvoss-logo {
+    width: 200px;
+    -webkit-animation-name: example;
+    animation-name: example;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    /*-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 960px) {
+    .herrvoss-logo {
+        width: 400px;
+    }
+}
+
+.herrvoss-logo img {
+    width: 100%;
+}
+
+.adritz-logo {
+    width: 200px;
+    -webkit-animation-name: example2;
+    animation-name: example2;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    /*-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    -webkit-transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+@media screen and (min-width: 960px) {
+    .adritz-logo {
+        width: 400px;
+    }
+}
+
+.adritz-logo img {
+    width: 100%;
+}
+
+.new-adritz-logo {
+    -webkit-animation-name: example3;
+    animation-name: example3;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    /*-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+	font-size: 48px;
+	font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+
+.wrench {
+    -webkit-animation-name: example4;
+    animation-name: example4;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    /*-webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -25%);
+    -moz-transform: translate(-50%, -25%);
+    -o-transform: translate(-50%, -25%);
+    -ms-transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
+    opacity: 0;
+}
+
+@-webkit-keyframes example {
+    10% {
+        left: -100%;
+    }
+    20% {
+        left: 50%;
+    }
+    30% {
+        left: 50%;
+    }
+    40% {
+        left: 25%;
+    }
+    50% {
+        left: 25%;
+    }
+    60% {
+        left: 50%;
+        opacity: 1;
+    }
+    70% {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(1, 1);
+        -moz-transform: translate(-50%, -50%) scale(1, 1);
+        -o-transform: translate(-50%, -50%) scale(1, 1);
+        -ms-transform: translate(-50%, -50%) scale(1, 1);
+        transform: translate(-50%, -50%) scale(1, 1);
+        opacity: .5;
+    }
+    80% {
+        top: 40px;
+        left: 40px;
+        -webkit-transform: translate(-50%, -50%) scale(.5, .5);
+        -moz-transform: translate(-50%, -50%) scale(.5, .5);
+        -o-transform: translate(-50%, -50%) scale(.5, .5);
+        -ms-transform: translate(-50%, -50%) scale(.5, .5);
+        transform: translate(-50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+    100% {
+        top: 40px;
+        left: 40px;
+        -webkit-transform: translate(-50%, -50%) scale(.5, .5);
+        -moz-transform: translate(-50%, -50%) scale(.5, .5);
+        -o-transform: translate(-50%, -50%) scale(.5, .5);
+        -ms-transform: translate(-50%, -50%) scale(.5, .5);
+        transform: translate(-50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+}
+
+@keyframes example {
+    10% {
+        left: -100%;
+    }
+    20% {
+        left: 50%;
+    }
+    30% {
+        left: 50%;
+    }
+    40% {
+        left: 25%;
+    }
+    50% {
+        left: 25%;
+    }
+    60% {
+        left: 50%;
+        opacity: 1;
+    }
+    70% {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(1, 1);
+        -moz-transform: translate(-50%, -50%) scale(1, 1);
+        -o-transform: translate(-50%, -50%) scale(1, 1);
+        -ms-transform: translate(-50%, -50%) scale(1, 1);
+        transform: translate(-50%, -50%) scale(1, 1);
+        opacity: .5;
+    }
+    80% {
+        top: 40px;
+        left: 40px;
+        -webkit-transform: translate(-50%, -50%) scale(.5, .5);
+        -moz-transform: translate(-50%, -50%) scale(.5, .5);
+        -o-transform: translate(-50%, -50%) scale(.5, .5);
+        -ms-transform: translate(-50%, -50%) scale(.5, .5);
+        transform: translate(-50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+    100% {
+        top: 40px;
+        left: 40px;
+        -webkit-transform: translate(-50%, -50%) scale(.5, .5);
+        -moz-transform: translate(-50%, -50%) scale(.5, .5);
+        -o-transform: translate(-50%, -50%) scale(.5, .5);
+        -ms-transform: translate(-50%, -50%) scale(.5, .5);
+        transform: translate(-50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes example2 {
+    25% {
+        right: -100%;
+    }
+    35% {
+        right: 25%;
+    }
+    50% {
+        right: 25%;
+    }
+    60% {
+        right: 50%;
+        opacity: 1;
+    }
+    70% {
+        top: 50%;
+        right: 50%;        
+        -webkit-transform: translate(50%, -50%) scale(1, 1);
+        -moz-transform: translate(50%, -50%) scale(1, 1);
+        -o-transform: translate(50%, -50%) scale(1, 1);
+        -ms-transform: translate(50%, -50%) scale(1, 1);
+        transform: translate(50%, -50%) scale(1, 1);
+        opacity: .5;
+    }
+    80% {
+        top: 40px;
+        right: 40px;
+        -webkit-transform: translate(50%, -50%) scale(.5, .5);
+        -moz-transform: translate(50%, -50%) scale(.5, .5);
+        -o-transform: translate(50%, -50%) scale(.5, .5);
+        -ms-transform: translate(50%, -50%) scale(.5, .5);
+        transform: translate(50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+    100% {
+        top: 40px;
+        right: 40px;
+        -webkit-transform: translate(50%, -50%) scale(.5, .5);
+        -moz-transform: translate(50%, -50%) scale(.5, .5);
+        -o-transform: translate(50%, -50%) scale(.5, .5);
+        -ms-transform: translate(50%, -50%) scale(.5, .5);
+        transform: translate(50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+}
+
+@keyframes example2 {
+    25% {
+        right: -100%;
+    }
+    35% {
+        right: 25%;
+    }
+    50% {
+        right: 25%;
+    }
+    60% {
+        right: 50%;
+        opacity: 1;
+    }
+    70% {
+        top: 50%;
+        right: 50%;
+        -webkit-transform: translate(50%, -50%) scale(1, 1);
+        -moz-transform: translate(50%, -50%) scale(1, 1);
+        -o-transform: translate(50%, -50%) scale(1, 1);
+        -ms-transform: translate(50%, -50%) scale(1, 1);
+        transform: translate(50%, -50%) scale(1, 1);
+        opacity: .5;
+    }
+    80% {
+        top: 40px;
+        right: 40px;
+        -webkit-transform: translate(50%, -50%) scale(.5, .5);
+        -moz-transform: translate(50%, -50%) scale(.5, .5);
+        -o-transform: translate(50%, -50%) scale(.5, .5);
+        -ms-transform: translate(50%, -50%) scale(.5, .5);
+        transform: translate(50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+    100% {
+        
+        top: 40px;
+        right: 40px;
+        -webkit-transform: translate(50%, -50%) scale(.5, .5);
+        -moz-transform: translate(50%, -50%) scale(.5, .5);
+        -o-transform: translate(50%, -50%) scale(.5, .5);
+        -ms-transform: translate(50%, -50%) scale(.5, .5);
+        transform: translate(50%, -50%) scale(.5, .5);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes example3 {
+    70% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes example3 {
+    70% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes example4 {
+    80% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes example4 {
+    80% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
