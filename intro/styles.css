@@ -16,9 +16,13 @@ body {
 
 .wrapper-inner {
     width: 100%;
-    max-width: 1700px;
+    max-width: 1170px;
     margin: auto;
-    background: lightgrey;
+    background: lightgrey url(Metal_LG.jpg) top center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     height: 600px;
     overflow: hidden;
     position: absolute;
@@ -49,16 +53,13 @@ body {
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    transform-origin: top left;
 }
 
 @media screen and (min-width: 960px) {
     .herrvoss-logo {
         width: 400px;
     }
-}
-
-.herrvoss-logo img {
-    width: 100%;
 }
 
 .adritz-logo {
@@ -79,16 +80,13 @@ body {
     -o-transform: translate(50%, -50%);
     -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
+    transform-origin: top right;
 }
 
 @media screen and (min-width: 960px) {
     .adritz-logo {
         width: 400px;
     }
-}
-
-.adritz-logo img {
-    width: 100%;
 }
 
 .new-adritz-logo {
@@ -136,57 +134,7 @@ body {
     opacity: 0;
 }
 
-@-webkit-keyframes example {
-    10% {
-        left: -100%;
-    }
-    20% {
-        left: 50%;
-    }
-    30% {
-        left: 50%;
-    }
-    40% {
-        left: 25%;
-    }
-    50% {
-        left: 25%;
-    }
-    60% {
-        left: 50%;
-        opacity: 1;
-    }
-    70% {
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%) scale(1, 1);
-        -moz-transform: translate(-50%, -50%) scale(1, 1);
-        -o-transform: translate(-50%, -50%) scale(1, 1);
-        -ms-transform: translate(-50%, -50%) scale(1, 1);
-        transform: translate(-50%, -50%) scale(1, 1);
-        opacity: .5;
-    }
-    80% {
-        top: 40px;
-        left: 40px;
-        -webkit-transform: translate(0, 0) scale(.5, .5);
-        -moz-transform: translate(0, 0) scale(.5, .5);
-        -o-transform: translate(0, 0) scale(.5, .5);
-        -ms-transform: translate(0, 0) scale(.5, .5);
-        transform: translate(0, 0) scale(.5, .5);
-        opacity: 1;
-    }
-    100% {
-        top: 40px;
-        left: 40px;
-        -webkit-transform: translate(0, 0) scale(.5, .5);
-        -moz-transform: translate(0, 0) scale(.5, .5);
-        -o-transform: translate(0, 0) scale(.5, .5);
-        -ms-transform: translate(0, 0) scale(.5, .5);
-        transform: translate(0, 0) scale(.5, .5);
-        opacity: 1;
-    }
-}
+/*@-webkit-keyframes example {}*/
 
 @keyframes example {
     10% {
@@ -240,51 +188,7 @@ body {
     }
 }
 
-@-webkit-keyframes example2 {
-    25% {
-        right: -100%;
-    }
-    35% {
-        right: 25%;
-    }
-    50% {
-        right: 25%;
-    }
-    60% {
-        right: 50%;
-        opacity: 1;
-    }
-    70% {
-        top: 50%;
-        right: 50%;        
-        -webkit-transform: translate(50%, -50%) scale(1, 1);
-        -moz-transform: translate(50%, -50%) scale(1, 1);
-        -o-transform: translate(50%, -50%) scale(1, 1);
-        -ms-transform: translate(50%, -50%) scale(1, 1);
-        transform: translate(50%, -50%) scale(1, 1);
-        opacity: .5;
-    }
-    80% {
-        top: 40px;
-        right: 40px;
-        -webkit-transform: translate(0, 0) scale(.5, .5);
-        -moz-transform: translate(0, 0) scale(.5, .5);
-        -o-transform: translate(0, 0) scale(.5, .5);
-        -ms-transform: translate(0, 0) scale(.5, .5);
-        transform: translate(0, 0) scale(.5, .5);
-        opacity: 1;
-    }
-    100% {
-        top: 40px;
-        right: 40px;
-        -webkit-transform: translate(0, 0) scale(.5, .5);
-        -moz-transform: translate(0, 0) scale(.5, .5);
-        -o-transform: translate(0, 0) scale(.5, .5);
-        -ms-transform: translate(0, 0) scale(.5, .5);
-        transform: translate(0, 0) scale(.5, .5);
-        opacity: 1;
-    }
-}
+/*@-webkit-keyframes example2 {}*/
 
 @keyframes example2 {
     25% {
