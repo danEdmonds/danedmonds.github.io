@@ -3,7 +3,8 @@ html {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-    *, *:before, *:after {
+
+*, *:before, *:after {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
@@ -12,18 +13,20 @@ html {
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    text-align: center;
 }
 
-.wrapper-inner {
+.wrapper {
     width: 100%;
     max-width: 1170px;
+    height: 150px;
     margin: auto;
     background: lightgrey url(Metal_LG.jpg) top center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 600px;
     overflow: hidden;
     position: absolute;
     top: 50%;
@@ -35,16 +38,34 @@ body {
     transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 480px) {
+    .wrapper {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .wrapper {
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .wrapper {
+        height: 600px;
+    }
+}
+
 .herrvoss-logo {
-    width: 200px;
+    width: 100px;
     -webkit-animation-name: example;
     animation-name: example;
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    /*-webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;*/
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     position: absolute;
     top: 50%;
     left: -100%;
@@ -53,7 +74,23 @@ body {
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
     transform-origin: top left;
+}
+
+@media screen and (min-width: 480px) {
+    .herrvoss-logo {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .herrvoss-logo {
+        width: 300px;
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -63,15 +100,15 @@ body {
 }
 
 .adritz-logo {
-    width: 200px;
+    width: 100px;
     -webkit-animation-name: example2;
     animation-name: example2;
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    /*-webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;*/
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     position: absolute;
     top: 50%;
     right: -100%;
@@ -80,7 +117,23 @@ body {
     -o-transform: translate(50%, -50%);
     -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
+    -moz-transform-origin: top right;
+    -webkit-transform-origin: top right;
+    -o-transform-origin: top right;
+    -ms-transform-origin: top right;
     transform-origin: top right;
+}
+
+@media screen and (min-width: 480px) {
+    .adritz-logo {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .adritz-logo {
+        width: 300px;
+    }
 }
 
 @media screen and (min-width: 960px) {
@@ -96,8 +149,8 @@ body {
     animation-duration: 10s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    /*-webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;*/
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -108,10 +161,28 @@ body {
     transform: translate(-50%, -50%);
     opacity: 0;
     font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
-	font-size: 48px;
+	font-size: 12px;
 	font-weight: 400;
     width: 100%;
     text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    .new-adritz-logo {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .new-adritz-logo {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .new-adritz-logo {
+        font-size: 48px;
+    }
 }
 
 .wrench {
@@ -121,8 +192,8 @@ body {
     animation-duration: 10s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    /*-webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;*/
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     position: absolute;
     top: 75%;
     left: 50%;
@@ -132,9 +203,78 @@ body {
     -ms-transform: translate(-50%, -25%);
     transform: translate(-50%, -25%);
     opacity: 0;
+    width: 185px;
 }
 
-/*@-webkit-keyframes example {}*/
+@media screen and (min-width: 480px) {
+    .wrench {
+        width: 370px;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .wrench {
+        width: 555px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .wrench {
+        width: 740px;
+    }
+}
+
+@-webkit-keyframes example {
+    10% {
+        left: -100%;
+    }
+    20% {
+        left: 50%;
+    }
+    30% {
+        left: 50%;
+    }
+    40% {
+        left: 25%;
+    }
+    50% {
+        left: 25%;
+    }
+    60% {
+        left: 50%;
+        opacity: 1;
+    }
+    70% {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(1, 1);
+        -moz-transform: translate(-50%, -50%) scale(1, 1);
+        -o-transform: translate(-50%, -50%) scale(1, 1);
+        -ms-transform: translate(-50%, -50%) scale(1, 1);
+        transform: translate(-50%, -50%) scale(1, 1);
+        opacity: .5;
+    }
+    80% {
+        top: 40px;
+        left: 40px;
+        -webkit-transform: translate(0, 0) scale(.5, .5);
+        -moz-transform: translate(0, 0) scale(.5, .5);
+        -o-transform: translate(0, 0) scale(.5, .5);
+        -ms-transform: translate(0, 0) scale(.5, .5);
+        transform: translate(0, 0) scale(.5, .5);
+        opacity: 1;
+    }
+    100% {
+        top: 40px;
+        left: 40px;
+        -webkit-transform: translate(0, 0) scale(.5, .5);
+        -moz-transform: translate(0, 0) scale(.5, .5);
+        -o-transform: translate(0, 0) scale(.5, .5);
+        -ms-transform: translate(0, 0) scale(.5, .5);
+        transform: translate(0, 0) scale(.5, .5);
+        opacity: 1;
+    }
+}
 
 @keyframes example {
     10% {
@@ -188,7 +328,52 @@ body {
     }
 }
 
-/*@-webkit-keyframes example2 {}*/
+@-webkit-keyframes example2 {
+    25% {
+        right: -100%;
+    }
+    35% {
+        right: 25%;
+    }
+    50% {
+        right: 25%;
+    }
+    60% {
+        right: 50%;
+        opacity: 1;
+    }
+    70% {
+        top: 50%;
+        right: 50%;
+        -webkit-transform: translate(50%, -50%) scale(1, 1);
+        -moz-transform: translate(50%, -50%) scale(1, 1);
+        -o-transform: translate(50%, -50%) scale(1, 1);
+        -ms-transform: translate(50%, -50%) scale(1, 1);
+        transform: translate(50%, -50%) scale(1, 1);
+        opacity: .5;
+    }
+    80% {
+        top: 40px;
+        right: 40px;
+        -webkit-transform: translate(0, 0) scale(.5, .5);
+        -moz-transform: translate(0, 0) scale(.5, .5);
+        -o-transform: translate(0, 0) scale(.5, .5);
+        -ms-transform: translate(0, 0) scale(.5, .5);
+        transform: translate(0, 0) scale(.5, .5);
+        opacity: 1;
+    }
+    100% {
+        
+        top: 40px;
+        right: 40px;
+        -webkit-transform: translate(0, 0) scale(.5, .5);
+        -moz-transform: translate(0, 0) scale(.5, .5);
+        -o-transform: translate(0, 0) scale(.5, .5);
+        -ms-transform: translate(0, 0) scale(.5, .5);
+        transform: translate(0, 0) scale(.5, .5);
+        opacity: 1;
+    }
+}
 
 @keyframes example2 {
     25% {
