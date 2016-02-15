@@ -20,7 +20,8 @@ body {
 .wrapper {
     width: 100%;
     max-width: 1170px;
-    height: 150px;
+    height: 100vh;
+    max-height: 600px;
     margin: auto;
     background: lightgrey url(Metal_LG.jpg) top center no-repeat;
     -webkit-background-size: cover;
@@ -36,24 +37,6 @@ body {
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
-
-@media screen and (min-width: 480px) {
-    .wrapper {
-        height: 300px;
-    }
-}
-
-@media screen and (min-width: 740px) {
-    .wrapper {
-        height: 450px;
-    }
-}
-
-@media screen and (min-width: 960px) {
-    .wrapper {
-        height: 600px;
-    }
 }
 
 .herrvoss-logo {
