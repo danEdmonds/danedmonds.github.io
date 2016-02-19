@@ -38,7 +38,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 48rem) {
     .wrapper-outer {
         max-height: 37.5rem;
     }
@@ -59,7 +59,7 @@ body {
     transform: translateY(-50%);
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 48rem) {
     .wrapper-inner {
         height: 37.5rem;
     }
@@ -94,7 +94,13 @@ body {
     transform-origin: top left;
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 48rem) {
+    .adritz-logo {
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
     .herrvoss-logo {
         width: 25rem;
     }
@@ -129,7 +135,13 @@ body {
     transform-origin: top right;
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 48rem) {
+    .adritz-logo {
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
     .adritz-logo {
         width: 25rem;
     }
@@ -164,9 +176,15 @@ body {
     text-align: center;
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 48rem) {
     .new-adritz-logo {
-        font-size: 3.75rem;
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .new-adritz-logo {
+        font-size: 3.625rem;
     }
 }
 
@@ -193,10 +211,15 @@ body {
     width: 23.125rem;
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 48rem) {
     .wrench {
-        /*width: 46.25rem;*/
-        width: 66.25rem;
+        width: 41.25rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .wrench {
+        width: 63.75rem;
     }
 }
 
