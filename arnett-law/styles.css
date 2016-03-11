@@ -82,6 +82,7 @@ button {
 .logo {
     max-width: 140px;
     margin-bottom: 30px;
+    display: block;
 }
 
 @media screen and (min-width: 640px) {
@@ -96,19 +97,56 @@ button {
     display: block;
 }
 
+.menu {
+    font-family: 'Droid Sans', sans-serif;
+}
+
+@media screen and (min-width: 640px) {
+    .bp-menu {
+        width: 33.33%; 
+        position: absolute; 
+        top: 0; 
+        left: 0;
+    }
+}
+
+.home-menu {
+    display: none;
+}
+
+@media screen and (min-width: 640px) {
+    .home-menu {
+        display: none;
+    }
+}
+
 .menu-button {
     position: absolute; 
     top: 0; 
     right: 0;
     font-size: 18px;
     font-family: 'Droid Sans', sans-serif;
+    display: none;
 }
 
-nav ul {
-    list-style-type: none;
+@media screen and (min-width: 640px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+.menu ul {
     padding-left: 0;
-    margin: 60px 0;
-    display: none;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 640px) {
+    .bp {
+        position: relative; 
+        padding-left: calc(33.33% + 60px);
+    }
 }
 
 /*
@@ -134,6 +172,7 @@ a {
 
 h1 {
     color: #7D0000;
+    font-family: 'Droid Sans', sans-serif;
 }
 
 h2 {
