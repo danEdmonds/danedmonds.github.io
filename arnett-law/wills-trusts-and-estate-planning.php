@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-	
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
-	<title>Arnett Law</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-<!--    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic,700,400italic' rel='stylesheet' type='text/css'>-->
-	<link rel="stylesheet" href="styles.css" media="all">
-	
-</head>
-
-<body>
-    
-<div class="site-wrapper">
-    
-    <header class="header">
-        <div class="layout-container">
-            <a href="index.html" class="logo"><img src="logo.svg"></a>
-            <a href="#menu" class="menu-button">MENU</a>
-            <a href="contact-arnett-law.html" class="contact-button">Contact Arnett Law</a>
-        </div>
-    </header>
+<?php 
+include('header.php'); 
+$page = 'wills-trusts-and-estate-planning'; ?>
         
     <div class="layout-container">
         <div class="bp">
@@ -66,21 +40,14 @@
                     <li>Guardianship Law</li>
                 </ul>
             </div>
-            <nav id="menu" class="menu bp-menu">
-                <ul>
-                    <li><a href="real-estate-law.html">Real Estate Law</a></li>
-                    <li><a href="personal-injury-law.html">Personal Injury Law</a></li>
-                    <li><a href="wills-trusts-and-estate-planning.html">Wills, Trusts, and Estate Planning</a></li>
-                    <li><a href="about-jeffrey-l-arnett.html">About Jeffrey L. Arnett</a></li>
-                </ul>
-            </nav>
+            <?php include('navigation.php'); ?>
         </div>
     </div>
 
     <section class="module contact">
         <div class="layout-container">
             <h2>Contact Arnett Law</h2>
-            <div class="contact-content">
+            <div class="contact-group">
                 <h3>Business Hours</h3>
                 <p>Monday-Friday 9 a.m.-5 p.m.<br>
                     Weekends by appointment</p>
@@ -94,10 +61,10 @@
 
                 <h3>Payment Methods</h3>
                 <ul>
-                    <li>Visa</li>   
-                    <li>MasterCard</li> 
-                    <li>Discover</li> 
-                    <li>Cash</li>  
+                    <li>Visa</li>
+                    <li>MasterCard</li>
+                    <li>Discover</li>
+                    <li>Cash</li>
                     <li>Check</li>
                 </ul>
                 <h3>Arnett Law Location</h3>
@@ -110,13 +77,4 @@
         </div>
     </section>
 
-    <footer>
-        <div class="layout-container">
-            <p>&copy; Copyright 2016 Arnett Law. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</div>
-
-</body>
-</html>
+<?php include('footer.php'); ?>

@@ -1,0 +1,400 @@
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_base.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 7, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_base.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* line 13, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_base.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  /*font-family: 'Droid Serif', serif;*/
+  font-family: Georgia, serif;
+  color: #4F483E; }
+
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_structure.scss */
+.site-wrapper {
+  width: 100%; }
+
+/* line 5, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_structure.scss */
+.layout-container {
+  width: calc(100% - 60px);
+  max-width: 1280px;
+  max-width: 1200px;
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto; }
+
+@media screen and (min-width: 740px) {
+  /* line 15, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_structure.scss */
+  .bp {
+    position: relative;
+    padding-left: calc(33.33% + 60px); } }
+
+/* line 21, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_structure.scss */
+.bp-content {
+  margin-bottom: 4rem; }
+
+/* background: #edede9; */
+/* line 32, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_structure.scss */
+.module {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+
+/* line 37, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_structure.scss */
+.module:first-of-type {
+  padding-top: 0; }
+
+/* line 41, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_structure.scss */
+.module-heading {
+  text-transform: uppercase; }
+
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_typography.scss */
+a {
+  color: #7D0000;
+  text-decoration: none;
+  -moz-transition: color 0.2s ease-out;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out; }
+
+/* line 9, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_typography.scss */
+h1 {
+  color: #7D0000;
+  font-family: "Droid Sans", sans-serif;
+  text-transform: uppercase; }
+
+/* line 15, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_typography.scss */
+h2 {
+  font-family: "Droid Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #435D73; }
+
+/* line 22, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_typography.scss */
+h2:first-child {
+  margin-top: 0; }
+
+/* line 26, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_typography.scss */
+h3 {
+  font-family: "Droid Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #435D73; }
+
+/* line 33, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_typography.scss */
+p {
+  font-size: 1.125rem;
+  line-height: 1.5; }
+
+/* line 42, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_typography.scss */
+li {
+  font-size: 1.125rem;
+  line-height: 1.5; }
+
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_buttons.scss */
+button {
+  border: none;
+  background: transparent;
+  outline: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  cursor: pointer; }
+
+/* line 17, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_buttons.scss */
+.button {
+  display: inline-block;
+  text-align: center;
+  padding: 15px 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: 'Droid Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px; }
+
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+.header {
+  padding-top: 2rem;
+  position: relative;
+  padding-bottom: 4rem; }
+
+/* line 8, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+.header:before,
+.header:after {
+  content: "";
+  display: table; }
+
+/* line 13, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+.header:after {
+  clear: both; }
+
+/* line 20, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+.logo {
+  max-width: 140px;
+  margin-bottom: 30px;
+  display: block; }
+
+@media screen and (min-width: 740px) {
+  /* line 27, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+  .logo {
+    max-width: 240px;
+    margin-bottom: 0; } }
+
+/* line 33, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+.logo img {
+  width: 100%;
+  display: block; }
+
+@media screen and (min-width: 740px) {
+  /* line 39, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+  .home-menu {
+    display: none; } }
+
+/* line 47, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+.menu-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 1px solid #7D0000;
+  float: right; }
+
+@media screen and (min-width: 740px) {
+  /* line 61, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+  .menu-button {
+    display: none; } }
+
+/* line 69, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+.contact-button {
+  background: #7D0000;
+  float: right;
+  color: white;
+  width: 100%; }
+
+@media screen and (min-width: 740px) {
+  /* line 77, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_header.scss */
+  .contact-button {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); } }
+
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.services {
+  margin-left: -10px;
+  width: calc(100% + 20px);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -26px; }
+
+/* line 9, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.card {
+  position: relative;
+  padding-bottom: 52px;
+  margin-bottom: 52px;
+  /*box-shadow: 0 1px 2px rgba(0, 0, 0, .3);*/
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  /*-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;*/
+  background: white; }
+
+@media screen and (min-width: 820px) {
+  /* line 25, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+  .card {
+    width: calc(33.33% - 20px);
+    margin-left: 10px;
+    margin-right: 10px; } }
+
+/* line 33, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #D3DBE3; }
+
+/* line 43, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.card-hero {
+  padding: 30px; }
+
+/* line 47, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.card-title {
+  margin-top: 0; }
+
+/* line 51, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.card-description {
+  margin-bottom: 0; }
+
+/* line 55, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.card-extension {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 52px;
+  font-family: 'Droid Sans', sans-serif;
+  text-transform: uppercase;
+  line-height: 52px;
+  background: #7D0000;
+  transform: translateY(50%);
+  color: white; }
+
+/* line 76, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+.card-extension::after {
+  content: "";
+  display: inline-block;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%) rotate(45deg);
+  vertical-align: top;
+  color: white; }
+
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_testimonials.scss */
+.testimonials {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #4F483E; }
+
+/* line 7, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_testimonials.scss */
+.testimonials-title {
+  color: white; }
+
+/* line 11, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_testimonials.scss */
+.testimonial {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  width: 50%;
+  padding: 30px;
+  background: white;
+  margin: 0 auto; }
+
+/* 0A0903 black */
+/* 1F526E blue */
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_navigation.scss */
+.menu {
+  font-family: 'Droid Sans', sans-serif;
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+
+@media screen and (min-width: 740px) {
+  /* line 8, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_navigation.scss */
+  .bp-menu {
+    width: 33.33%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 0;
+    padding-bottom: 0; } }
+
+/* line 18, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_navigation.scss */
+.menu ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid #D3DBE3; }
+
+/* line 27, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_navigation.scss */
+.menu a {
+  padding: 1rem;
+  line-height: 1.4;
+  border-bottom: 1px solid #D3DBE3;
+  display: block; }
+
+/* line 34, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_navigation.scss */
+.menu li:last-child a {
+  border-bottom: none; }
+
+/* line 38, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_navigation.scss */
+.menu .current a {
+  color: white;
+  background: #7D0000; }
+
+/* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+.contact {
+  /*background: #D3DBE3;*/
+  /*padding-top: 60px; 
+    padding-bottom: 60px;*/ }
+
+@media screen and (min-width: 820px) {
+  /* line 8, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+  .contact-group {
+    position: relative;
+    padding-right: calc(60% + 60px); } }
+
+/* line 14, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+.google-map {
+  width: 100%; }
+
+@media screen and (min-width: 820px) {
+  /* line 19, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+  .contact-group .google-map {
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0; } }
+
+/* line 27, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+.form {
+  font-family: "Droid Sans", sans-serif;
+  margin-bottom: 4rem; }
+
+/* line 32, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+.form ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* line 39, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+.form label {
+  display: block;
+  margin-bottom: .25rem; }
+
+/* line 47, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_contact.scss */
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+  border: 2px solid #D3DBE3;
+  background: white;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem; }
+
+/*# sourceMappingURL=styles.css.map */

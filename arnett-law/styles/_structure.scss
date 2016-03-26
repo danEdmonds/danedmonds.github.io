@@ -1,0 +1,43 @@
+.site-wrapper {
+    width: 100%; 
+}
+
+.layout-container {
+    width: calc(100% - 60px); 
+    max-width: 1280px; 
+    max-width: 1200px;
+    max-width: 960px;
+    position: relative; 
+    margin: 0 auto; 
+}
+
+@media screen and (min-width: 740px) {
+    .bp {
+        position: relative; 
+        padding-left: calc(33.33% + 60px);
+    }
+}
+
+.bp-content {
+    margin-bottom: 4rem;
+}
+
+
+
+
+
+/* background: #edede9; */
+
+
+.module {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.module:first-of-type {
+    padding-top: 0;
+}
+
+.module-heading {
+    text-transform: uppercase;
+}

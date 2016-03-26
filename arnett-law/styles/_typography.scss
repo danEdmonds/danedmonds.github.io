@@ -1,0 +1,45 @@
+a {
+    color: $arnett-red;
+	text-decoration: none;
+	-moz-transition: color 0.2s ease-out;
+	-webkit-transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out;
+}
+
+h1 {
+    color: $arnett-red;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: $sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #435D73;
+}
+
+h2:first-child {
+    margin-top: 0;
+}
+
+h3 {
+    font-family: $sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #435D73;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+ul {
+    
+}
+
+li {
+    font-size: 1.125rem;
+    line-height: 1.5;
+}

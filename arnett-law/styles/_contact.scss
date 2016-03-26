@@ -1,0 +1,54 @@
+.contact {
+    /*background: #D3DBE3;*/
+    /*padding-top: 60px; 
+    padding-bottom: 60px;*/
+}
+
+@media screen and (min-width: 820px) {
+    .contact-group {
+        position: relative;
+        padding-right: calc(60% + 60px);
+    }
+}
+
+.google-map {
+    width: 100%;
+}
+
+@media screen and (min-width: 820px) {
+    .contact-group .google-map {
+        width: 60%; 
+        position: absolute; 
+        top: 0; 
+        right: 0;
+    }
+}
+
+.form {
+    font-family: $sans-serif;
+    margin-bottom: 4rem;
+}
+
+.form ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form label {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+    border: 2px solid #D3DBE3;
+    background: white;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}

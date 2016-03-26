@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
-	<title>Arnett Law</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-<!--    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic,700,400italic' rel='stylesheet' type='text/css'>-->
-	<link rel="stylesheet" href="styles.css" media="all">
-
-</head>
-
-<body>
-
-<div class="site-wrapper">
-
-    <header class="header">
-        <div class="layout-container">
-            <a href="index.html" class="logo"><img src="logo.svg"></a>
-            <a href="#menu" class="menu-button">MENU</a>
-            <a href="" class="contact-button">Contact Arnett Law</a>
-        </div>
-    </header>
+<?php include('header.php'); ?>
 
     <section class="module">
         <div class="layout-container">
@@ -34,24 +6,24 @@
             <div class="services">
                 <div class="card service">
                     <div class="card-hero">
-                        <h3 class="card-title"><a href="real-estate-law.html">Real Estate Law</a></h3>
+                        <h3 class="card-title"><a href="real-estate-law.php">Real Estate Law</a></h3>
                         <p class="card-description">Arnett Law Serves Morgantown and North Central West Virginia</p>
                     </div>
-                    <a href="real-estate-law.html" class="card-extension">Learn More</a>
+                    <a href="real-estate-law.php" class="card-extension">Learn More</a>
                 </div>
                 <div class="card service">
                     <div class="card-hero">
-                        <h3 class="card-title"><a href="">Personal Injury Law</a></h3>
+                        <h3 class="card-title"><a href="personal-injury-law.php">Personal Injury Law</a></h3>
                         <p class="card-description">Arnett Law Takes It Personally</p>
                     </div>
-                    <a href="#" class="card-extension">Learn More</a>
+                    <a href="personal-injury-law.php" class="card-extension">Learn More</a>
                 </div>
                 <div class="card service">
                     <div class="card-hero">
-                        <h3 class="card-title"><a href="">Wills, Trusts, and Estate Planning</a></h3>
+                        <h3 class="card-title"><a href="wills-trusts-and-estate-planning.php">Wills, Trusts, and Estate Planning</a></h3>
                         <p class="card-description">At Arnett Law, Your Goals are Our Goals</p>
                     </div>
-                    <a href="#" class="card-extension">Learn More</a>
+                    <a href="wills-trusts-and-estate-planning.php" class="card-extension">Learn More</a>
                 </div>
             </div>
         </div>
@@ -59,21 +31,18 @@
 
     <section class="module">
         <div class="layout-container">
-            <h2>About Jeffrey L. Arnett</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-
-            <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.</p>
+            <h2>Learn About Jeffrey L. Arnett</h2>
         </div>
     </section>
 
-    <section class="module testimonials">
+    <!--<section class="module testimonials">
         <div class="layout-container">
             <h2 class="testimonials-title">Testimonials</h2>
             <div class="testimonial">
                 <p>Testimonial</p>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <nav id="menu" class="menu home-menu">
         <ul>
@@ -87,7 +56,7 @@
     <section class="module contact">
         <div class="layout-container">
             <h2>Contact Arnett Law</h2>
-            <div class="contact-content">
+            <div class="contact-group">
                 <h3>Business Hours</h3>
                 <p>Monday-Friday 9 a.m.-5 p.m.<br>
                     Weekends by appointment</p>
@@ -117,13 +86,4 @@
         </div>
     </section>
 
-    <footer>
-        <div class="layout-container">
-            <p>&copy; Copyright 2016 Arnett Law. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-</div>
-
-</body>
-</html>
+<?php include('footer.php'); ?>
