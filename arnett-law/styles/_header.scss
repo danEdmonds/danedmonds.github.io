@@ -35,12 +35,6 @@
     display: block;
 }
 
-@media screen and (min-width: 740px) {
-    .home-menu {
-        display: none;
-    }
-}
-
 
 
 
@@ -53,7 +47,6 @@
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    border: 1px solid #7D0000;
     float: right;
 }
 
@@ -67,9 +60,7 @@
 
 
 .contact-button {
-    background: #7D0000;
     float: right;
-    color: white;
     width: 100%;
 }
 

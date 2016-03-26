@@ -13,7 +13,6 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 <!--    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic,700,400italic' rel='stylesheet' type='text/css'>-->
 	<link rel="stylesheet" href="styles/styles.css" media="all">
-    <link rel="stylesheet" href="style.css" media="all">
 
 </head>
 
@@ -24,7 +23,7 @@
     <header class="header">
         <div class="layout-container">
             <a href="/" class="logo"><img src="logo.svg"></a>
-            <a href="#menu" class="button menu-button">MENU</a>
-            <a href="contact-arnett-law.php" class="button contact-button">Contact Arnett Law</a>
+            <a href="#menu" class="button outline-button menu-button">MENU</a>
+            <a href="contact-arnett-law.php" class="button solid-button contact-button">Contact Arnett Law</a>
         </div>
     </header>

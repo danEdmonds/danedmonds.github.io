@@ -10,6 +10,9 @@ h1 {
     color: $arnett-red;
     font-family: $sans-serif;
     text-transform: uppercase;
+    margin-top: 0;
+    line-height: 1.2;
+    margin-bottom: .6em;
 }
 
 h2 {
@@ -17,6 +20,9 @@ h2 {
     font-weight: 700;
     text-transform: uppercase;
     color: #435D73;
+    line-height: 1.2;
+    margin-top: 1.8em;
+    margin-bottom: .6em;
 }
 
 h2:first-child {
@@ -28,18 +34,29 @@ h3 {
     font-weight: 700;
     text-transform: uppercase;
     color: #435D73;
+    line-height: 1.15;
+    margin-bottom: .575em;
+    margin-top: 1.725em;
 }
 
 p {
     font-size: 1.125rem;
     line-height: 1.5;
+    margin: 0 0 1.5em;
 }
 
 ul {
-    
+    margin-bottom: 1.5em;
 }
 
 li {
     font-size: 1.125rem;
     line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
 }

@@ -1,4 +1,4 @@
-<nav id="menu" class="menu bp-menu">
+<nav id="menu" class="menu <?php echo ($page == 'home' ? 'hp-menu' : 'bp-menu'); ?>">
     <ul>
         <li class="<?php echo ($page == 'real-estate-law' ? 'current' : ''); ?>">
             <a href="real-estate-law.php">Real Estate Law</a>
