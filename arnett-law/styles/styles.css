@@ -375,7 +375,14 @@ button {
   border-bottom: 1px solid #D3DBE3;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: #30373b; }
+  background: #30373b;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  color: white; }
+
+/* line 13, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_about.scss */
+.about h2 {
+  color: white; }
 
 /* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_navigation.scss */
 .menu {
