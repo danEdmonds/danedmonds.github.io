@@ -11,22 +11,20 @@
     margin: 0 auto; 
 }
 
-@media screen and (min-width: 740px) {
-    .bp {
+.module {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.bp {
+    margin-top: 2rem;
+    
+    @media screen and (min-width: 740px) {
         position: relative; 
         padding-left: calc(33.33% + 60px);
     }
 }
 
 .bp-content {
-    margin-bottom: 4rem;
-}
-
-.module {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-.module-heading {
-    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
