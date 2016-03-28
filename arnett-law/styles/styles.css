@@ -278,7 +278,7 @@ button {
 
 /* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
 .cards {
-  margin-bottom: -26px; }
+  margin-bottom: -32px; }
   @media screen and (min-width: 760px) {
     /* line 1, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
     .cards {
@@ -290,11 +290,12 @@ button {
 /* line 12, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
 .card {
   position: relative;
-  padding-bottom: 52px;
-  margin-bottom: 52px;
+  padding-bottom: 6.75rem;
+  margin-bottom: 2rem;
   width: 100%;
   background: white;
-  border: 1px solid #D3DBE3; }
+  border: 1px solid #D3DBE3;
+  border-top: 3px solid #7D0000; }
   @media screen and (min-width: 760px) {
     /* line 12, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
     .card {
@@ -302,37 +303,28 @@ button {
       margin-left: 10px;
       margin-right: 10px; } }
 
-/* line 27, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+/* line 39, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
 .card-hero {
   padding: 2rem; }
 
-/* line 31, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+/* line 43, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
 .card-title {
   margin-top: 0; }
 
-/* line 35, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+/* line 47, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
 .card-description {
   margin-bottom: 0; }
 
-/* line 39, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+/* line 51, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
 .card-extension {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: block;
   position: absolute;
-  bottom: 0;
-  left: 2rem;
-  right: 2rem;
-  height: 52px;
-  font-family: 'Droid Sans', sans-serif;
-  text-transform: uppercase;
-  line-height: 52px;
-  background: #7D0000;
-  transform: translateY(50%);
-  color: white;
-  font-size: 1rem; }
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 2.5rem;
+  width: calc(100% - 4rem); }
 
-/* line 57, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
+/* line 71, /Users/webservices/Desktop/Websites/danEdmonds.github.io/danEdmonds.github.io/arnett-law/styles/_cards.scss */
 .card-extension::after {
   content: "";
   display: inline-block;
@@ -342,7 +334,7 @@ button {
   width: 12px;
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 1rem;
   transform: translateY(-50%) rotate(45deg);
   vertical-align: top;
   color: white; }
