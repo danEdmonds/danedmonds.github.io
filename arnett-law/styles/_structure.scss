@@ -5,9 +5,7 @@
 .layout-container {
     //width: calc(100% - 60px);
     width: 100%;
-    //max-width: 1280px; 
-    //max-width: 1200px;
-    max-width: 960px;
+    max-width: 60rem;
     position: relative; 
     margin: 0 auto; 
 }
@@ -21,9 +19,9 @@
 .bp {
     margin-top: 2rem;
     
-    @media screen and (min-width: 740px) {
+    @media screen and (min-width: 46.25em) {
         position: relative; 
-        padding-left: calc(33.33% + 60px);
+        padding-left: calc(33.33% + 3.75rem);
     }
 }
 
@@ -32,7 +30,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     
-    @media screen and (min-width: 740px) {
+    @media screen and (min-width: 46.25em) {
         padding-left: 0;
         padding-right: 0;
     }
