@@ -30,11 +30,13 @@ body {
 .header {
     /*margin-bottom: 3rem;*/
     background: white;
-    border-bottom: 1px solid #e0e0e0;
+    /*padding-left: 1rem;*/
+    /*padding-right: 1rem;*/
 }
 
 .logo {
     display: block;
+    width: calc(100% - 2rem);
     max-width: 600px;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -53,6 +55,8 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .nav li {
@@ -60,11 +64,10 @@ body {
 }
 
 .nav a {
+    /*margin: 1rem;*/
+    padding: 1rem .75rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    padding-left: .75rem;
-    padding-right: .75rem;
-    padding-bottom: 1rem;
     display: block;
     text-decoration: none;
     color: black;
