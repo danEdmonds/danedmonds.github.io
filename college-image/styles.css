@@ -25,10 +25,7 @@ a {
 .layout-container {
     width: calc(100% - 2rem);
     margin: 0 auto;
-<<<<<<< HEAD
-=======
     /*max-width: 960px;*/
->>>>>>> origin/master
     max-width: 1200px;
 }
 
@@ -52,12 +49,13 @@ a {
 }*/
 
 .logo {
-    display: block;
+    display: inline-block;
     width: calc(100% - 2rem);
     max-width: 600px;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    /*float: left;*/
 }
 
 .logo img {
@@ -71,9 +69,8 @@ a {
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
+    display: inline-block;
+    /*float: right;*/
 }
 
 .nav li {
@@ -91,7 +88,7 @@ a {
     position: relative;
 }
 
-.current a::after {
+/*.current a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -99,7 +96,7 @@ a {
     width: 100%;
     height: 3px;
     background: red;
-}
+}*/
 
 .content {
     padding-top: 6rem;
