@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     color: #444;
+    padding-top: 53px;
 }
 
 a {
@@ -31,22 +32,12 @@ a {
     max-width: 800px;
 }
 
-.header {
-    position: relative;
-    background: #f2f2f2;
-}
-
-.header-container {
-    overflow: hidden;
-}
-
 .logo {
     display: inline-block;
-    width: calc(100% - 2rem);
-    max-width: 300px;
+    width: 100%;
+    max-width: 400px;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    float: left;
 }
 
 .logo img {
@@ -58,6 +49,14 @@ a {
 nav {
     font-weight: 600;
     text-transform: uppercase;
+    border-top: 2px solid red;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1;
 }
 
 .nav {
@@ -65,23 +64,31 @@ nav {
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
-    display: inline-block;
-    float: right;
-}
-
-.nav li {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav a {
     /*margin: 1rem;*/
-    padding: 1rem .75rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding: 1rem;
+    /*margin-left: 1rem;
+    margin-right: 1rem;*/
     display: block;
     text-decoration: none;
     color: black;
     position: relative;
+    -webkit-transition: background .3s, color .3s;
+    -moz-transition: background .3s, color .3s;
+    transition: background .3s, color .3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.current a {
+    background: #f2f2f2;
+    color: red;
 }
 
 .content {
