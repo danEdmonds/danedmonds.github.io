@@ -378,3 +378,61 @@ p {
     border-radius: 4px;
     text-align: center;
 }
+
+
+
+
+.form {
+    margin-bottom: 4rem;
+}
+
+.form ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form label {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    
+    border: .125rem solid #D3DBE3;
+    background: white;
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.success,
+.error {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    border-radius: .25rem;
+}
+
+.success {
+    color: #468847;
+    background-color: #dff0d8;
+    border: .0625rem solid #d6e9c6;
+}
+
+.error {
+    color: #b94a48;
+    background: #f2dede;
+    border: .0625rem solid rgba(185, 74, 72, .3);
+}

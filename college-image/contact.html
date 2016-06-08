@@ -36,6 +36,33 @@
 		<main class="page-content">
 			<div class="layout-container">
 				<h1>Contact</h1>
+				<div id="form-messages" class="form-messages"></div>
+				<form id="ajax-contact" class="form" method="post" action="mailer.php">
+					<ul>
+						<li>
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" required>
+						</li>
+						<li>
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" required>
+						</li>
+						<li>
+							<label for="phone">Phone</label>
+							<input type="tel" id="phone" name="phone">
+						</li>
+						<li>
+							<label for="message">Message</label>
+							<textarea id="message" name="message" required></textarea>
+						</li>
+						<li>
+							<button type="submit" class="button solid-button">Send</button>
+						</li>
+					</ul>
+				</form>
+				<h3>Arnett Law Location</h3>
+				<p>711 Greenbag Road<br>
+					Morgantown, WV 26508</p>
 			</div>
 		</main>
 
