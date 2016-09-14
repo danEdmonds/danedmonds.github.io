@@ -23,50 +23,49 @@
 			<nav role="navigation">
 				<div class="layout-container">
 					<ul class="nav">
-						<li class="current"><a href="index.html">Work</a></li>
+						<li><a href="index.html">Work</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="why-ci.html">Why College Image?</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li class="current"><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>				
 			</nav>
 			<section class="page-header">
 				<div class="layout-container">
-					<a href="index.html" class="logo home-logo"><img src="images/logo-temp.jpg"></a>
-					<!--<p class="tagline">Video Creation for Higher Education</p>-->
+					<a href="index.html" class="logo"><img src="images/logo-temp.jpg"></a>
 				</div>
 			</section>
 		</header>
 
-		<main class="page-content">
+		<main id="content">
 			<div class="layout-container">
-				<h1 class="page-heading">Contact</h1>
-				<div id="form-messages" class="form-messages"></div>
-				<form id="ajax-contact" class="form" method="post" action="mailer.php">
-					<ul>
-						<li>
-							<label for="name">Name</label>
-							<input type="text" id="name" name="name" required>
-						</li>
-						<li>
-							<label for="email">Email</label>
-							<input type="email" id="email" name="email" required>
-						</li>
-						<li>
-							<label for="phone">Phone</label>
-							<input type="tel" id="phone" name="phone">
-						</li>
-						<li>
-							<label for="message">Message</label>
-							<textarea id="message" name="message" required></textarea>
-						</li>
-						<li>
-							<button type="submit" class="button">Send</button>
-						</li>
-					</ul>
-				</form>
-				<h3>Address</h3>
-				<p>Address</p>
+				<div class="page-content">
+					<h1 class="page-heading">Contact</h1>
+					<div id="form-messages" class="form-messages"></div>
+					<form id="ajax-contact" class="form" method="post" action="mailer.php">
+						<ul>
+							<li>
+								<label for="name">Name</label>
+								<input type="text" id="name" name="name" required>
+							</li>
+							<li>
+								<label for="email">Email</label>
+								<input type="email" id="email" name="email" required>
+							</li>
+							<li>
+								<label for="phone">Phone</label>
+								<input type="tel" id="phone" name="phone">
+							</li>
+							<li>
+								<label for="message">Message</label>
+								<textarea id="message" name="message" required></textarea>
+							</li>
+							<li>
+								<button type="submit" class="button">Send</button>
+							</li>
+						</ul>
+					</form>
+				</div>
 			</div>
 		</main>
 
