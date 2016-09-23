@@ -369,6 +369,13 @@ p {
   margin-bottom: 1rem;
 }
 
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="tel"]:focus,
+.form textarea:focus {
+  border: .125rem solid #1F4E79;
+}
+
 .success,
 .error {
   padding: 1rem;
