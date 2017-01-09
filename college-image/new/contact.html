@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<title>College Image</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" media="all">
+
+</head>
+
+<body>
+
+	<header class="cd-header">
+		<div class="cd-logo"><a href="index.html"><img src="http://danedmonds.net/college-image/images/logo-temp-blue.jpg" alt="Logo"></a></div>
+		<div id="cd-nav" class="cd-nav">
+			<button class="cd-primary-nav-trigger"><span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span></button>
+			<nav id="cd-main-nav" class="cd-main-nav">
+				<ul>
+					<li class="current"><a href="index.html">Work</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="why-ci.html">Why College Image?</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- https://secure.dunked.com/signup -->
+
+	<div style="display: flex; width: 100%; height: 100vh;">
+		<div style="width: 100%; max-width: 500px; margin: auto;">
+			<h1 class="page-heading">Contact</h1>
+			<div id="form-messages" class="form-messages"></div>
+			<form id="ajax-contact" class="form" method="post" action="mailer.php">
+				<ul>
+					<li>
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required>
+					</li>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required>
+					</li>
+					<li>
+						<label for="phone">Phone</label>
+						<input type="tel" id="phone" name="phone">
+					</li>
+					<li>
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="10" required></textarea>
+					</li>
+					<li>
+						<button type="submit" class="button">Send</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="scripts/scripts.js"></script>
+
+</body>
+</html>
