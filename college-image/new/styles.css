@@ -6,6 +6,10 @@ body {
     margin: 0;
     padding: 0;
     font-size: 100%;
+
+    background: #1f4e79;
+    background: #091621;
+    background: #060F16;
 }
 
 
@@ -53,13 +57,11 @@ button {
     right: 2rem;
 }
 
-.cd-nav-trigger.menu-is-open {}
-
 .cd-primary-nav-trigger {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: red;
+    /*background-color: red;*/
     padding: 1rem 2.5rem 1rem 1rem;
     color: white;
     text-transform: uppercase;
@@ -67,6 +69,11 @@ button {
     font-size: 1rem;
     line-height: 1;
     z-index: 2;
+    background-color: #1f4e79;
+    font-weight: bold;
+    /*border-radius: 4px;*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    transition: box-shadow .3s;
 }
 
 .cd-primary-nav-trigger .cd-menu-icon {
@@ -74,7 +81,7 @@ button {
     position: absolute;
     top: 50%;
     right: 1rem;
-    transform: translateY(-50%);
+    transform: translateY(-2px);
     width: 18px;
     height: 2px;
     background-color: white;
@@ -102,6 +109,10 @@ button {
 
 .cd-primary-nav-trigger .cd-menu-icon::after {
     top: 5px;
+}
+
+.menu-is-open {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
 }
 
 .menu-is-open .cd-menu-icon {
@@ -251,6 +262,7 @@ button {
     margin-right: 1rem;
     margin-bottom: 2rem;
     position: relative;
+    /*border: 6px solid white;*/
 }
 
 .video-entry-image {
@@ -264,6 +276,14 @@ button {
 .video-entry-image img {
     width: 100%;
     display: block;
+}
+
+.video-entry-title {
+    background: #091621;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1rem;
 }
 
 
