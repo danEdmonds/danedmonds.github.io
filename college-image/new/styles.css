@@ -12,6 +12,7 @@ body {
     color: white;
     font-family: 'texgyrescholaregular';
     font-family: 'Open Sans', sans-serif;
+    /*padding-top: 7rem;*/
 }
 
 a {
@@ -47,9 +48,17 @@ button {
 .cd-logo-2 {
     display: block;
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: 1rem;
+    left: 1rem;
     width: 400px;
+}
+
+@media screen and (min-width: 480px) {
+    .cd-logo,
+    .cd-logo-2 {
+        top: 2rem;
+        left: 2rem;
+    }
 }
 
 .cd-logo img {
@@ -67,9 +76,17 @@ button {
 
 .cd-nav {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
-    right: 2rem;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+    .cd-nav {
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+    }
 }
 
 .cd-primary-nav-trigger {
@@ -249,39 +266,120 @@ button {
 
 .container {
     position: relative;
-    padding-left: 40%;
-    width: calc(100% - 2rem)
+    /*width: calc(100% - 2rem);*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    /*width: 100%;*/
+}
+
+.cd-slider-nav {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+}
+
+.video-embed iframe,
+.video-embed object,
+.video-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*@media screen and (min-width: 480px) {
+    .container {
+        width: calc(100% - 4rem);
+    }
+}*/
+
+@media screen and (min-width: 780px) {
+    .container {
+        padding-left: 50%;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+        padding-left: 40%;
+    }
 }
 
 .left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 100vh;
-    padding: 4rem;
+    padding: 3rem;
+}
+
+@media screen and (min-width: 780px) {
+    .left {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .left {
+        width: 40%;
+    }
+}
+
+.tagline {
+    font-family: 'texgyrescholaregular';
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1000px) {
+    .tagline {
+        font-size: 3.5rem;
+    }
 }
 
 
 
 
-.videos {
-    display: flex;
-    flex-wrap: wrap;
+/*.videos {
     margin-top: 7rem;
-    margin-left: -1rem;
-    width: calc(100% + 2rem);
+}*/
+
+@media screen and (min-width: 1160px) {
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1rem;
+        width: calc(100% + 2rem);
+    }
 }
 
-.video-entry {
-    width: 50%;
-    width: calc(50% - 2rem);
-    margin-left: 1rem;
-    margin-right: 1rem;
+@media screen and (min-width: 1160px) {
+    .video-entry {
+        width: 50%;
+    }
+}
+
+.video-entry-link {
     margin-bottom: 2rem;
-    position: relative;
-    /*border: 6px solid white;*/
-    overflow: hidden;
+    display: block;
+}
+
+@media screen and (min-width: 1160px) {
+    .video-entry-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 .video-entry-image {
@@ -316,6 +414,17 @@ button {
 .video-entry-link:hover .video-entry-title {
     background-color: #1f4e79;
 }
+
+
+
+
+/*@media screen and (min-width: 1100px) {
+    .cd-nav {
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+    }
+}*/
 
 
 
