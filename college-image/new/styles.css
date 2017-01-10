@@ -6,10 +6,16 @@ body {
     margin: 0;
     padding: 0;
     font-size: 100%;
+    /*background: #14161B;*/
+    background: #181B20;
+    /*B80C09*/
+    color: white;
+    font-family: 'texgyrescholaregular';
+    font-family: 'Open Sans', sans-serif;
+}
 
-    background: #1f4e79;
-    background: #091621;
-    background: #060F16;
+a {
+    text-decoration: none;
 }
 
 
@@ -37,7 +43,8 @@ button {
     z-index: 3;
 }
 
-.cd-logo {
+.cd-logo,
+.cd-logo-2 {
     display: block;
     position: absolute;
     top: 2rem;
@@ -48,6 +55,14 @@ button {
 .cd-logo img {
     width: 100%;
     display: block;
+}
+
+.cd-logo-2 {
+    width: auto;
+    font-family: 'texgyrescholaregular';
+    /*font-family: 'texgyrescholabold';*/
+    color: white;
+    font-size: 2.25rem;
 }
 
 .cd-nav {
@@ -235,6 +250,7 @@ button {
 .container {
     position: relative;
     padding-left: 40%;
+    width: calc(100% - 2rem)
 }
 
 .left {
@@ -253,6 +269,8 @@ button {
     display: flex;
     flex-wrap: wrap;
     margin-top: 7rem;
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
 }
 
 .video-entry {
@@ -263,6 +281,7 @@ button {
     margin-bottom: 2rem;
     position: relative;
     /*border: 6px solid white;*/
+    overflow: hidden;
 }
 
 .video-entry-image {
@@ -276,14 +295,26 @@ button {
 .video-entry-image img {
     width: 100%;
     display: block;
+    transform: scale(1);
+    transition: transform .2s;
+}
+
+.video-entry-link:hover img {
+    transform: scale(1.1);
 }
 
 .video-entry-title {
-    background: #091621;
+    /*background-color: #20232B;*/
+    background-color: #242830;
     color: white;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 1rem;
+    padding: 1.5rem;
+    transition: background-color .2s;
+}
+
+.video-entry-link:hover .video-entry-title {
+    background-color: #1f4e79;
 }
 
 
@@ -310,8 +341,12 @@ button {
 }
 
 .video-page .copy {
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
+    /*background-color: #e2e3e5;*/
+    background-color: #FBFBFF;
+    color: #181B20;
     width: 27rem;
+    width: 25rem;
     position: absolute;
     top: 2rem;
     left: 0;
@@ -382,10 +417,12 @@ ul {
 
 .prev,
 .next {
-    width: 60px;
-    height: 60px;
+    width: 3rem;
+    /*width: 10rem;*/
+    height: 3rem;
     border-radius: 100%;
-    border: 2px solid black;
+    /*border-radius: 1.5rem;*/
+    border: 3px solid #242830;
     display: block;
 }
 
@@ -402,27 +439,21 @@ ul {
 .next::after {
     content: "";
     border-style: solid;
-    border-width: .125rem .125rem 0 0;
+    border-width: 3px 3px 0 0;
     display: inline-block;
     height: .75rem;
     width: .75rem;
-    color: black;
+    /*color: black;*/
+    color: #242830;
+    /*color: #181B20;*/
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(-45deg);
     position: relative;
-    top: -.0625rem;
+    top: 4px;
 }
-
-/*.prev::after {
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}*/
 
 .next::after {
     -moz-transform: rotate(45deg);
@@ -430,6 +461,7 @@ ul {
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(135deg);
+    top: -.0625rem;
 }
 
 .prev.inactive,
@@ -485,7 +517,7 @@ ul {
 
 .form label {
     display: block;
-    margin-bottom: .25rem;
+    margin-bottom: .75rem;
 }
 
 .form input[type="text"],
@@ -497,19 +529,27 @@ ul {
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    border: .125rem solid #D3DBE3;
-    background: white;
+    /*border: .125rem solid #D3DBE3;
+    background: white;*/
     width: 100%;
-    padding: .5rem;
+    padding: .75rem;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: #242830;
+    color: white;
+    border-radius: .25rem;
+    transition: background-color .2s;
 }
 
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
 .form input[type="tel"]:focus,
 .form textarea:focus {
-    border: .125rem solid #1F4E79;
+    /*border: .125rem solid #1F4E79;*/
+    background-color: white;
+    color: #242830;
+
 }
 
 .success,
