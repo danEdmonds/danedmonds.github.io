@@ -41,7 +41,7 @@ h3 {
     font-weight: normal;
 }
 
-.left p {
+.about p {
     font-size: 1.5rem;
     line-height: 1.4;
 }
@@ -56,7 +56,7 @@ ul {
 .layout-container {
     width: calc(100% - 2rem);
     max-width: 1400px;
-    margin: 4rem auto;
+    margin: 1rem auto;
     background-color: #5031a9;
     border-top: 16px solid #4c2da2;
 }
@@ -64,29 +64,43 @@ ul {
 @media screen and (min-width: 1240px) {
     .layout-container {
         width: calc(100% - 10rem);
+        margin: 4rem auto;
         display: flex;
         flex-wrap: wrap;
     }
 }
 
-.left {
-    max-width: 840px;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+.about, .work {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
 @media screen and (min-width: 840px) {
-    .left {
+    .about, .work {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
         padding-left: 4rem;
         padding-right: 4rem;
     }    
 }
 
+.about {
+    max-width: 840px;
+}
+
 @media screen and (min-width: 1240px) {
-    .left {
+    .about {
         flex: 0 0 560px;
+    }    
+}
+
+@media screen and (min-width: 1240px) {
+    .work {
+        flex: 1;
+        padding-left: 0;
+        padding-right: 0;
     }    
 }
 
@@ -117,30 +131,8 @@ ul {
     background-color: #ffc600;
 }
 
-.right {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-@media screen and (min-width: 840px) {
-    .right {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }    
-}
-
-@media screen and (min-width: 1240px) {
-    .right {
-        flex: 1;
-        padding-left: 0;
-        padding-right: 0;
-    }    
-}
-
 @media screen and (min-width: 740px) {
-    .work {
+    .work__list {
         display: grid; 
         grid-template-columns: repeat(2, 1fr); 
         grid-gap: 2rem;
@@ -148,7 +140,7 @@ ul {
 }
 
 @media screen and (min-width: 1240px) {
-    .work {
+    .work__list {
         grid-template-columns: repeat(2, 1fr); 
         transform: translateX(2rem);
     }
