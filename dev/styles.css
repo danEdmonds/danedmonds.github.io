@@ -10,30 +10,23 @@ body {
     margin: 0;
     font-size: 100%;
     font-family: 'Roboto', sans-serif;
-    /* font-weight: 500; */
-    /* font-family: 'Playfair Display', serif; */
-    /* font-weight: 500; */
-    background-color: #2644a6;
     background-color: #2B1848;
-    /* background-color: #efe9ca; */
     color: white;
 }
 
 a {
-    color: #ef512c;
     color: #47e49f;
-    /* color: #ef512c; */
-    /* color: #47e49f; */
-    /* color: #f14b59; */
+    transition-property: color, background-color;
+    transition-duration: .25s;
 }
 
-/* a:hover, a:focus {
-    color: white;
-} */
+a:hover, a:focus {
+    color: #ffc600;
+}
 
 h1 {
-    color: #ff7f01;
-    margin-top: 0;
+    font-size: 2.25rem;
+    color: #ffc600;
 }
 
 h2 {
@@ -49,8 +42,7 @@ h3 {
 }
 
 .left p {
-    font-size: 1.75rem;
-    /* font-size: 2.125rem; */
+    font-size: 1.5rem;
     line-height: 1.4;
 }
 
@@ -65,19 +57,13 @@ ul {
     width: calc(100% - 2rem);
     max-width: 1400px;
     margin: 4rem auto;
-
-    background-color: #2b4bb2;
-    background-color: #8F49CF;
     background-color: #5031a9;
-    /* background-color: #ef512c; */
-    /* background-color: #ffc600; */
-
     border-top: 16px solid #4c2da2;
 }
 
 @media screen and (min-width: 1240px) {
     .layout-container {
-        width: calc(100% - 6rem);
+        width: calc(100% - 10rem);
     }    
 }
 
@@ -103,27 +89,32 @@ ul {
     }    
 }
 
-.connect {
+.logo {
+    width: 100px;
+    fill: #47e49f;
+}
+
+.buttons {
     display: flex;
     margin-top: 4rem;
 }
 
-.connect__item {
-    margin-right: 1rem;
-}
-
-.connect__link {
+.button {
     display: block;
     text-decoration: none;
     font-weight: 500;
     border-radius: .125rem;
     padding: .75rem 1rem;
     color: white;
+    /* background-color: #ffc600; */
+    background-color: #47e49f;
+    margin-right: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+}
 
-    background-color: #ff7050;
-    background-color: #ef512c;
+.button:hover, .button:focus {
+    color: white;
     background-color: #ffc600;
-    /* background-color: #47e49f; */
 }
 
 .right {
@@ -187,9 +178,7 @@ ul {
 
 .work__image {
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    background-color: lightgrey;
+    height: auto;
 }
 
 .footer {
