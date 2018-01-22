@@ -1,3 +1,12 @@
+/* :root {
+    --bodyBackgroundColor: #2B1848;
+    --primaryLayoutBackgroundColor: #5031a9;
+    --secondaryLayoutBackgroundColor: #4c2da2;
+    --highlightColor: #47e49f;
+}
+  
+background-color: var(--color); */
+
 html {
     box-sizing: border-box;
 }
@@ -11,11 +20,13 @@ body {
     font-size: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: #2B1848;
+    background-color: #2644a6;
     color: white;
 }
 
 a {
     color: #47e49f;
+    color: #ff7050;
     transition-property: color, background-color;
     transition-duration: .25s;
 }
@@ -26,7 +37,6 @@ a:hover, a:focus {
 
 h1 {
     font-size: 2.25rem;
-    /* color: #ffc600; */
 }
 
 h2 {
@@ -58,15 +68,19 @@ ul {
     max-width: 1400px;
     margin: 1rem auto;
     background-color: #5031a9;
+    background-color: #375bcd;
     border-top: 16px solid #4c2da2;
+    border-top: 16px solid #2b4bb2;
 }
 
 @media screen and (min-width: 1240px) {
     .layout-container {
         width: calc(100% - 10rem);
         margin: 4rem auto;
-        display: flex;
-        flex-wrap: wrap;
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: 560px  1fr;
     }
 }
 
@@ -90,15 +104,15 @@ ul {
     max-width: 840px;
 }
 
-@media screen and (min-width: 1240px) {
+/* @media screen and (min-width: 1240px) {
     .about {
         flex: 0 0 560px;
     }    
-}
+} */
 
 @media screen and (min-width: 1240px) {
     .work {
-        flex: 1;
+        /* flex: 1; */
         padding-left: 0;
         padding-right: 0;
     }    
@@ -122,6 +136,7 @@ ul {
     padding: .75rem 1rem;
     color: white;
     background-color: #47e49f;
+    background-color: #ff7050;
     margin-right: 1rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
 }
@@ -162,6 +177,12 @@ ul {
     background-color: white;
     height: 100%;
     box-shadow: 0 16px 36px rgba(0, 0, 0, .15), 0 6px 16px rgba(0, 0, 0, .12);
+    transition-property: transform;
+    transition-duration: .25s;
+}
+
+.work__link:hover, .work__link:focus {
+    transform: translateY(-.25rem);
 }
 
 .work__title {
@@ -175,8 +196,10 @@ ul {
 }
 
 .footer {
-    flex: 0 0 auto;
-    width: 100%;
+    /* flex: 0 0 auto;
+    width: 100%; */
+    grid-column: span 2;
     padding: 1rem 2rem;
     background-color: #4c2da2;
+    background-color: #2b4bb2;
 }
