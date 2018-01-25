@@ -18,7 +18,7 @@ body {
 a {
     color: #47e49f;
     /* color: #ff7050; */
-    transition-property: color, background-color, transform;
+    transition-property: color, background-color, text-shadow;
     transition-duration: .25s;
 }
 
@@ -184,6 +184,16 @@ b, strong {
     }
 }
 
+.work__item {
+    /* height: 100%; */
+    background-color: white;
+    color: #4c2da2;
+    box-shadow: 0 1rem 2.25rem rgba(0, 0, 0, .15), 
+                0 .375rem 1rem rgba(0, 0, 0, .12);
+    display: flex;
+    flex-direction: column;
+}
+
 .work__item:nth-child(n+2) {
     margin-top: 2rem;
 }
@@ -226,29 +236,63 @@ b, strong {
     }
 }
 
+.work__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.work__title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+    font-size: 1.125rem;
+}
+
+.work__item dl {
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .875rem;
+}
+
+.work__item dt {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.work__item dd {
+    margin-bottom: .25rem;
+    margin-left: 0;
+    margin-right: .25rem;
+    /* background-color: #f5f5f5; */
+    background-color: rgba(0, 0, 0, .06);
+    padding: .125rem .25rem;
+    border-radius: .125rem;
+}
+
 .work__link {
     display: block;
     text-decoration: none;
     background-color: white;
-    height: 100%;
-    box-shadow: 0 1rem 2.25rem rgba(0, 0, 0, .15), 
-                0 .375rem 1rem rgba(0, 0, 0, .12);
+    padding: 1rem 1rem 1rem;
+    line-height: 1;
+    margin-top: auto;
+    font-weight: 500;
 }
 
 .work__link:hover, .work__link:focus {
     color: white;
     background-color: #47e49f;
-    transform: translateY(-.25rem);
-}
-
-.work__title {
-    padding: 1rem;
-    font-size: 1.125rem;
-}
-
-.work__image {
-    width: 100%;
-    height: auto;
+    text-shadow: 0 .0625rem .125rem rgba(0, 0, 0, .25);
+    /* transform: translateY(-.25rem); */
 }
 
 .footer {
