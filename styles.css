@@ -81,6 +81,8 @@ b, strong {
 }
 
 .grid {
+    display: flex;
+    flex-wrap: wrap;
     display: grid;
     grid-gap: 6rem;
     grid-template-columns: 1fr;
@@ -92,11 +94,6 @@ b, strong {
 
 @media screen and (min-width: 82.5em) {
     .grid {
-        /* margin: 4rem auto; */
-        /* display: flex;
-        flex-wrap: wrap; */
-        /* display: grid;
-        grid-gap: 4rem; */
         grid-template-columns: 26.25rem 1fr;
         padding: 4rem;
     }
@@ -108,8 +105,24 @@ b, strong {
 
 @media screen and (min-width: 82.5em) {
     .about {
-        flex: 0 0 35rem;
+        flex: 0 0 26.25rem;
     }    
+}
+
+/* For Edge and any other browsers that doesn't support CSS grid layout */
+@supports not (display:grid) {
+    @media screen and (min-width: 82.5em) {
+        .about {
+            margin-right: 6rem;
+        }
+    }
+}
+
+/* For IE 10 and 11 */
+@media screen and (min-width: 82.5em) and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+    .about {
+        margin-right: 6rem;
+    }
 }
 
 .logo {
@@ -151,6 +164,22 @@ b, strong {
     }    
 }
 
+/* For Edge and any other browsers that doesn't support CSS grid layout */
+/* @supports not (display:grid) {
+    @media screen and (min-width: 46.25em) {
+        .work {
+            margin-top: 0;
+        }
+    }
+} */
+
+/* For IE 10 and 11 */
+/* @media screen and (min-width: 46.25em) and (-ms-high-contrast:none), (-ms-high-contrast:active) {
+    .work {
+        margin-top: 0;
+    }
+} */
+
 @media screen and (min-width: 46.25em) {
     .work__list {
         display: flex;
@@ -179,9 +208,9 @@ b, strong {
     box-shadow: 0 1rem 2.25rem rgba(0, 0, 0, .15), 0 .375rem 1rem rgba(0, 0, 0, .12);
     display: flex;
     flex-direction: column;
-    transition-property: transform;
+    /* transition-property: transform;
     transition-duration: .25s;
-    will-change: transform;
+    will-change: transform; */
 }
 
 .work__item:nth-child(n+2) {
@@ -314,9 +343,9 @@ b, strong {
     }
 }
 
-.work__item[data-hover="true"] {
+/* .work__item[data-hover="true"] {
     transform: scale(1.01);
-}
+} */
 
 .work__image {
     width: 100%;
@@ -353,12 +382,15 @@ b, strong {
 }
 
 .work__link {
-    display: block;
+    align-self: center;
+    /* display: inline-block; */
     text-decoration: none;
     background-color: white;
+    border-radius: .125rem;
     padding: 1rem 1rem 1rem;
     line-height: 1;
     margin-top: auto;
+    margin-bottom: 1rem;
     font-weight: 500;
     text-align: center;
 }
