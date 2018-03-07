@@ -214,8 +214,13 @@ b, strong {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: .75rem;
+    /* margin-bottom: .25rem; */
     font-size: 1.25rem;
     color: #0081ce;
+}
+
+.work__year {
+    margin: 0 1rem .5rem;
 }
 
 .work__roles {
@@ -223,15 +228,13 @@ b, strong {
     margin-bottom: 1.75rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    display: flex;
-    flex-wrap: wrap;
     font-size: .875rem;
 }
 
 .work__role {
+    display: inline-block;
     margin-bottom: .25rem;
     margin-left: 0;
-    margin-right: .25rem;
     background-color: rgba(0, 0, 0, .08);
     padding: .125rem .25rem;
     border-radius: .125rem;
