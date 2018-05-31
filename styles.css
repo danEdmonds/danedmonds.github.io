@@ -11,9 +11,8 @@ body {
     font-size: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: #0a1922;
-    color: white;
-
     border-top: .25rem solid #0594cb;
+    color: white;
 }
 
 a {
@@ -118,7 +117,7 @@ b, strong {
     border-radius: .125rem;
     padding: .75rem 1rem;
     color: white;
-    background-color: #0081ce;
+    background-color: #0594cb;
 }
 
 .button:hover, .button:focus {
