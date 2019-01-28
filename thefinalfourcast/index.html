@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+    <style>
+
+        html{
+            box-sizing: border-box;
+        }
+        
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background-color: #002855;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 100%;
+            text-transform: uppercase;
+        }
+
+        p, li {
+            font-size: 1.25em;
+        }
+
+        .section {
+            /* display: grid; */
+            /* grid-template-columns: 1fr repeat(4, 360px) 1fr; */
+            grid-template-columns: 1fr repeat(6, 240px) 1fr;
+            grid-template-columns: repeat(6, 1fr);
+            /* grid-template-columns: 1fr 320px;
+            grid-template-columns: 1fr 480px; */
+            /* grid-template-columns: 1fr repeat(3, 480px) 1fr; */
+            /* height: 90vh; */
+            min-height: 100vh;
+            /* padding: 1rem; */
+            /* text-align: center; */
+        }
+
+        .layout {
+            /* width: 100%; */
+            /* max-width: 1440px;  */
+            max-width: 1200px;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+
+        .grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header {
+            display: flex;
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            align-items: center;
+            height: 720px;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: flex-end; */
+            /* min-height: 720px; */
+            background-image: url(final-fourcast.jpg);
+            background-image: 
+                linear-gradient(rgba(0, 40, 85, .88), rgba(0, 40, 85, .88)), 
+                url(final-fourcast.jpg);
+            /* background-image: 
+                linear-gradient(rgba(0, 40, 85, .88), rgba(0, 51, 160, .88)), 
+                url(final-fourcast-resized.jpg); */
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            text-align: center;
+            background-color: #002045;
+            /* background-image: linear-gradient(#002045 2rem, rgba(0, 51, 160, 0) 12rem); */
+        }
+
+        .heading {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #EAAA00;
+            font-size: 6.5rem;
+            font-size: 6rem;
+            font-weight: 800;
+            line-height: .8;
+        }
+
+        .subheading {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: white;
+            font-size: 1.625rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .player {
+            /* display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 720px;
+            margin-top: -4rem;
+            padding-bottom: 4rem; */
+            /* background-image: 
+                linear-gradient(#002045 2rem, rgba(0, 51, 160, 0) 12rem), 
+                url(final-fourcast.jpg); */
+            /* background-image: url(final-fourcast.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover; */
+        }
+
+        .play {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background-color: transparent;
+            border: 4px solid red;
+            border-radius: 100%;
+        }
+    
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div style="display: flex; flex-wrap: wrap; min-height: 100vh;">
+        <div style="flex: 0 0 50%; background-image: url(final-fourcast.jpg); background-repeat: no-repeat; background-position: top center; background-size: cover;"></div>
+        <div style="flex: 0 0 50%;">
+            <div style="position: relative; padding-top: 4rem; padding-left: 4rem; padding-right: 4rem; text-align: center;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: calc(50% + 2rem); background-image: linear-gradient(to right, #002045, transparent 6rem), linear-gradient(to left, #002045, transparent 6rem), linear-gradient(#002045, transparent);"></div>
+                <div style="position: relative; z-index: 1;">
+                    <h1 class="heading">The Final Fourcast</h1>
+                    <p class="subheading">A podcast starring Kevin Jones, Da'Sean Butler, John Flowers and Ashley</p>
+                </div>
+            </div>
+            <div style="padding: 4rem; text-align: center;">
+                <h2>Advertise With Us</h2>
+                <p>Contact Us<br>jflowent@yahoo.com</p>
+                <h2>Connect With Us!</h2>
+                <ul style="padding-left: 0; list-style-type: none;">
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div style="position: relative; margin-bottom: 4rem; padding-top: 4rem; text-align: center;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 7.5rem; background-image: linear-gradient(to right, #002045, transparent 16rem), linear-gradient(to left, #002045, transparent 16rem), linear-gradient(#002045, transparent);"></div>
+        <div style="position: relative; z-index: 1;">
+            <h1 class="heading">The Final Fourcast</h1>
+            <p class="subheading">A podcast starring Kevin Jones, Da'Sean Butler, John Flowers and Ashley</p>
+        </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr repeat(3, 400px) 1fr;">
+        <div style="grid-column: 2;">
+            <p>Where to Download, Apple, Spotify, TuneIn, Stitcher</p>
+        </div>
+        <img src="final-fourcast-resized.jpg" alt="" style="grid-column: 3 / span 3;">
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr repeat(3, 400px) 1fr; margin-top: -4rem; padding-bottom: 2rem; padding-top: 6rem; background-color: #002045;">
+        <div style="grid-column: 2;">
+            <h2>Advertise With Us</h2>
+            <p>Contact Us<br>jflowent@yahoo.com</p>
+        </div>
+        <div>
+            <h2>Connect With Us!</h2>
+            <ul>
+                <li>Instagram</li>
+                <li>Twitter</li>
+                <li>Facebook</li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- <div style="display: flex; height: 100vh;"> -->
+
+        <header class="header" style="flex: 0 0 50%;">
+            <div class="layout">
+                <h1 class="heading">The Final Fourcast</h1>
+                <p class="subheading">A podcast starring Kevin Jones, Da'Sean Butler, John Flowers and Ashley</p>
+                <p>Where to Download, Apple, Spotify, TuneIn, Stitcher</p>
+            </div>
+        </header>
+
+        <div class="layout grid" style="flex: 0 0 50%; padding-top: 4rem; padding-bottom: 4rem;">
+            <div style="">
+                <h2>Advertise With Us</h2>
+                <p>Contact Us<br>jflowent@yahoo.com</p>
+            </div>
+            <div style="margin-left: 4rem;">
+                <h2>Connect With Us!</h2>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+        </div>
+
+    <!-- </div> -->
+    
+</body>
+
+</html>
