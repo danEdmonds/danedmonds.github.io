@@ -1,5 +1,7 @@
 $wvu-blue: #002855;
 $wvu-yellow: #EAAA00;
+$pms-286-c: #0033A0;
+$pms-300-c: #005EB8;
 
 html{
     box-sizing: border-box;
@@ -11,8 +13,8 @@ html{
 
 body {
     margin: 0;
-    background-color: $wvu-blue;
-    color: white;
+    // background-color: $wvu-blue;
+    // color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
     text-transform: uppercase;
@@ -53,20 +55,21 @@ ul {
 .header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     min-height: 100vh;
     min-height: 720px;
-    min-height: 600px;
+    // min-height: 600px;
     background-image: url(final-fourcast.jpg);
     background-image: 
         linear-gradient(rgba(0, 40, 85, .8), rgba(0, 40, 85, .8), #002855), 
         url(final-fourcast-resized.jpg);
     background-image: 
-        linear-gradient(to right, rgba(0, 40, 85, .8), rgba(0, 40, 85, .8), #002855), 
+        linear-gradient(to right, rgba($pms-286-c, .86), rgba($wvu-blue, .86)), 
         url(final-fourcast-resized-1440x600.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    color: white;
 }
 
 .heading {
@@ -94,15 +97,40 @@ img {
 
 .player {
     margin-top: 2rem;
-}
+    background-color: white;
+    box-shadow: 0 .25rem .5rem black;
 
-.play {
-    display: block;
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent;
-    border: 4px solid red;
-    border-radius: 100%;
+    &__header {
+        background-color: grey;
+        padding: 2rem;
+    }
+
+    &__title {
+
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        margin-top: -3rem;
+        padding: 2rem;
+    }
+
+    &__button {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        margin-right: 2rem;
+        background-color: transparent;
+        border: 4px solid black;
+        border-radius: 100%;
+    }
+
+    &__progress {
+        flex: 1;
+        height: 4px;
+        background-color: red;
+    }
 }
 
 .info {
