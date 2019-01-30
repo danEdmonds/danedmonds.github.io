@@ -6,7 +6,8 @@ html {
 
 body {
   margin: 0;
-  color: #333F48;
+  background-color: #002855;
+  color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 100%; }
 
@@ -32,27 +33,36 @@ ul {
   padding-left: 0;
   list-style-type: none; }
 
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(0, 40, 85, 0.94)), url(final-fourcast-resized-1440x600.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
 .layout {
   width: calc(100% - 2rem);
   max-width: 1040px;
   margin-left: auto;
   margin-right: auto; }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 720px;
-  background-image: linear-gradient(to right, rgba(0, 51, 160, 0.86), rgba(0, 40, 85, 0.9)), url(final-fourcast-resized-1440x600.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-
 .heading {
   color: #EAAA00;
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: .8; }
+  @media screen and (min-width: 400px) {
+    .heading {
+      font-size: 4rem; } }
+  @media screen and (min-width: 600px) {
+    .heading {
+      font-size: 6rem; } }
 
 .subheading {
   margin-top: 1rem;
@@ -68,67 +78,67 @@ img {
   height: auto; }
 
 .player {
-  margin-top: 2rem;
-  background-color: #e0e5eb; }
-  .player__header {
-    background-color: white;
-    padding: 1rem 1rem 2.5rem; }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10rem; }
   .player__title {
+    flex: 1;
+    order: 2;
+    margin-left: 1rem;
     font-size: 1.5em;
     line-height: 1.2; }
-  .player__actions {
-    display: flex;
-    align-items: center;
-    margin-top: -2rem;
-    padding: 1rem; }
   .player__button {
+    flex: 0 0 auto;
+    order: 1;
     display: block;
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
-    background-color: #002855;
-    border: none; }
+    background-color: transparent;
+    border: .125rem solid white;
+    cursor: pointer; }
+    .player__button:hover, .player__button:focus {
+      border-color: #EAAA00; }
     .player__button-icon {
       transform: translateX(0.125rem);
       fill: white; }
+    .player__button:hover .player__button-icon, .player__button:focus .player__button-icon {
+      fill: #EAAA00; }
   .player__progress {
-    flex: 1;
-    height: .5rem;
-    margin-left: 2rem;
-    margin-right: 1rem;
-    border-radius: .25rem;
-    background-color: #f0f2f5; }
+    flex: 0 0 100%;
+    order: 3;
+    height: .25rem;
+    margin-top: 1rem;
+    border-radius: .125rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-image: linear-gradient(to right, #EAAA00, #EAAA00 25%, transparent 25%, transparent); }
 
 .info {
   margin-top: 2rem;
-  padding-bottom: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1); }
 
 .info__layout {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between; }
 
 .advertise, .social {
-  flex: 1;
-  padding-top: 2rem; }
+  max-width: calc(100% - 2rem);
+  padding-top: 4rem; }
 
 .social__items {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
-.social__item + .social__item {
-  margin-left: 1rem; }
-
-.social__item--facebook a {
-  color: #3b5999; }
-
-.social__item--instagram a {
-  color: #d93175; }
-
-.social__item--twitter a {
-  color: #55acee; }
+.social__item {
+  flex: 0 0 auto; }
+  .social__item:nth-last-child(n+2) {
+    margin-right: 1rem; }
 
 .social a {
   display: block;
+  color: currentColor;
   text-decoration: none; }
 
 .social__icon {
@@ -143,3 +153,13 @@ img {
   margin-right: .25rem;
   transform: translate(4px, -1px);
   fill: currentColor; }
+
+.jflow-bug {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 600;
+  text-decoration: none; }

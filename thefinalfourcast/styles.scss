@@ -20,7 +20,8 @@ html{
 
 body {
     margin: 0;
-    color: $pms-432-c;
+    background-color: $wvu-blue;
+    color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
 }
@@ -43,7 +44,6 @@ h2 {
 p {
     margin-top: .25rem;
     margin-bottom: 0;
-    // font-weight: 700;
 }
 
 ul {
@@ -53,6 +53,22 @@ ul {
     list-style-type: none;
 }
 
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-image: 
+        linear-gradient(to right, rgba($pms-286-c, .9), rgba($wvu-blue, .94)), 
+        url(final-fourcast-resized-1440x600.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 .layout {
     width: calc(100% - 2rem);
     max-width: 1040px;
@@ -60,24 +76,19 @@ ul {
     margin-right: auto;
 }
 
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    min-height: 720px;
-    background-image: 
-        linear-gradient(to right, rgba($pms-286-c, .86), rgba($wvu-blue, .9)), 
-        url(final-fourcast-resized-1440x600.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
 .heading {
     color: $wvu-yellow;
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 800;
     line-height: .8;
+
+    @media screen and (min-width: 400px) {
+        font-size: 4rem;
+    }
+
+    @media screen and (min-width: 600px) {
+        font-size: 6rem;
+    }
 }
 
 .subheading {
@@ -96,83 +107,90 @@ img {
 }
 
 .player {
-    margin-top: 2rem;
-    background-color: mix($wvu-blue, white, 12%);
-
-    &__header {
-        background-color: white;
-        padding: 1rem 1rem 2.5rem;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10rem;
 
     &__title {
+        flex: 1;
+        order: 2;
+        margin-left: 1rem;
         font-size: 1.5em;
-        // font-weight: 800;
         line-height: 1.2;
     }
 
-    &__actions {
-        display: flex;
-        align-items: center;
-        margin-top: -2rem;
-        padding: 1rem;
-    }
-
     &__button {
+        flex: 0 0 auto;
+        order: 1;
         display: block;
         width: 4rem;
         height: 4rem;
         border-radius: 100%;
-        background-color: $wvu-blue;
-        border: none;
+        background-color: transparent;
+        border: .125rem solid white;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            border-color: $wvu-yellow;
+        }
 
         &-icon {
             transform: translateX(.125rem);
             fill: white;
         }
+
+        &:hover &-icon, &:focus &-icon {
+            fill: $wvu-yellow;
+        }
     }
 
     &__progress {
-        flex: 1;
-        height: .5rem;
-        margin-left: 2rem;
-        margin-right: 1rem;
-        border-radius: .25rem;
-        background-color: mix($wvu-blue, white, 6%);
+        flex: 0 0 100%;
+        order: 3;
+        height: .25rem;
+        margin-top: 1rem;
+        border-radius: .125rem;
+        background-color: rgba(white, .4);
+        background-image: linear-gradient(to right, $wvu-yellow, $wvu-yellow 25%, transparent 25%, transparent);
     }
 }
 
 .info {
-    margin-top: 2rem; 
-    padding-bottom: 2rem; 
+    margin-top: 2rem;
     border-top: 1px solid rgba(white, .1);
 }
 
 .info__layout {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .advertise, .social {
-    flex: 1;
-    padding-top: 2rem;
+    max-width: calc(100% - 2rem);
+    padding-top: 4rem;
 }
 
 .social {    
     &__items {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__item {
-        & + & {
-            margin-left: 1rem;
+        flex: 0 0 auto;
+        
+        &:nth-last-child(n+2) {
+            margin-right: 1rem;
         }
 
-        &--facebook a {
-            color: $facebook;
-        }
+        // &--facebook a {
+        //     color: $facebook;
+        // }
 
-        &--instagram a {
-            color: $instagram;
+        // &--instagram a {
+        //     color: $instagram;
             // background-image: 
             //     radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
             //     radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
@@ -182,15 +200,16 @@ img {
             //     radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
             //     radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
             //     linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-        }
+        // }
 
-        &--twitter a {
-            color: $twitter;
-        }
+        // &--twitter a {
+        //     color: $twitter;
+        // }
     }
 
     a {
         display: block;
+        color: currentColor;
         text-decoration: none;
     }
 
@@ -208,4 +227,15 @@ img {
         transform: translate(4px, -1px);
         fill: currentColor;
     }
+}
+
+.jflow-bug {
+    position: absolute; 
+    top: 2rem; 
+    right: 2rem; 
+    padding: 2rem; 
+    background-color: rgba(white, .1);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
 }
