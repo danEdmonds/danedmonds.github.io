@@ -10,6 +10,12 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Black Heart';
+  src: url("BlackHeart.woff2") format("woff2"), url("BlackHeart.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   box-sizing: border-box; }
 
@@ -64,18 +70,22 @@ ul {
   margin-right: auto; }
 
 .heading {
+  font-family: 'Black Heart';
   color: #EAAA00;
   font-size: 3rem;
-  line-height: .8; }
+  font-weight: normal;
+  line-height: .8;
+  letter-spacing: .25rem;
+  text-shadow: 1px 0 white; }
   @media screen and (min-width: 400px) {
     .heading {
       font-size: 4rem; } }
   @media screen and (min-width: 600px) {
     .heading {
-      font-size: 6rem; } }
+      font-size: 8.5rem; } }
 
 .subheading {
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
