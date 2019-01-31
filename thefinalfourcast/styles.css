@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Futura Std';
+  src: url("FuturaStd-Bold.woff2") format("woff2"), url("FuturaStd-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura Std';
+  src: url("FuturaStd-Book.woff2") format("woff2"), url("FuturaStd-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   box-sizing: border-box; }
 
@@ -8,7 +20,7 @@ body {
   margin: 0;
   background-color: #002855;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Futura Std';
   font-size: 100%; }
 
 a {
@@ -17,7 +29,6 @@ a {
 h1, h2 {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 800;
   text-transform: uppercase; }
 
 h2 {
@@ -48,14 +59,13 @@ ul {
 
 .layout {
   width: calc(100% - 2rem);
-  max-width: 1040px;
+  max-width: 67.5rem;
   margin-left: auto;
   margin-right: auto; }
 
 .heading {
   color: #EAAA00;
   font-size: 3rem;
-  font-weight: 800;
   line-height: .8; }
   @media screen and (min-width: 400px) {
     .heading {
@@ -68,7 +78,7 @@ ul {
   margin-top: 1rem;
   color: white;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.2;
   text-transform: uppercase; }
 
@@ -97,14 +107,16 @@ img {
     border-radius: 100%;
     background-color: transparent;
     border: .125rem solid white;
-    cursor: pointer; }
+    color: white;
+    cursor: pointer;
+    transition-property: border-color, color;
+    transition-duration: .25s; }
     .player__button:hover, .player__button:focus {
-      border-color: #EAAA00; }
+      border-color: #EAAA00;
+      color: #EAAA00; }
     .player__button-icon {
       transform: translateX(0.125rem);
-      fill: white; }
-    .player__button:hover .player__button-icon, .player__button:focus .player__button-icon {
-      fill: #EAAA00; }
+      fill: currentColor; }
   .player__progress {
     flex: 0 0 100%;
     order: 3;
@@ -139,7 +151,11 @@ img {
 .social a {
   display: block;
   color: currentColor;
-  text-decoration: none; }
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: .25s; }
+  .social a:hover, .social a:focus {
+    color: #EAAA00; }
 
 .social__icon {
   display: inline-block;
@@ -161,5 +177,5 @@ img {
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
-  font-weight: 600;
+  font-weight: bold;
   text-decoration: none; }

@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Futura Std';
+    src: url('FuturaStd-Bold.woff2') format('woff2'),
+        url('FuturaStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('FuturaStd-Book.woff2') format('woff2'),
+        url('FuturaStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $wvu-blue: #002855;
 $wvu-yellow: #EAAA00;
 $wvu-black: #2C2A29;
@@ -22,7 +38,8 @@ body {
     margin: 0;
     background-color: $wvu-blue;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Futura Std';
     font-size: 100%;
 }
 
@@ -33,7 +50,6 @@ a {
 h1, h2 {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 800;
     text-transform: uppercase;
 }
 
@@ -71,7 +87,7 @@ ul {
 
 .layout {
     width: calc(100% - 2rem);
-    max-width: 1040px;
+    max-width: 67.5rem; // 1080px
     margin-left: auto; 
     margin-right: auto;
 }
@@ -79,7 +95,6 @@ ul {
 .heading {
     color: $wvu-yellow;
     font-size: 3rem;
-    font-weight: 800;
     line-height: .8;
 
     @media screen and (min-width: 400px) {
@@ -95,7 +110,7 @@ ul {
     margin-top: 1rem;
     color: white;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1.2;
     text-transform: uppercase;
 }
@@ -129,20 +144,25 @@ img {
         border-radius: 100%;
         background-color: transparent;
         border: .125rem solid white;
+        color: white;
         cursor: pointer;
+
+        transition-property: border-color, color;
+        transition-duration: .25s;
 
         &:hover, &:focus {
             border-color: $wvu-yellow;
+            color: $wvu-yellow;
         }
 
         &-icon {
             transform: translateX(.125rem);
-            fill: white;
+            fill: currentColor;
         }
 
-        &:hover &-icon, &:focus &-icon {
-            fill: $wvu-yellow;
-        }
+        // &:hover &-icon, &:focus &-icon {
+        //     fill: currentColor;
+        // }
     }
 
     &__progress {
@@ -211,6 +231,13 @@ img {
         display: block;
         color: currentColor;
         text-decoration: none;
+
+        transition-property: color;
+        transition-duration: .25s;
+
+        &:hover, &:focus {
+            color: $wvu-yellow;
+        }
     }
 
     &__icon {
@@ -236,6 +263,6 @@ img {
     padding: 2rem; 
     background-color: rgba(white, .1);
     color: white;
-    font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
 }
