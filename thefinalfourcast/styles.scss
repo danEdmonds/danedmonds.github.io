@@ -21,6 +21,10 @@ $pms-432-c: #333F48;
 $pms-429-c: #A2AAAD;
 $pms-286-c: #0033A0;
 $pms-300-c: #005EB8;
+$apple: black;
+$spotify: #1DB954;
+$tunein: #14D8CC;
+$stitcher: black;
 $facebook: #3b5999;
 $instagram: #d93175;
 $twitter: #55acee;
@@ -115,10 +119,29 @@ ul {
     text-transform: uppercase;
 }
 
-img {
-    display: block;
-    width: 100%;
-    height: auto;
+.listen {
+    display: inline-block;
+    height: 34px;
+    padding: .25rem;
+    border-radius: .125rem;
+    background-color: black;
+    color: white;
+
+    &--apple {
+        background-color: $apple;
+    }
+    
+    &--spotify {
+        background-color: $spotify;
+    }
+
+    &--tunein {
+        background-color: $tunein;
+    }
+
+    &--stitcher {
+        background-color: $stitcher;
+    }
 }
 
 .player {

@@ -82,10 +82,21 @@ ul {
   line-height: 1.2;
   text-transform: uppercase; }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto; }
+.listen {
+  display: inline-block;
+  height: 34px;
+  padding: .25rem;
+  border-radius: .125rem;
+  background-color: black;
+  color: white; }
+  .listen--apple {
+    background-color: black; }
+  .listen--spotify {
+    background-color: #1DB954; }
+  .listen--tunein {
+    background-color: #14D8CC; }
+  .listen--stitcher {
+    background-color: black; }
 
 .player {
   display: flex;
