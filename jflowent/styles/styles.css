@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Futura Std';
+  src: url("../fonts/FuturaStd-Bold.woff2") format("woff2"), url("../fonts/FuturaStd-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura Std';
+  src: url("../fonts/FuturaStd-Book.woff2") format("woff2"), url("../fonts/FuturaStd-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Black Heart';
+  src: url("../fonts/BlackHeart.woff2") format("woff2"), url("../fonts/BlackHeart.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #002855;
+  color: white;
+  font-family: 'Futura Std';
+  font-size: 100%; }
+
+.page--podcast {
+  background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(0, 40, 85, 0.94)), url(../images/final-fourcast-resized-1440x600.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+a {
+  color: #EAAA00; }
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+
+h2 {
+  margin-bottom: .25em; }
+
+p {
+  margin-top: .25rem;
+  margin-bottom: 0; }
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none; }
+
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute; }
+
+.layout {
+  width: calc(100% - 2rem);
+  max-width: 67.5rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.header {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  text-align: center; }
+  .page--podcast .header {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    text-align: center; }
+  .header__logo--jflow {
+    height: 240px; }
+  .header__logo--podcast {
+    font-family: 'Black Heart';
+    color: #EAAA00;
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: .8;
+    letter-spacing: .25rem;
+    text-shadow: 1px 0 white; }
+    @media screen and (min-width: 400px) {
+      .header__logo--podcast {
+        font-size: 4rem; } }
+    @media screen and (min-width: 600px) {
+      .header__logo--podcast {
+        font-size: 8.5rem; } }
+  .header__logo img {
+    width: auto;
+    height: 100%; }
+  .header p {
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.25rem; }
+    .header p:first-of-type {
+      font-size: 2.25rem;
+      font-weight: bold;
+      text-transform: uppercase; }
+
+.listen {
+  display: inline-block;
+  padding: .125rem .25rem;
+  border-radius: .125rem;
+  background-color: black;
+  color: white; }
+  .listen--apple {
+    background-color: black; }
+  .listen--spotify {
+    background-color: #1DB954; }
+  .listen--tunein {
+    background-color: #14D8CC; }
+  .listen--stitcher {
+    background-color: black; }
+
+.events {
+  text-align: center; }
+  .events__layout {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+  .events li {
+    margin-top: 1rem; }
+  .events .button {
+    width: 100%; }
+
+.button {
+  display: inline-block;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  background-color: #EAAA00;
+  border-radius: .25rem;
+  color: #002855;
+  text-align: center; }
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .page--podcast .footer {
+    margin-top: auto; }
+  .footer__layout {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: auto auto;
+    justify-content: space-between; }
+
+.social__items {
+  display: flex;
+  flex-wrap: wrap; }
+
+.social__item {
+  flex: 0 0 auto; }
+  .social__item:nth-last-child(n+2) {
+    margin-right: 1rem; }
+
+.social a {
+  display: block;
+  color: currentColor;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: .25s; }
+  .social a:hover, .social a:focus {
+    color: #EAAA00; }
+
+.social__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: .25rem;
+  background-color: currentColor; }
+
+.social svg {
+  vertical-align: middle;
+  margin-right: .25rem;
+  transform: translate(4px, -1px);
+  fill: currentColor; }
