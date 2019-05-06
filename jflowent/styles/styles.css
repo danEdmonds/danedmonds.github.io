@@ -30,13 +30,12 @@ body {
   background-color: #002855;
   color: white;
   font-family: 'Futura Std';
-  font-size: 100%; }
-
-.page--podcast {
+  font-size: 100%;
   background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(0, 40, 85, 0.94)), url(../images/final-fourcast-resized-1440x600.jpg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
 
 a {
   color: #EAAA00; }
@@ -59,6 +58,11 @@ ul {
   padding-left: 0;
   list-style-type: none; }
 
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%; }
+
 .visually-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -70,21 +74,19 @@ ul {
   position: absolute; }
 
 .layout {
-  width: calc(100% - 2rem);
+  width: calc(100% - 4rem);
   max-width: 67.5rem;
   margin-left: auto;
   margin-right: auto; }
 
 .header {
   padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
   text-align: center; }
   .page--podcast .header {
     padding-top: 12rem;
     padding-bottom: 12rem;
     text-align: center; }
-  .header__logo--jflow {
-    height: 240px; }
   .header__logo--podcast {
     font-family: 'Black Heart';
     color: #EAAA00;
@@ -100,8 +102,7 @@ ul {
       .header__logo--podcast {
         font-size: 8.5rem; } }
   .header__logo img {
-    width: auto;
-    height: 100%; }
+    max-width: 240px; }
   .header p {
     margin-top: 2rem;
     color: white;
@@ -127,6 +128,9 @@ ul {
     background-color: black; }
 
 .events {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: white;
   text-align: center; }
   .events__layout {
     display: grid;
@@ -137,26 +141,42 @@ ul {
   .events .button {
     width: 100%; }
 
+.event {
+  display: flex;
+  flex-direction: column; }
+  .event__logo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #EAAA00; }
+    .event--podcast .event__logo {
+      font-family: 'Black Heart';
+      font-size: 4rem;
+      font-weight: normal;
+      line-height: 1;
+      letter-spacing: .25rem; }
+
 .button {
   display: inline-block;
   padding: .5rem .75rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   background-color: #EAAA00;
   border-radius: .25rem;
   color: #002855;
+  font-weight: bold;
   text-align: center; }
 
 .footer {
-  margin-top: 4rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); }
-  .page--podcast .footer {
-    margin-top: auto; }
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto; }
   .footer__layout {
     display: grid;
     grid-gap: 4rem;
     grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     justify-content: space-between; }
 
 .social__items {

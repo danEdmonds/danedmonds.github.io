@@ -55,17 +55,18 @@ body {
     // font-family: 'Open Sans', sans-serif;
     font-family: 'Futura Std';
     font-size: 100%;    
-}
+// }
 
-.page {
-    &--podcast {
+// .page {
+    // &--podcast {
         background-image: 
         linear-gradient(to right, rgba($pms-286-c, .9), rgba($wvu-blue, .94)), 
         url(../images/final-fourcast-resized-1440x600.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-    }
+        background-attachment: fixed;
+    // }
 }
 
 a {
@@ -94,6 +95,13 @@ ul {
     list-style-type: none;
 }
 
+img {
+    // display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
 .visually-hidden {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
@@ -106,7 +114,7 @@ ul {
 }
 
 .layout {
-    width: calc(100% - 2rem);
+    width: calc(100% - 4rem);
     max-width: 67.5rem; // 1080px
     margin-left: auto; 
     margin-right: auto;
@@ -114,7 +122,7 @@ ul {
 
 .header {
     padding-top: 8rem; 
-    padding-bottom: 8rem; 
+    padding-bottom: 4rem; 
     text-align: center;
 
     .page--podcast & {
@@ -124,10 +132,6 @@ ul {
     }
 
     &__logo {
-        &--jflow {
-            height: 240px;
-        }
-
         &--podcast {
             font-family: 'Black Heart';
             color: $wvu-yellow;
@@ -147,8 +151,7 @@ ul {
         }
 
         img {
-            width: auto;
-            height: 100%;
+            max-width: 240px;
         }
     }
 
@@ -196,6 +199,10 @@ ul {
 
 
 .events {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: white;
+    // background-color: rgba($wvu-blue, .5);
     text-align: center;
 
     &__layout {
@@ -213,13 +220,41 @@ ul {
     }
 }
 
+.event {
+    $self: &;
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $wvu-yellow;
+
+        #{$self}--podcast & {
+            font-family: 'Black Heart';
+            font-size: 4rem;
+            font-weight: normal;
+            line-height: 1;
+            letter-spacing: .25rem;
+            // text-shadow: 1px 0 white;
+        }
+
+        img {
+
+        }
+    }
+}
+
 .button {
     display: inline-block;
     padding: .5rem .75rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     background-color: $wvu-yellow;
     border-radius: .25rem;
     color: $wvu-blue;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -227,24 +262,27 @@ ul {
 
 
 .footer {
-    margin-top: 4rem;
+    // margin-top: 4rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
     border-top: 1px solid rgba(white, .1);
 
-    .page--podcast & {
+    // .page--podcast & {
         margin-top: auto;
-    }
+    // }
 
     &__layout {
         display: grid;
         grid-gap: 4rem;
         grid-template-columns: auto auto;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         justify-content: space-between;
     }
 }
 
 .social {    
+    // justify-self: end;
+
     &__items {
         display: flex;
         flex-wrap: wrap;
