@@ -55,18 +55,27 @@ body {
     // font-family: 'Open Sans', sans-serif;
     font-family: 'Futura Std';
     font-size: 100%;    
-// }
+}
 
-// .page {
-    // &--podcast {
+.page {
+    background-color: $pms-286-c;
+    // background-image: 
+    //     linear-gradient(to right, rgba($pms-286-c, .9), rgba($wvu-blue, .94)), 
+    //     url(../images/CJY-2115.JPG);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    // background-attachment: fixed;
+
+    &--podcast {
         background-image: 
         linear-gradient(to right, rgba($pms-286-c, .9), rgba($wvu-blue, .94)), 
         url(../images/final-fourcast-resized-1440x600.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        background-attachment: fixed;
-    // }
+        // background-attachment: fixed;
+    }
 }
 
 a {
@@ -201,7 +210,7 @@ img {
 .events {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    background-color: white;
+    // background-color: white;
     // background-color: rgba($wvu-blue, .5);
     text-align: center;
 

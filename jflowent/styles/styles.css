@@ -30,12 +30,15 @@ body {
   background-color: #002855;
   color: white;
   font-family: 'Futura Std';
-  font-size: 100%;
-  background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(0, 40, 85, 0.94)), url(../images/final-fourcast-resized-1440x600.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed; }
+  font-size: 100%; }
+
+.page {
+  background-color: #0033A0; }
+  .page--podcast {
+    background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(0, 40, 85, 0.94)), url(../images/final-fourcast-resized-1440x600.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
 
 a {
   color: #EAAA00; }
@@ -130,7 +133,6 @@ img {
 .events {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-color: white;
   text-align: center; }
   .events__layout {
     display: grid;
