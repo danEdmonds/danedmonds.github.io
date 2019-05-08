@@ -58,14 +58,24 @@ body {
 }
 
 .page {
-    background-color: $pms-286-c;
+    // background-color: $pms-286-c;
+    // background-image: 
+    //     linear-gradient(rgba(white, 1) 8rem, rgba(white, 0) 50%), 
+    //     linear-gradient(rgba(white, .8), rgba(white, .8)), 
+    //     url(../images/61.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    // background-attachment: fixed;
+
     background-image: 
-        linear-gradient(rgba($wvu-blue, .9) 4rem, rgba($wvu-blue, 0) 50%), 
-        url(../images/trianglify-blue-small.png);
+        // linear-gradient(rgba(white, 1), rgba(white, 0)), 
+        linear-gradient(rgba(white, .8), rgba(white, .8)), 
+        url(../images/61.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    // background-attachment: fixed;
+    background-attachment: fixed;
 
     &--podcast {
         background-image: 
@@ -74,7 +84,7 @@ body {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        // background-attachment: fixed;
+        background-attachment: scroll;
     }
 }
 
@@ -130,7 +140,7 @@ img {
 }
 
 .header {
-    padding-top: 8rem; 
+    padding-top: 4rem; 
     padding-bottom: 4rem; 
     text-align: center;
 
@@ -210,8 +220,16 @@ img {
 .events {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    // background-color: white;
+    // background-color: rgba(white, .1);
     // background-color: rgba($wvu-blue, .5);
+    background-image: 
+        // linear-gradient(rgba(white, 1), rgba(white, 0)), 
+        linear-gradient(rgba($wvu-black, .9), rgba($wvu-black, .9)), 
+        url(../images/61.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     text-align: center;
 
     &__layout {
@@ -235,6 +253,7 @@ img {
     flex-direction: column;
 
     &__logo {
+        // flex: 0 0 200px;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -250,9 +269,13 @@ img {
             // text-shadow: 1px 0 white;
         }
 
-        img {
+        // img {
+        //     max-height: 200px;
+        // }
+    }
 
-        }
+    p {
+        font-size: 1.5rem;
     }
 }
 
@@ -279,6 +302,10 @@ img {
     // .page--podcast & {
         margin-top: auto;
     // }
+
+    .page--jflow & {
+        color: $wvu-black;
+    }
 
     &__layout {
         display: grid;
