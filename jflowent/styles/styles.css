@@ -33,7 +33,11 @@ body {
   font-size: 100%; }
 
 .page {
-  background-color: #0033A0; }
+  background-color: #0033A0;
+  background-image: linear-gradient(rgba(0, 40, 85, 0.9) 4rem, rgba(0, 40, 85, 0) 50%), url(../images/trianglify-blue-small.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
   .page--podcast {
     background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(0, 40, 85, 0.94)), url(../images/final-fourcast-resized-1440x600.jpg);
     background-repeat: no-repeat;

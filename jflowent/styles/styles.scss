@@ -59,12 +59,12 @@ body {
 
 .page {
     background-color: $pms-286-c;
-    // background-image: 
-    //     linear-gradient(to right, rgba($pms-286-c, .9), rgba($wvu-blue, .94)), 
-    //     url(../images/CJY-2115.JPG);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
+    background-image: 
+        linear-gradient(rgba($wvu-blue, .9) 4rem, rgba($wvu-blue, 0) 50%), 
+        url(../images/trianglify-blue-small.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     // background-attachment: fixed;
 
     &--podcast {
