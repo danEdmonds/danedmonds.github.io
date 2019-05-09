@@ -33,7 +33,7 @@ body {
   font-size: 100%; }
 
 .page {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../images/61.jpg);
+  background-image: linear-gradient(rgba(44, 42, 41, 0.9), rgba(44, 42, 41, 0.9)), url(../images/61.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -89,7 +89,7 @@ img {
 
 .header {
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 0;
   text-align: center; }
   .page--podcast .header {
     padding-top: 12rem;
@@ -138,11 +138,6 @@ img {
 .events {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-image: linear-gradient(rgba(44, 42, 41, 0.9), rgba(44, 42, 41, 0.9)), url(../images/61.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
   text-align: center; }
   .events__layout {
     display: grid;
@@ -186,8 +181,6 @@ img {
   padding-bottom: 4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: auto; }
-  .page--jflow .footer {
-    color: #2C2A29; }
   .footer__layout {
     display: grid;
     grid-gap: 4rem;
