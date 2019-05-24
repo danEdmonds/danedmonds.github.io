@@ -310,7 +310,10 @@ ul {
 
     &__player {
         overflow: hidden;
+        max-width: 800px;
         margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
         background-color: #ddd;
         border-radius: .125rem;
         box-shadow: 0 .25rem .5rem black;
