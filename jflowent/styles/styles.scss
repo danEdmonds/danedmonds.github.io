@@ -29,13 +29,6 @@ $pms-432-c: #333F48;
 $pms-429-c: #A2AAAD;
 $pms-286-c: #0033A0;
 $pms-300-c: #005EB8;
-$apple: black;
-$spotify: #1DB954;
-$tunein: #14D8CC;
-$stitcher: black;
-$facebook: #3b5999;
-$instagram: #d93175;
-$twitter: #55acee;
 
 html{
     box-sizing: border-box;
@@ -46,55 +39,11 @@ html{
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     margin: 0;
     background-color: $wvu-blue;
     color: white;
-    // font-family: 'Open Sans', sans-serif;
-    font-family: 'Futura Std';
+    font-family: 'Futura Std', sans-serif;
     font-size: 100%;    
-}
-
-.page {
-    // background-color: $pms-286-c;
-    // background-image: 
-    //     linear-gradient(rgba(white, 1) 8rem, rgba(white, 0) 50%), 
-    //     linear-gradient(rgba(white, .8), rgba(white, .8)), 
-    //     url(../images/61.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
-    // background-attachment: fixed;
-
-    background-image: 
-        // linear-gradient(rgba(white, 1), rgba(white, 0)), 
-        linear-gradient(rgba($wvu-black, .9), rgba($wvu-black, .9)), 
-        url(../images/61.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-
-    // background-image: 
-    //     // linear-gradient(rgba(white, 1), rgba(white, 0)), 
-    //     linear-gradient(rgba(white, .8), rgba(white, .8)), 
-    //     url(../images/61.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
-    // background-attachment: fixed;
-
-    &--podcast {
-        background-image: 
-        linear-gradient(to right, rgba($pms-286-c, .9), rgba($wvu-blue, .94)), 
-        url(../images/final-fourcast-resized-1440x600.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        background-attachment: scroll;
-    }
 }
 
 a {
@@ -108,12 +57,14 @@ h1, h2 {
 }
 
 h2 {
+    margin-top: 2rem;
     margin-bottom: .25em;
 }
 
 p {
     margin-top: .25rem;
     margin-bottom: 0;
+    font-size: 1.5em;
 }
 
 ul {
@@ -121,13 +72,6 @@ ul {
     margin-bottom: 0;
     padding-left: 0;
     list-style-type: none;
-}
-
-img {
-    // display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
 }
 
 .visually-hidden {
@@ -141,6 +85,15 @@ img {
     position: absolute;
 }
 
+.page {
+    background-image: 
+        linear-gradient(rgba(black, .8), rgba(black, .8)),
+        url(../images/61.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 .layout {
     width: calc(100% - 4rem);
     max-width: 67.5rem; // 1080px
@@ -149,96 +102,93 @@ img {
 }
 
 .header {
-    padding-top: 4rem; 
-    padding-bottom: 0; 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
     text-align: center;
 
-    .page--podcast & {
-        padding-top: 12rem; 
-        padding-bottom: 12rem;
-        text-align: center;
+    h1 {
+        font-size: 1em;
+        font-weight: normal;
+        text-transform: none;
     }
+}
 
-    &__logo {
-        &--podcast {
-            font-family: 'Black Heart';
-            color: $wvu-yellow;
-            font-size: 3rem;
-            font-weight: normal;
-            line-height: .8;
-            letter-spacing: .25rem;
-            text-shadow: 1px 0 white;
-        
-            @media screen and (min-width: 400px) {
-                font-size: 4rem;
+.footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid rgba(white, .1);
+    font-size: 1.125em;
+    text-align: center;
+
+    nav {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        li {
+            flex: 0 0 auto;
+        }
+
+        &:first-child li {
+            &:first-child {
+                order: 1;
             }
-        
-            @media screen and (min-width: 600px) {
-                font-size: 8.5rem;
+
+            &:nth-child(2) {
+                order: 2;
+            }
+
+            &:nth-child(3) {
+                order: 4;
+            }
+
+            &:nth-child(4) {
+                order: 5;
+            }
+
+            &:last-child {
+                order: 3;
+            }
+        }
+    
+        a {
+            display: block;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            color: currentColor;
+            text-decoration: none;
+    
+            transition-property: color;
+            transition-duration: .25s;
+    
+            &:hover, &:focus {
+                color: $wvu-yellow;
             }
         }
 
         img {
-            max-width: 240px;
+            width: 120px;
         }
-    }
-
-    p {
-        margin-top: 2rem;
-        color: white; 
-        font-size: 1.25rem;
-
-        &:first-of-type {
-            font-size: 2.25rem;
-            font-weight: bold;
-            text-transform: uppercase;
+        
+        svg {
+            vertical-align: middle;
+            margin-right: .25rem;
+            transform: translate(4px, -1px);
+            fill: currentColor;
         }
     }
 }
-
-
-
-
-.listen {
-    display: inline-block;
-    padding: .125rem .25rem;
-    border-radius: .125rem;
-    background-color: black;
-    color: white;
-
-    &--apple {
-        background-color: $apple;
-    }
-    
-    &--spotify {
-        background-color: $spotify;
-    }
-
-    &--tunein {
-        background-color: $tunein;
-    }
-
-    &--stitcher {
-        background-color: $stitcher;
-    }
-}
-
-
-
 
 .events {
     padding-top: 4rem;
-    padding-bottom: 4rem;
-    // background-color: rgba(white, .1);
-    // background-color: rgba($wvu-blue, .5);
-    // background-image: 
-    //     // linear-gradient(rgba(white, 1), rgba(white, 0)), 
-    //     linear-gradient(rgba($wvu-black, .9), rgba($wvu-black, .9)), 
-    //     url(../images/61.jpg);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
-    // background-attachment: fixed;
     text-align: center;
 
     &__layout {
@@ -262,7 +212,6 @@ img {
     flex-direction: column;
 
     &__logo {
-        // flex: 0 0 200px;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -275,16 +224,13 @@ img {
             font-weight: normal;
             line-height: 1;
             letter-spacing: .25rem;
-            // text-shadow: 1px 0 white;
         }
-
-        // img {
-        //     max-height: 200px;
-        // }
     }
 
-    p {
-        font-size: 1.5rem;
+    img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
     }
 }
 
@@ -297,75 +243,60 @@ img {
     color: $wvu-blue;
     font-weight: bold;
     text-align: center;
+
+    &--spotify {
+        background-color: white;
+        color: #1DB954;
+    }
+
+    img {
+        display: block;
+    }
 }
 
+.podcast {
+    text-align: center;
 
-
-
-.footer {
-    // margin-top: 4rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    border-top: 1px solid rgba(white, .1);
-
-    // .page--podcast & {
-        margin-top: auto;
-    // }
-
-    // .page--jflow & {
-    //     color: $wvu-black;
-    // }
+    &__photo {
+        width: 100%;
+    }
 
     &__layout {
-        display: grid;
-        grid-gap: 4rem;
-        grid-template-columns: auto auto;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        justify-content: space-between;
+        position: relative;
+        margin-top: -16rem;
+        padding-top: 8rem;
+        background-image: linear-gradient(rgba(black, 0), rgba(black, 1) 16rem, rgba( black, 0));
     }
-}
 
-.social {    
-    // justify-self: end;
+    &__logo {
+        font-family: 'Black Heart';
+        color: $wvu-yellow;
+        font-size: 3rem;
+        font-weight: normal;
+        line-height: .8;
+        letter-spacing: .25rem;
+        text-shadow: 1px 0 white;
+    
+        @media screen and (min-width: 400px) {
+            font-size: 4rem;
+        }
+    
+        @media screen and (min-width: 600px) {
+            font-size: 8.5rem;
+        }
+    }
 
-    &__items {
+    &__subscriptions {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
     }
 
-    &__item {
+    &__subscribe {
         flex: 0 0 auto;
-        
-        &:nth-last-child(n+2) {
-            margin-right: 1rem;
-        }
-    }
-
-    a {
-        display: block;
-        color: currentColor;
-        text-decoration: none;
-
-        transition-property: color;
-        transition-duration: .25s;
-
-        &:hover, &:focus {
-            color: $wvu-yellow;
-        }
-    }
-
-    &__icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        border-radius: .25rem;
-        background-color: currentColor;
-    }
-    
-    svg {
-        vertical-align: middle;
-        margin-right: .25rem;
-        transform: translate(4px, -1px);
-        fill: currentColor;
+        margin-left: .5rem;
+        margin-right: .5rem;
     }
 }
