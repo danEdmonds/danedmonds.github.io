@@ -40,7 +40,7 @@ html{
 
 body {
     margin: 0;
-    background-color: $wvu-blue;
+    background-color: black;
     color: white;
     font-family: 'Futura Std', sans-serif;
     font-size: 100%;    
@@ -252,11 +252,6 @@ ul {
     font-weight: bold;
     text-align: center;
 
-    &--spotify {
-        background-color: white;
-        color: #1DB954;
-    }
-
     img {
         display: block;
     }
@@ -300,12 +295,16 @@ ul {
         justify-content: center;
         margin-top: 4rem;
         margin-bottom: 2rem;
-    }
 
-    &__subscribe {
-        flex: 0 0 auto;
-        margin-left: .5rem;
-        margin-right: .5rem;
+        li {
+            flex: 0 0 auto;
+        }
+
+        a {
+            display: block;
+            margin-left: .5rem;
+            margin-right: .5rem;
+        }
     }
 
     &__player {

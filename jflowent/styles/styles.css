@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #002855;
+  background-color: black;
   color: white;
   font-family: 'Futura Std', sans-serif;
   font-size: 100%; }
@@ -176,9 +176,6 @@ ul {
   color: #002855;
   font-weight: bold;
   text-align: center; }
-  .button--spotify {
-    background-color: white;
-    color: #1DB954; }
   .button img {
     display: block; }
 
@@ -211,10 +208,12 @@ ul {
     justify-content: center;
     margin-top: 4rem;
     margin-bottom: 2rem; }
-  .podcast__subscribe {
-    flex: 0 0 auto;
-    margin-left: .5rem;
-    margin-right: .5rem; }
+    .podcast__subscriptions li {
+      flex: 0 0 auto; }
+    .podcast__subscriptions a {
+      display: block;
+      margin-left: .5rem;
+      margin-right: .5rem; }
   .podcast__player {
     overflow: hidden;
     max-width: 800px;
