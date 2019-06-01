@@ -355,6 +355,15 @@ ul {
         text-align: left;
     }
 
+    &--4 {
+        background-image: 
+                linear-gradient(rgba(black, .7), rgba(black, .7)),
+                url(../images/alumni-game-01.jpg);
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+
     &--5, &--7 {
         background-color: rgba(white, .9);
         color: $wvu-blue;

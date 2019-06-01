@@ -245,6 +245,11 @@ ul {
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) repeat(3, 360px) minmax(1rem, 1fr);
     text-align: left; }
+  .tbt-section--4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/alumni-game-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
   .tbt-section--5, .tbt-section--7 {
     background-color: rgba(255, 255, 255, 0.9);
     color: #002855; }
