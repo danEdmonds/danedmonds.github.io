@@ -1,0 +1,51 @@
+/* CAFEE Colors
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Primary Palette */
+/* Neutral Palette */
+/* Accent Palette */
+/* Social Media Colors */
+/* CAFEE Typefaces
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+body {
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  transition-property: background-color, color;
+  transition-duration: .25s; }
+
+.btn {
+  font-weight: bold; }
+
+.btn-primary {
+  background-color: #EAAA00;
+  border-color: #EAAA00;
+  color: #002855; }
+
+.cafee-header {
+  background-color: #001e41; }
+  .cafee-header__skip-nav {
+    background-color: #EAAA00;
+    color: #002855; }
+  .cafee-header .nav-link {
+    color: white; }
+    .cafee-header .nav-link:hover, .cafee-header .nav-link:focus {
+      color: #EAAA00; }
+  .cafee-header__secondary-navigation {
+    font-size: .875rem; }
+  .cafee-header__navigation {
+    background-color: #002855;
+    font-size: 1.125em; }
+
+.cafee-footer {
+  background-color: #2C2A29;
+  color: white;
+  font-size: .875rem; }
+  .cafee-footer .nav-link {
+    color: white; }
+  .cafee-footer__copyright {
+    background-color: #21201f; }
+
+.cafee-card__header {
+  background-color: #EAAA00;
+  color: #002855;
+  font-size: 1.5rem; }

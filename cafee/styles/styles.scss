@@ -1,0 +1,81 @@
+@import "variables";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    transition-property: background-color, color;
+    transition-duration: .25s;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: $wvu-yellow;
+    border-color: $wvu-yellow;
+    color: $wvu-blue;
+}
+
+.cafee {
+    &-header {
+        background-color: darken($wvu-blue, 4%);
+
+        &__skip-nav {
+            background-color: $wvu-yellow;
+            color: $wvu-blue;
+        }
+
+        // &__brand {
+        //     max-width: 320px;
+        // }
+
+        .nav-link {
+            color: white;
+
+            &:hover, &:focus {
+                color: $wvu-yellow;
+            }
+        }
+
+        &__secondary-navigation {
+            font-size: .875rem;
+        }
+
+        &__navigation {
+            background-color: $wvu-blue;
+            font-size: 1.125em;
+        }
+    }
+
+    &-footer {
+        background-color: $wvu-black;
+        color: white;
+        font-size: .875rem;
+
+        .nav-link {
+            color: white;
+        }
+
+        &__navigation {
+
+        }
+
+        &__copyright {
+            background-color: darken($wvu-black, 4%);
+        }
+    }
+
+    &-card {
+        // border-color: $pms-144-c;
+
+        &__header {
+            background-color: $wvu-yellow;
+            // border-color: $pms-144-c;
+            color: $wvu-blue;
+            font-size: 1.5rem;
+        }
+    }
+}
