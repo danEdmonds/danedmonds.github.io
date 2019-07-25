@@ -49,3 +49,7 @@ a {
   background-color: #EAAA00;
   color: #002855;
   font-size: 1.5rem; }
+
+.cafee-capability__image {
+  width: 400px;
+  height: 600px; }
