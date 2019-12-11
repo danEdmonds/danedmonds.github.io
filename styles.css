@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
     margin: 0;
     background-color: #0a1922;
@@ -21,9 +22,8 @@ body {
 }
 
 .container {
-    width: calc(100% - 4rem);
-    max-width: 40rem;
-    margin: auto;
+    max-width: 48rem;
+    padding: 2rem;
 }
 
 a {
