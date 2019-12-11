@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    height: 100%;
 }
 
 *, *:before, *:after {
@@ -11,10 +12,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
     background-color: #0a1922;
-    /* background-image: radial-gradient(circle at right, #33ba91 0%, #0594cb 100%); */
     border-top: .5rem solid #0594cb;
     color: white;
     font-family: 'Roboto', sans-serif;
