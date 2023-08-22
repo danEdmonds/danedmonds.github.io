@@ -5,4 +5,4 @@
 layout: page
 title: Hello, I’m Dan Edmonds.
 ---
-I’m a passionate <strong>front-end designer and developer</strong> in Pittsburgh, Pennsylvania, and I’m a <strong>Creative Development Lead</strong> at the <a href="https://health.wvu.edu" target="_blank">Health Sciences Campus</a> at West Virginia University.
+I’m a passionate <strong>front-end designer and developer</strong> in Morgantown, WV, and I’m a <strong>user interface designer</strong> at West Virginia University.
