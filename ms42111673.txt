@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "danedmonds.net",
+  "Id": "a8bd34d4-2b4c-4089-af6c-3bedc3ca9b34"
+}
