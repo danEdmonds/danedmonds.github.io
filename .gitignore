@@ -1,2 +1,5 @@
-intro/Metal_LG.jpg
-arnett-law/images/Thumbs.db
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
