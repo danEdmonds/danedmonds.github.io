@@ -5,4 +5,4 @@
 layout: page
 title: Hello, I’m Dan Edmonds.
 ---
-I’m a passionate <strong>front-end designer and developer</strong> in Morgantown, WV, and I’m a <strong>user interface designer</strong> at West Virginia University.
+I’m a passionate <strong>front-end designer and developer</strong> in Morgantown, WV, and I’m a <strong>user interface designer</strong> at <strong style="color: #eaaa00;">West Virginia University</strong>.
