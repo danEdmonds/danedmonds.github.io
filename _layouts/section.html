@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="section">
+  {% if page.section == 'about' %}
+    <h2>About Us</h2>
+  {% elsif page.section == 'contact' %}
+    <h2>Contact Us</h2>
+  {% endif %}
+  
+  {{ content }}
+</div>

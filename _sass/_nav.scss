@@ -1,0 +1,32 @@
+// Nav
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    a {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    .logo {
+        transform: translateY(0);
+        width: 6rem;
+        fill: var(--de-green);
+        filter: drop-shadow(0 .25rem 0 rgba(0, 0, 0, 0));
+
+        transition-property: transform, fill, filter;
+        transition-duration: .25s;
+    }
+
+    a:hover .logo, 
+    a:focus .logo {
+        transform: translateY(-.125rem);
+        filter: drop-shadow(0 .25rem 0 rgba(0, 0, 0, .25));
+    }
+}

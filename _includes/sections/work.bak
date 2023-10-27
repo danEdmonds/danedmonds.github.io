@@ -1,0 +1,50 @@
+{% assign projects = site.projects | sort: 'order' | reverse %}
+{%- if projects.size > 0 -%}
+    <div>
+        <h2 id="{{ section.slug }}">{{ section.title }}</h2>
+        
+        {{ section.content }}
+
+        <div class="projects">
+            {%- for post in projects -%}
+                {%- unless post.parent -%}
+                    {% assign class_list = "project" %}
+                    {% assign has_related_projects = false %}
+
+                    {% if post.slug %}
+                        {% assign class_list = class_list | append: " project--" | append: post.slug %}
+                    {% endif %}
+
+                    <a href="{{ post.url | relative_url }}" class="{{ class_list }}">
+                        <figure>
+                            <img src="{{ site.baseurl }}/assets/images/{{ post.thumbnail }}" alt="" width="600" height="800">
+
+                            <figcaption>{{ post.title | escape }}</figcaption>
+                        </figure>
+                    </a>
+
+                    {% for otherPost in projects %}
+                        {% if otherPost.title != post.title and otherPost.parent == post.title %}
+                            {% assign has_related_projects = true %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                
+                    {% if has_related_projects %}
+                        {% assign related_projects = site.projects | where: "parent", post.title | reverse %}
+
+                        <dl class="project project--related">
+                            <dt>WVU Health Subsites</dt>
+
+                            {%- for related_project in related_projects -%}
+                                <dd>
+                                    <a href="{{ related_project.url | relative_url }}">{{ related_project.title | escape }}</a> 
+                                </dd>
+                            {%- endfor -%}
+                        </dl>
+                    {% endif %}
+                {%- endunless -%}
+            {%- endfor -%}
+        </div>
+    </div>
+{%- endif -%}

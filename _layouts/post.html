@@ -1,38 +1,34 @@
 ---
 layout: base
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
-        </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
+<nav>
+    <a href="{{ "/" | relative_url }}">
+        <svg viewBox="0 0 128 99.63" class="logo">
+            <path d="M34.43 11.38C45.45.36 63.31.36 74.32 11.38l17.73 17.73a3.138 3.138 0 0 0 4.43 0l8.87-8.87a3.138 3.138 0 0 1 4.43 0l13.3 13.3a3.138 3.138 0 0 1 0 4.43L80.97 80.08a6.27 6.27 0 0 1-8.87 0L47.72 55.7a3.138 3.138 0 0 1 0-4.43l4.43-4.43a3.138 3.138 0 0 1 4.43 0l8.87 8.87a3.138 3.138 0 0 0 4.43 0l2.22-2.22a6.27 6.27 0 0 0 0-8.87l-13.3-13.3a6.27 6.27 0 0 0-8.87 0L32.21 49.05a6.27 6.27 0 0 0 0 8.87l19.95 19.95a3.138 3.138 0 0 1 0 4.43l-13.3 13.3a3.138 3.138 0 0 1-4.43 0L12.26 73.43c-11.02-11.02-11.02-28.88 0-39.89l22.17-22.16z" />
+        </svg>
+    </a>
+
+    <a href="{{ "/" | relative_url }}#my-work">My work.</a>
+</nav>
+
+<main class="project-entry animate">
+    {%- if page.parent -%}
+        {% for post in site.projects %}
+            {% if post.title == page.parent %}
+                {% assign parent_post = post %}
+                {% break %}
+            {% endif %}
         {% endfor %}
-      {%- endif -%}</p>
-  </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+        {% if parent_post %}
+            <p>
+                <a href="{{ parent_post.url }}" class="project-entry__parent">{{ page.parent }}</a>
+            </p>
+        {% endif %}
+    {%- endif -%}
+
+    <h1 data-heading="{{ page.title | escape }}">{{ page.title | escape }}</h1>
+
     {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</main>

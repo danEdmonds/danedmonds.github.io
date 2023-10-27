@@ -1,7 +1,18 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+/* danedmonds.net
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-@import
-//   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-    "minima/initialize";
+@import "variables";
+@import "tools";
+@import "scrim-gradient";
+@import "base";
+@import "layout";
+@import "logo";
+@import "nav";
+@import "header";
+@import "projects";
+@import "related";
+@import "project";
+@import "footer";

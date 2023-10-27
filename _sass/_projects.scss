@@ -1,0 +1,172 @@
+// Projects
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.projects {
+    display: grid;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card,
+.project {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-row-end: span 3;
+    // max-width: 480px;
+    border-radius: 1.5rem;
+    border-top-left-radius: 8rem;
+    background-color: var(--de-blue);
+    color: var(--de-light-blue);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: right;
+
+    transition-property: transform, background-color, color;
+    transition-duration: 0.25s;
+
+    @media screen and (min-width: 768px) {
+        &:first-child {
+            grid-column-start: 2;
+        }
+    }
+
+    &[href]:hover,
+    &[href]:focus {
+        color: var(--de-green);
+
+        transition-duration: 0.5s;
+    }
+
+    &[href]::before,
+    &[href]::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 1.5rem;
+        border-top-left-radius: 8rem;
+        border: 0.25rem solid darken-color(var(--de-dark-blue), 70%);
+
+        transition-property: transform, box-shadow;
+        transition-duration: 0.25s;
+        // transition-timing-function: cubic-bezier(0, 0.1, 0, 1);
+    }
+
+    &[href]::before {
+        background-color: white;
+        box-shadow: 8px 8px 0px 0px rgba(black, 0.2);
+    }
+
+    &[href]::after {
+        z-index: 1;
+        box-shadow: inset -8px -8px 0px 0px rgba(black, 0.1);
+    }
+
+    &[href]:hover::before,
+    &[href]:focus::before,
+    &[href]:hover::after,
+    &[href]:focus::after {
+        transform: scale(1.05);
+
+        transition-duration: 0.5s;
+    }
+
+    &[href]:hover::before,
+    &[href]:focus::before {
+        box-shadow: 16px 16px 0px 0px rgba(black, 0.1);
+    }
+
+    .projects & {
+        max-width: 30rem;
+        aspect-ratio: 1 / 1.25;
+    }
+
+    figure {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        margin: 0;
+    }
+
+    &__thumbnails {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 1.5rem;
+        border-top-left-radius: 8rem;
+        overflow: hidden;
+
+        transition-property: transform;
+        transition-duration: 0.25s;
+
+        #{$root}[href]:hover &,
+        #{$root}[href]:focus & {
+            transform: scale(1.05);
+
+            transition-duration: 0.5s;
+        }
+    
+        &-container {
+            position: absolute;
+            top: calc(25% + 4rem);
+            left: 50%;
+            transform: rotate(30deg);
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            // width: 45rem; // 720px
+            width: 40rem; // 640px
+            // margin-left: -22.5rem; // -360px
+            margin-left: -20rem; // -320px
+        }
+
+        img {
+            grid-column-end: span 2;
+            aspect-ratio: 4 / 3;
+            border-radius: 4px;
+            background-color: lightgrey;
+            // box-shadow: 
+            //     0px 16px 32px rgba(black, 0.06),
+            //     0px 8px 16px rgba(black, 0.1);
+            box-shadow: 8px 8px 0px 0px rgba(black, 0.08);
+        
+            &:nth-child(3) {
+                grid-column-start: 2;
+            }
+
+            transition-property: transform, box-shadow;
+            transition-duration: 0.25s;
+            transition-delay: 0.075s;
+
+            #{$root}[href]:hover &,
+            #{$root}[href]:focus & {
+                transform: scale(1.05);
+                box-shadow: 12px 12px 0px 0px rgba(black, 0.04);
+
+                transition-duration: 0.5s;
+                transition-delay: 0s;
+            }
+        }
+    }
+
+    figcaption {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 1.5rem 1.5rem 1.5rem 5rem;
+    }
+}
