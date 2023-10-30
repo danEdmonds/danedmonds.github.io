@@ -15,7 +15,7 @@ module Jekyll
             caption = @attributes['caption']
 
             # output = "<div class=\"project-entry__codepen\">"
-            output = "<figure class=\"project-entry__figure\">"
+            output = "<figure class=\"figure\">"
             # output += "<p class=\"codepen\" data-height=\"743\" data-default-tab=\"result\" data-slug-hash=\"#{hash}\" data-user=\"#{user}\" style=\"height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;\"><span>See the Pen <a href=\"https://codepen.io/#{user}/pen/#{hash}\"> WVU R1 Logo SVG Animation</a> by Dan Edmonds (<a href=\"https://codepen.io/#{user}\">@#{user}</a>) on <a href=\"https://codepen.io\">CodePen</a>.</span></p>"
             output += "<p class=\"codepen\" data-height=\"743\" data-default-tab=\"result\" data-slug-hash=\"#{hash}\" data-user=\"#{user}\"><span>See the Pen <a href=\"https://codepen.io/#{user}/pen/#{hash}\"> WVU R1 Logo SVG Animation</a> by Dan Edmonds (<a href=\"https://codepen.io/#{user}\">@#{user}</a>) on <a href=\"https://codepen.io\">CodePen</a>.</span></p>"
             output += "<script async src=\"https://cpwebassets.codepen.io/assets/embed/ei.js\"></script>"

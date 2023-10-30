@@ -10,7 +10,7 @@ module Jekyll
             image = @attributes['image']
             caption = @attributes['caption']
 
-            output = "<figure class=\"project-entry__figure\">"
+            output = "<figure class=\"figure\">"
             output += "<img src=\"#{baseurl}/assets/images/#{image}\" alt=\"\" width=\"1600\" height=\"1200\">"
 
             if !caption.nil? && !caption.empty?

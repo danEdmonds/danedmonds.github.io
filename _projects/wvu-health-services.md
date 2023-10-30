@@ -18,7 +18,7 @@ We worked with the WVU Health Sciences Communications team to organize and prese
 
 ## Well-being
 
-<!-- {% codepen_embed hash="QWzaNdP" user="danedmonds" caption="WVU’s well-being tagline, “Be Well. Be Mindful. Be Active.”, is uniquely presented in a fun animated divider component." %} -->
+{% codepen_embed hash="QWzaNdP" user="danedmonds" caption="WVU’s well-being tagline, “Be Well. Be Mindful. Be Active.”, is uniquely presented in a fun animated divider component." %}
 
 {% video_figure poster="wvu-health-services/wvu-well-being_carousel_poster.jpg" mp4="wvu-health-services/wvu-well-being_carousel_h.264.mp4" caption="Various wellness services offered at WVU are highlighted in an engaging carousel component." %}
 
