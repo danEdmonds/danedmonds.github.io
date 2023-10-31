@@ -1,0 +1,98 @@
+// Typography
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+a {
+    color: white;
+    text-decoration-color: $de-light-blue;
+    text-decoration-thickness: 2px;
+
+    transition-property: background-color, color, text-decoration-color;
+    transition-duration: 0.25s;
+
+    &:hover, &:focus {
+        color: white;
+        text-decoration-color: $de-green;
+    }
+}
+
+h1, h2 {
+    scroll-margin-top: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-weight: 900;
+}
+
+h1 {
+    // --h1-stroke-color: $de-light-blue;
+    // --h1-depth-color: var(--h1-stroke-color);
+
+    position: relative;
+    font-size: 3.25rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    // -webkit-text-stroke: 1px var(--h1-stroke-color);
+    text-shadow:
+        1px 1px lighten-color(var(--de-blue), 20%),
+        2px 2px lighten-color(var(--de-blue), 20%),
+        8px 8px rgba(black, 0.2);
+
+    @media screen and (min-width: 768px) {
+        font-size: 5rem;
+        line-height: 1.1;
+    }
+}
+
+h2 {
+    margin-top: 4em;
+    font-size: 3rem;
+    line-height: 1.2;
+
+    @media screen and (min-width: 576px) {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+}
+
+h3 {
+    margin-top: 1.5em;
+    font-size: 2.5rem;
+}
+
+p {
+    color: rgba(white, 0.6);
+    line-height: 1.75;
+}
+
+main p {
+    max-width: 45rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+b, strong {
+    color: $de-green;
+    font-weight: 500;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+dl:not([class]) {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.6;
+
+    dt {
+        margin-top: 1em;
+    }
+
+    dd {
+        margin-left: 0;
+        color: rgba(white, 0.6);
+        font-size: 1.25rem;
+    }
+}

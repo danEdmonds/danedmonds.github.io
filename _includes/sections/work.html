@@ -1,6 +1,6 @@
 {% assign projects = site.projects | sort: 'order' | reverse %}
 {%- if projects.size > 0 -%}
-    <div>
+    <div class="{{ section.slug }}">
         <h2 id="{{ section.slug }}">{{ section.title }}</h2>
         
         {{ section.content }}
