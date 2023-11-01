@@ -17,16 +17,20 @@ nav {
     .logo {
         transform: translateY(0);
         width: 6rem;
-        fill: var(--de-green);
-        filter: drop-shadow(0 .25rem 0 rgba(0, 0, 0, 0));
+        fill: darken($de-green, 20%);
+        filter: drop-shadow(0.25rem 0.25rem 0 rgba(0, 0, 0, 0));
 
         transition-property: transform, fill, filter;
         transition-duration: .25s;
+
+        use[clip-path] {
+            fill: var(--de-green);
+        }
     }
 
     a:hover .logo, 
     a:focus .logo {
-        transform: translateY(-.125rem);
-        filter: drop-shadow(0 .25rem 0 rgba(0, 0, 0, .25));
+        transform: translate(-0.125rem, -0.125rem);
+        filter: drop-shadow(0.25rem 0.25rem 0 rgba(0, 0, 0, .25));
     }
 }

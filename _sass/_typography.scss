@@ -50,7 +50,7 @@ h2 {
 
     @media screen and (min-width: 576px) {
         font-size: 3.5rem;
-        line-height: 1.2;
+        // line-height: 1.2;
     }
 }
 
@@ -67,7 +67,7 @@ p {
 main p {
     max-width: 45rem;
     font-size: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 b, strong {
@@ -84,7 +84,7 @@ img {
 dl:not([class]) {
     color: white;
     font-size: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.5;
 
     dt {
         margin-top: 1em;

@@ -7,7 +7,7 @@
     justify-content: center;
     margin-top: 3rem;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 960px) {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -27,13 +27,14 @@
     color: var(--de-light-blue);
     font-size: 2rem;
     font-weight: 700;
+    line-height: 1.2;
     text-decoration: none;
     text-align: right;
 
     transition-property: transform, background-color, color;
     transition-duration: 0.25s;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 960px) {
         &:first-child {
             grid-column-start: 2;
         }
