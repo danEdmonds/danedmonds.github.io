@@ -6,11 +6,14 @@
 
     &__parent {
         display: inline-block;
-        padding: 0.5rem 0.75rem;
+        height: 2.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
         border-radius: 0.5rem;
         background-color: var(--de-blue);
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         font-weight: 700;
+        line-height: 2.5rem;
         text-decoration: none;
 
         &:hover,
@@ -61,7 +64,7 @@
         border: 1px solid rgba(black, 0.1);
         box-shadow: 
             0 0 0 16px white,
-            12px 12px 0 16px rgba(black, 0.1);
+            12px 12px 0 16px rgba(black, 0.2);
     }
 
     .cp_embed_wrapper {

@@ -3,7 +3,8 @@
 
 nav {
     display: flex; 
-    justify-content: space-between;
+    gap: 1.5rem;
+    // justify-content: space-between;
     align-items: center;
     margin-bottom: 8rem;
     padding-top: 1rem;
@@ -12,6 +13,10 @@ nav {
     a {
         font-size: 1.25rem;
         font-weight: 700;
+
+        &:nth-child(2) {
+            margin-left: auto;
+        }
     }
 
     .logo {

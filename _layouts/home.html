@@ -7,7 +7,7 @@ layout: base
         <path d="M34.43 11.38C45.45.36 63.31.36 74.32 11.38l17.73 17.73a3.138 3.138 0 0 0 4.43 0l8.87-8.87a3.138 3.138 0 0 1 4.43 0l13.3 13.3a3.138 3.138 0 0 1 0 4.43L80.97 80.08a6.27 6.27 0 0 1-8.87 0L47.72 55.7a3.138 3.138 0 0 1 0-4.43l4.43-4.43a3.138 3.138 0 0 1 4.43 0l8.87 8.87a3.138 3.138 0 0 0 4.43 0l2.22-2.22a6.27 6.27 0 0 0 0-8.87l-13.3-13.3a6.27 6.27 0 0 0-8.87 0L32.21 49.05a6.27 6.27 0 0 0 0 8.87l19.95 19.95a3.138 3.138 0 0 1 0 4.43l-13.3 13.3a3.138 3.138 0 0 1-4.43 0L12.26 73.43c-11.02-11.02-11.02-28.88 0-39.89l22.17-22.16z" />
     </svg>
 
-    <div>
+    <div class="container">
         {%- if page.title -%}
             <h1 class="page-heading" data-title="{{ page.title }}">{{ page.title }}</h1>
         {%- endif -%}
@@ -27,7 +27,7 @@ layout: base
     {% endfor %}
 </main>
 
-<script>
+<!-- <script>
     var titleWrapper = document.querySelector('h1');
     var titleText = titleWrapper.textContent;
     titleWrapper.innerHTML = '';
@@ -45,4 +45,4 @@ layout: base
             titleWrapper.appendChild(document.createTextNode(char));
         }
     }
-</script>
+</script> -->

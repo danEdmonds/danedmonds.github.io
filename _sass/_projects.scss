@@ -42,7 +42,9 @@
 
     &[href]:hover,
     &[href]:focus {
-        color: var(--de-green);
+        // color: var(--de-green);
+        // color: white;
+        color: $de-blue;
 
         transition-duration: 0.5s;
     }
@@ -59,7 +61,7 @@
         border-top-left-radius: 8rem;
         border: 0.25rem solid darken-color(var(--de-dark-blue), 70%);
 
-        transition-property: transform, box-shadow;
+        transition-property: transform, background-color, box-shadow;
         transition-duration: 0.25s;
         // transition-timing-function: cubic-bezier(0, 0.1, 0, 1);
     }
@@ -85,6 +87,7 @@
 
     &[href]:hover::before,
     &[href]:focus::before {
+        background-color: $de-green;
         box-shadow: 16px 16px 0px 0px rgba(black, 0.1);
     }
 
@@ -102,7 +105,7 @@
         margin: 0;
     }
 
-    &__thumbnails {
+    &__thumbs {
         position: relative;
         width: 100%;
         height: 100%;
@@ -128,38 +131,54 @@
             display: grid;
             gap: 2rem;
             grid-template-columns: repeat(4, 1fr);
-            // width: 45rem; // 720px
             width: 40rem; // 640px
-            // margin-left: -22.5rem; // -360px
             margin-left: -20rem; // -320px
+        }
+    }
+
+    &__thumb {
+        grid-column-end: span 2;
+        border-radius: 4px;
+        background-color: $de-blue;
+        box-shadow: 8px 8px 0px 0px rgba(black, 0.08);
+        overflow: hidden;
+    
+        &:nth-child(3) {
+            grid-column-start: 2;
+        }
+
+        transition-property: transform, background-color, box-shadow;
+        transition-duration: 0.25s;
+        transition-delay: 0.075s;
+
+        #{$root}[href]:hover &,
+        #{$root}[href]:focus & {
+            transform: scale(1.05);
+            background-color: darken($de-green, 4%);
+            box-shadow: 12px 12px 0px 0px rgba(black, 0.04);
+
+            transition-duration: 0.5s;
+            transition-delay: 0s;
         }
 
         img {
-            grid-column-end: span 2;
             aspect-ratio: 4 / 3;
-            border-radius: 4px;
-            background-color: lightgrey;
-            // box-shadow: 
-            //     0px 16px 32px rgba(black, 0.06),
-            //     0px 8px 16px rgba(black, 0.1);
-            box-shadow: 8px 8px 0px 0px rgba(black, 0.08);
-        
-            &:nth-child(3) {
-                grid-column-start: 2;
-            }
+            filter: grayscale(0);
+            // opacity: 0.5;
+            opacity: 1;
 
-            transition-property: transform, box-shadow;
+            transition-property: filter, opacity;
             transition-duration: 0.25s;
             transition-delay: 0.075s;
+        }
 
-            #{$root}[href]:hover &,
-            #{$root}[href]:focus & {
-                transform: scale(1.05);
-                box-shadow: 12px 12px 0px 0px rgba(black, 0.04);
+        #{$root}[href]:hover & img,
+        #{$root}[href]:focus & img {
+            filter: grayscale(1);
+            opacity: 0.2;
 
-                transition-duration: 0.5s;
-                transition-delay: 0s;
-            }
+            transition-duration: 0.5s;
+            transition-delay: 0s;
         }
     }
 
