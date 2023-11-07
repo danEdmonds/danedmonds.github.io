@@ -7,7 +7,7 @@
     justify-content: center;
     margin-top: 3rem;
 
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 60em) {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -23,8 +23,8 @@
     // max-width: 480px;
     border-radius: 1.5rem;
     border-top-left-radius: 8rem;
-    background-color: var(--de-blue);
-    color: var(--de-light-blue);
+    background-color: $de-blue;
+    color: $de-light-blue;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
@@ -34,7 +34,7 @@
     transition-property: transform, background-color, color;
     transition-duration: 0.25s;
 
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 60em) {
         &:first-child {
             grid-column-start: 2;
         }
@@ -42,8 +42,6 @@
 
     &[href]:hover,
     &[href]:focus {
-        // color: var(--de-green);
-        // color: white;
         color: $de-blue;
 
         transition-duration: 0.5s;
@@ -59,7 +57,7 @@
         left: 0;
         border-radius: 1.5rem;
         border-top-left-radius: 8rem;
-        border: 0.25rem solid darken-color(var(--de-dark-blue), 70%);
+        border: 0.25rem solid darken($de-dark-blue, 70%);
 
         transition-property: transform, background-color, box-shadow;
         transition-duration: 0.25s;
@@ -68,12 +66,12 @@
 
     &[href]::before {
         background-color: white;
-        box-shadow: 8px 8px 0px 0px rgba(black, 0.2);
+        box-shadow: 0.5rem 0.5rem 0 0 rgba(black, 0.2);
     }
 
     &[href]::after {
         z-index: 1;
-        box-shadow: inset -8px -8px 0px 0px rgba(black, 0.1);
+        box-shadow: inset -.5rem -.5rem 0 0 rgba(black, 0.1);
     }
 
     &[href]:hover::before,
@@ -88,7 +86,7 @@
     &[href]:hover::before,
     &[href]:focus::before {
         background-color: $de-green;
-        box-shadow: 16px 16px 0px 0px rgba(black, 0.1);
+        box-shadow: 1rem 1rem 0 0 rgba(black, 0.1);
     }
 
     .projects & {
@@ -138,9 +136,9 @@
 
     &__thumb {
         grid-column-end: span 2;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         background-color: $de-blue;
-        box-shadow: 8px 8px 0px 0px rgba(black, 0.08);
+        box-shadow: 0.5rem 0.5rem 0 0 rgba(black, 0.08);
         overflow: hidden;
     
         &:nth-child(3) {
@@ -155,7 +153,7 @@
         #{$root}[href]:focus & {
             transform: scale(1.05);
             background-color: darken($de-green, 4%);
-            box-shadow: 12px 12px 0px 0px rgba(black, 0.04);
+            box-shadow: 0.75rem 0.75rem 0 0 rgba(black, 0.04);
 
             transition-duration: 0.5s;
             transition-delay: 0s;
@@ -164,7 +162,6 @@
         img {
             aspect-ratio: 4 / 3;
             filter: grayscale(0);
-            // opacity: 0.5;
             opacity: 1;
 
             transition-property: filter, opacity;

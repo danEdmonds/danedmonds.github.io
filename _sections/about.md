@@ -10,6 +10,8 @@ I’m currently a **user experience designer** at [West Virginia University Heal
 
 I appreciate simplicity and user centered design, taking particular delight in microinteractions and using motion to guide users. **I’m eager to break habits and learn new things.**
 
+[My LinkedIn.](https://www.linkedin.com/in/edmondsdan/)
+
 ### My experience.
 
 <dl>
@@ -24,5 +26,3 @@ I appreciate simplicity and user centered design, taking particular delight in m
     <dt><strong>Multimedia Developer,</strong> Fargo Design Co., <em>Pittsburgh, PA</em></dt>
     <dd>February 2011–May 2011</dd>
 </dl>
-
-[My LinkedIn.](https://www.linkedin.com/in/edmondsdan/)

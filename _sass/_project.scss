@@ -10,7 +10,7 @@
         padding-left: 0.75rem;
         padding-right: 0.75rem;
         border-radius: 0.5rem;
-        background-color: var(--de-blue);
+        background-color: $de-blue;
         font-size: 1.125rem;
         font-weight: 700;
         line-height: 2.5rem;
@@ -18,7 +18,7 @@
 
         &:hover,
         &:focus {
-            background-color: var(--de-green);
+            background-color: $de-green;
         }
     }
 
@@ -33,13 +33,13 @@
 .figure {
     position: relative;
     margin: 8rem 0;
-    background-color: var(--de-blue);
-    box-shadow: 0 0 0 3rem var(--de-blue);
+    background-color: $de-blue;
+    box-shadow: 0 0 0 3rem $de-blue;
     color: white;
     text-align: center;
     line-height: 1.5;
 
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 87.5em) {
         width: calc(100% + 20rem);
         margin-left: -10rem;
     }
@@ -50,21 +50,14 @@
 
     & > div {
         padding: 1rem;
-        // border: 1rem solid white;
-        // box-shadow: 
-        //     0 2px 1px rgba(black, 0.15),
-        //     0 4px 2px rgba(black, 0.15),
-        //     0 8px 4px rgba(black, 0.15),
-        //     0 16px 8px rgba(black, 0.15),
-        //     0 32px 16px rgba(black, 0.15);
     }
 
     img, video {
         background-color: white;
-        border: 1px solid rgba(black, 0.1);
+        border: 0.0625rem solid rgba(black, 0.1);
         box-shadow: 
-            0 0 0 16px white,
-            12px 12px 0 16px rgba(black, 0.2);
+            0 0 0 1rem white,
+            0.75rem 0.75rem 0 1rem rgba(black, 0.2);
     }
 
     .cp_embed_wrapper {
@@ -83,7 +76,7 @@
     p {
         display: flex; 
         align-items: center; 
-        min-height: 320px;
+        min-height: 20rem;
         margin-left: auto;
         margin-right: auto;
         text-align: center;

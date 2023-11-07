@@ -3,7 +3,6 @@
 
 html {
     box-sizing: border-box;
-    height: 100%;
 }
 
 *, *:before, *:after {
@@ -13,8 +12,8 @@ html {
 body {
     min-height: 100%;
     margin: 0;
-    background-color: var(--de-dark-blue);
-    border-top: 0.5rem solid var(--de-blue);
+    background-color: $de-dark-blue;
+    border-top: 0.5rem solid $de-blue;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 100%;

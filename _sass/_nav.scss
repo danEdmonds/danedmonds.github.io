@@ -4,7 +4,6 @@
 nav {
     display: flex; 
     gap: 1.5rem;
-    // justify-content: space-between;
     align-items: center;
     margin-bottom: 8rem;
     padding-top: 1rem;
@@ -23,19 +22,19 @@ nav {
         transform: translateY(0);
         width: 6rem;
         fill: darken($de-green, 20%);
-        filter: drop-shadow(0.25rem 0.25rem 0 rgba(0, 0, 0, 0));
+        filter: drop-shadow(0.25rem 0.25rem 0 rgba(black, 0));
 
         transition-property: transform, fill, filter;
         transition-duration: .25s;
 
         use[clip-path] {
-            fill: var(--de-green);
+            fill: $de-green;
         }
     }
 
     a:hover .logo, 
     a:focus .logo {
         transform: translate(-0.125rem, -0.125rem);
-        filter: drop-shadow(0.25rem 0.25rem 0 rgba(0, 0, 0, .25));
+        filter: drop-shadow(0.25rem 0.25rem 0 rgba(black, .25));
     }
 }

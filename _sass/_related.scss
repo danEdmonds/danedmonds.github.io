@@ -37,13 +37,13 @@
         padding: 1rem;
         border-radius: 1rem;
         background-color: rgba(white, 0.04);
-        border: 0.125rem solid var(--de-dark-blue);
+        border: 0.125rem solid $de-dark-blue;
         color: currentColor;
         text-decoration: none;
 
         &:hover,
         &:focus {
-            color: var(--de-blue);
+            color: $de-blue;
         }
 
         &::before {
@@ -55,13 +55,13 @@
             left: 0;
             border-radius: 1rem;
             background-color: white;
-            border: 0.125rem solid lighten-color(var(--de-blue), 20%);
+            border: 0.125rem solid lighten($de-blue, 20%);
             box-shadow:
-                inset -1px -1px lighten-color(var(--de-blue), 20%),
-                inset -2px -2px lighten-color(var(--de-blue), 20%),
+                inset -0.0625rem -0.0625rem lighten($de-blue, 20%),
+                inset -0.125rem -0.125rem lighten($de-blue, 20%),
 
-                0px 2px 4px rgba(black, 0.1),
-                0px 8px 16px rgba(black, 0.1);
+                0 0.125rem 0.25rem rgba(black, 0.1),
+                0 0.5rem 1rem rgba(black, 0.1);
             opacity: 0;
     
             transition-property: transform, opacity;

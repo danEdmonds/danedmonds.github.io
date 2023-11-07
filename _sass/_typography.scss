@@ -4,7 +4,7 @@
 a {
     color: white;
     text-decoration-color: $de-light-blue;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 0.125rem;
 
     transition-property: background-color, color, text-decoration-color;
     transition-duration: 0.25s;
@@ -31,13 +31,13 @@ h1 {
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: 0.03em;
-    // -webkit-text-stroke: 1px var(--h1-stroke-color);
+    // -webkit-text-stroke: 0.0625rem var(--h1-stroke-color);
     text-shadow:
-        1px 1px lighten-color(var(--de-blue), 20%),
-        2px 2px lighten-color(var(--de-blue), 20%),
-        8px 8px rgba(black, 0.2);
+        0.0625rem 0.0625rem lighten($de-blue, 20%),
+        0.125rem 0.125rem lighten($de-blue, 20%),
+        0.5rem 0.5rem rgba(black, 0.2);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48em) {
         font-size: 5rem;
         line-height: 1.1;
     }
@@ -48,7 +48,7 @@ h2 {
     font-size: 3rem;
     line-height: 1.2;
 
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 36em) {
         font-size: 3.5rem;
     }
 }
@@ -69,14 +69,14 @@ dl:not([class]) {
     font-size: 1.25rem;
     line-height: 1.5;
 
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 36em) {
         font-size: 1.5rem;
     }
 }
 
 dl:not([class]) {
     dt {
-        margin-top: 1em;
+        margin-top: 1.5em;
     }
 
     dd {
