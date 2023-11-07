@@ -63,10 +63,27 @@ p {
     line-height: 1.75;
 }
 
-main p {
+main p,
+dl:not([class]) {
     max-width: 45rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.5;
+
+    @media screen and (min-width: 576px) {
+        font-size: 1.5rem;
+    }
+}
+
+dl:not([class]) {
+    dt {
+        margin-top: 1em;
+    }
+
+    dd {
+        margin-left: 0;
+        color: rgba(white, 0.6);
+        font-size: 1.25rem;
+    }
 }
 
 b, strong {
@@ -78,20 +95,4 @@ img {
     display: block;
     height: auto;
     max-width: 100%;
-}
-
-dl:not([class]) {
-    color: white;
-    font-size: 1.5rem;
-    line-height: 1.5;
-
-    dt {
-        margin-top: 1em;
-    }
-
-    dd {
-        margin-left: 0;
-        color: rgba(white, 0.6);
-        font-size: 1.25rem;
-    }
 }
