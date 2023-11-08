@@ -8,3 +8,21 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @media screen and (min-width: 48em) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.my-work {
+    background-color: $de-blue;
+}
