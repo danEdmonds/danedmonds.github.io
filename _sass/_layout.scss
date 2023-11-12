@@ -23,6 +23,14 @@
     }
 }
 
-.my-work {
+.home {
     background-color: $de-blue;
+}
+
+.my-work {
+    background-color: $de-dark-blue;
+    background-image: radial-gradient(ellipse at center bottom, rgba(black, 0.2), rgba(black, 0.2) 50%, transparent 50%, transparent);
+    background-position: center bottom -0.75rem;
+    background-repeat: no-repeat;
+    background-size: 150% 2rem;      
 }

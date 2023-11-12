@@ -12,7 +12,7 @@ We collaborated with the school’s communications team to build a robust list o
 
 Structured and focused templates provide smaller groups with the tools they need to beautifully tailer individual program information to cater to the appropriate audience, while the school’s communications team ensures governance and brand consistency across the website.
 
-{% video_figure poster="wvu-health/wvu-health_homepage_poster.jpg" mp4="wvu-school-of-medicine/wvu-school-of-medicine_homepage_h.264.mp4" %}
+{% video_figure poster="wvu-school-of-medicine/wvu-school-of-medicine_homepage_poster.jpg" mp4="wvu-school-of-medicine/wvu-school-of-medicine_homepage_h.264.mp4" %}
 
 {% figure image="wvu-school-of-medicine/wvu-school-of-medicine_homepage.jpg" caption="" %}
 

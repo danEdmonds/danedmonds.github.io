@@ -13,6 +13,10 @@ body {
     min-height: 100%;
     margin: 0;
     background-color: $de-dark-blue;
+    // background-image: radial-gradient(ellipse at center top, rgba(black, 0.2), rgba(black, 0.2) 50%, transparent 50%, transparent);
+    // background-position: center top -0.25rem;
+    // background-repeat: no-repeat;
+    // background-size: 140% 1rem;
     border-top: 0.5rem solid $de-blue;
     color: white;
     font-family: 'Roboto', sans-serif;

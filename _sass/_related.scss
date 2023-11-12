@@ -52,9 +52,11 @@
             bottom: 0;
             left: 0;
             border-radius: 1rem;
-            background-color: $de-blue;
+            // background-color: $de-blue;
+            background-color: rgba(black, 0.06);
             border: 0.125rem solid mix($de-dark-blue, black, 70%);
-            box-shadow: inset -0.25rem -0.25rem mix($de-blue, white, 96%);
+            // box-shadow: inset -0.25rem -0.25rem mix($de-blue, white, 96%);
+            box-shadow: inset -0.25rem -0.25rem rgba(white, 0.06);
     
             transition-property: transform, background-color, box-shadow;
             transition-duration: 0.25s;

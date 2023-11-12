@@ -18,7 +18,7 @@ I built a modular design system of adjustable components that fit together beaut
 
 This design system is continuously used as the foundation for building microsites under the WVU Health umbrella, creating an ecosystem of WVU Health properties that share one sustainable and growing collection of modular and extendable components. Building microsites often spurs new unique components along with expanding upon and evolving existing components to create new variations.
 
-## The cover
+## The cover.
 
 Referred to as the "cover", editors choose from various layout options to focus on a single prominent item on the homepage supported by a large, engaging photo or video montage. The cover often serves as a playground to try out new and unique layouts and components.
 
@@ -26,7 +26,7 @@ Referred to as the "cover", editors choose from various layout options to focus 
 
 {% video_figure poster="wvu-health/wvu-health_cover_welcome-week_poster.jpg" mp4="wvu-health/wvu-health_cover_welcome-week_h.264.mp4" caption="A spin-off of the University’s 90’s style Welcome Week brand shapes are used to promote WVU Welcome Week on the cover." %}
 
-## Landing pages
+## Landing pages.
 
 {% figure image="wvu-health/wvu-health_research.jpg" caption="" %}
 
@@ -34,7 +34,7 @@ Referred to as the "cover", editors choose from various layout options to focus 
 
 {% figure image="wvu-health/wvu-health_education.jpg" caption="" %}
 
-## Subpages
+## Subpages.
 
 {% figure image="wvu-health/wvu-health_grants.jpg" caption="I built a simple, sortable list of research grants awarded to the University, using a colorful set of custom icons and illustrations to present information throughout." %}
 

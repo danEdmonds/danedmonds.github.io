@@ -7,4 +7,9 @@ footer {
     padding-top: 2rem;
     border-top: 0.125rem solid $de-blue;
     text-align: center;
+
+    .home & {
+        margin-top: 0;
+        border-color: $de-dark-blue;
+    }
 }
