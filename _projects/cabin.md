@@ -10,6 +10,8 @@ Built on the Umbraco content management system, Cabin is a simple project manage
 
 This simple and clean interface is reinforced by a modular design system, keeping scalability in mind to build upon as new features are added.
 
+{% figure image="cabin/cabin_dashboard.jpg" caption="" %}
+
 {% figure image="cabin/cabin_meetings.jpg" caption="" %}
 
 {% figure image="cabin/cabin_meeting.jpg" caption="" %}
