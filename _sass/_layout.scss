@@ -10,12 +10,13 @@
 }
 
 .section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    --section-vertical-padding: 4rem;
+
+    padding-top: var(--section-vertical-padding);
+    padding-bottom: var(--section-vertical-padding);
 
     @media screen and (min-width: 48em) {
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        --section-vertical-padding: 8rem;
     }
 
     h2 {

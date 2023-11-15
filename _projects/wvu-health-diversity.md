@@ -6,7 +6,7 @@ parent: "WVU Health"
 permalink: /wvu-health-diversity/
 ---
 
-Working with the University’s diversity, equity, and inclusion brand patterns and colors, we created a clean, colorful, and engaging microsite to highlight initiatives and events at the WVU Health Sciences campus.
+Working with the University’s diversity, equity, and inclusion brand patterns and colors, I created a clean, colorful, and engaging microsite to highlight DEI initiatives and events at WVU Health Sciences.
 
 {% figure image="wvu-health-diversity/wvu-health-diversity_homepage.jpg" caption="" %}
 
