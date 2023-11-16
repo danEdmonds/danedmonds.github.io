@@ -31,6 +31,8 @@
 }
 
 .figure {
+    --figure-border-width: 0.5rem;
+
     position: relative;
     margin: 8rem 0;
     background-color: $de-blue;
@@ -38,6 +40,10 @@
     color: white;
     text-align: center;
     line-height: 1.5;
+
+    @media screen and (min-width: 48em) {
+        --figure-border-width: 1rem;
+    }
 
     @media screen and (min-width: 87.5em) {
         width: calc(100% + 20rem);
@@ -49,15 +55,15 @@
     }
 
     & > div {
-        padding: 1rem;
+        padding: var(--figure-border-width);
     }
 
     img, video {
         background-color: white;
         border: 0.0625rem solid rgba(black, 0.1);
         box-shadow: 
-            0 0 0 1rem white,
-            0.75rem 0.75rem 0 1rem rgba(black, 0.2);
+            0 0 0 var(--figure-border-width) white,
+            0.75rem 0.75rem 0 var(--figure-border-width) rgba(black, 0.2);
     }
 
     .cp_embed_wrapper {
