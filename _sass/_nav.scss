@@ -25,7 +25,8 @@ nav {
         filter: drop-shadow(0.25rem 0.25rem 0 rgba(black, 0));
 
         transition-property: transform, fill, filter;
-        transition-duration: .25s;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.35, 0, 0, 1);
 
         use[clip-path] {
             fill: $de-green;
@@ -36,5 +37,7 @@ nav {
     a:focus .logo {
         transform: translate(-0.125rem, -0.125rem);
         filter: drop-shadow(0.25rem 0.25rem 0 rgba(black, .25));
+
+        transition-duration: 0.5s;
     }
 }

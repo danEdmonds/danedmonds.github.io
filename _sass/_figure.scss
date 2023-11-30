@@ -1,0 +1,68 @@
+// Figure
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.figure {
+    --figure-border-width: 0.5rem;
+
+    position: relative;
+    margin: 8rem 0;
+    background-color: $de-blue;
+    box-shadow: 0 0 0 3rem $de-blue;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+
+    @media screen and (min-width: 48em) {
+        --figure-border-width: 1rem;
+    }
+
+    @media screen and (min-width: 87.5em) {
+        width: calc(100% + 20rem);
+        margin-left: -10rem;
+    }
+
+    & + & {
+        margin-top: 10rem;
+    }
+
+    & > div {
+        padding: var(--figure-border-width);
+    }
+
+    img, video {
+        background-color: white;
+        border: 0.0625rem solid rgba(black, 0.1);
+        box-shadow: 
+            0 0 0 var(--figure-border-width) white,
+            0.75rem 0.75rem 0 var(--figure-border-width) rgba(black, 0.2);
+    }
+
+    .cp_embed_wrapper {
+        position: relative;
+        aspect-ratio: 4 / 3;
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        display: flex; 
+        align-items: center; 
+        min-height: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    figcaption {
+        max-width: 80ch;
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

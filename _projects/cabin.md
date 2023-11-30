@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Cabin"
-order: 2
 # categories: 
 permalink: /cabin/
+thumbnail: thumb-centered.jpg
+client: "West Virginia University"
+order: 5
 ---
 
 Built on the Umbraco content management system, Cabin is a simple project management tool for sharing meeting minutes, loosely tracking tasks, and providing awareness of noteworthy events.

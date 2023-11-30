@@ -1,0 +1,18 @@
+<nav>
+    {% assign url = "" %}
+
+    {% if include.is_subpage == "true" %}
+        {% assign url = "/" | relative_url %}
+
+        <a href="{{ url }}" aria-label="Home">
+            {% include logo.html %}
+        </a>
+    {% else %}
+        <div>
+            {% include logo.html %}
+        </div>
+    {% endif %}
+
+    <a href="{{ url }}#my-work">My work.</a>
+    <a href="{{ url }}#about-me">About me.</a>
+</nav>

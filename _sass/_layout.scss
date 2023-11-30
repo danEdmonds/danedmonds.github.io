@@ -2,12 +2,32 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .container {
+    // --container-gutter: 2rem;
+    // --container-content-max-width: 960px;
+    // --container-content-size: min(100% - (var(--container-gutter) * 2), var(--container-content-max-width));
+    // --container-breakout-max-width: 1280px;
+    // --container-breakout-size: minmax(0, calc((var(--container-breakout-max-width) - var(--container-content-max-width)) / 2));
+
+    // display: grid;
+    // grid-template-columns: [full-start] minmax(var(--container-gutter), 1fr) [breakout-start] var(--container-breakout-size) [content-start] var(--container-content-size) [content-end] var(--container-breakout-size) [breakout-end] minmax(var(--container-gutter), 1fr) [full-end];
     width: calc(100% - 2rem);
     height: 100%;
     max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
+
+    // & > * {
+    //     grid-column: content;
+    // }
 }
+
+// .breakout {
+//     grid-column: breakout;
+// }
+
+// .full {
+//     grid-column: full;
+// }
 
 .section {
     --section-vertical-padding: 4rem;
