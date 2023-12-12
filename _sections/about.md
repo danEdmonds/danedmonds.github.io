@@ -15,7 +15,7 @@ I appreciate simplicity and user centered design, taking particular delight in m
 ### My experience.
 
 <dl>
-    <dt><strong>Creative Development Lead,</strong><br>
+    <dt><strong>User Experience Designer,</strong><br>
         WVU Health Sciences, <em>Morgantown, WV</em></dt>
     <dd>January 2015–Present</dd>
     <dt><strong>Multimedia Producer,</strong><br>

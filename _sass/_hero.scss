@@ -26,6 +26,17 @@
         position: relative;
     }
 
+    .prepare & h1,
+    .prepare & p {
+        --smooth-entry-from: 3rem;
+
+        animation-name: SmoothEntryY, FadeIn;
+        animation-duration: 0.5s, 0.25s;
+        animation-delay: 0.5s;
+        animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
+        animation-fill-mode: both;
+    }
+
     p {
         max-width: 45rem;
         color: white;
@@ -40,6 +51,10 @@
 
         @media screen and (min-width: 48em) {
             font-size: 2rem;
+        }
+
+        .prepare & {
+            animation-delay: 0.55s; // + 0.05s
         }
     }
 }

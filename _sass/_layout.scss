@@ -53,5 +53,32 @@
     background-image: radial-gradient(ellipse at center bottom, rgba(black, 0.2), rgba(black, 0.2) 50%, transparent 50%, transparent);
     background-position: center bottom -0.75rem;
     background-repeat: no-repeat;
-    background-size: 150% 2rem;      
+    background-size: 150% 2rem;
+
+    &.prepare h2,
+    &.prepare p {
+        --smooth-entry-from: 3rem;
+
+        animation-name: SmoothEntryY, FadeIn;
+        animation-duration: 0.5s, 0.25s;
+        animation-delay: 0.5s;
+        animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
+        animation-fill-mode: both;
+    }
+
+    &.prepare p {
+        --smooth-entry-from: 3rem;
+
+        animation-name: SmoothEntryY, FadeIn;
+        animation-duration: 0.5s, 0.25s;
+        animation-delay: 0.5s;
+        animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
+        animation-fill-mode: both;
+    }
+
+    @for $i from 1 through 3 {
+        &.prepare p:nth-child(#{$i}) {
+            animation-delay: ($i * .075) + 0.5s;
+        }
+    }
 }

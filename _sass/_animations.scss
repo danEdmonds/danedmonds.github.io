@@ -1,0 +1,60 @@
+// Animations
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes SmoothEntryX {
+    from {
+        transform: translateX(var(--smooth-entry-from, 1rem));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes SmoothEntryY {
+    from {
+        transform: translateY(var(--smooth-entry-from, 1rem));
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+  
+@keyframes ScaleIn {
+    from {
+        transform: scale(var(--scale-in-from, 1.1));
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.prepare *,
+.prepare *::before,
+.prepare *::after,
+*.prepare,
+*.prepare::before,
+*.prepare::after {
+    animation-play-state: paused;
+}
+
+.in-view *,
+.in-view *::before,
+.in-view *::after,
+*.in-view,
+*.in-view::before,
+*.in-view::after {
+    animation-play-state: running;
+}

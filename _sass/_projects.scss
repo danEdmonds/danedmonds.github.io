@@ -37,8 +37,7 @@
         }
     }
 
-    &::before {
-        content: "";
+    &__background {
         position: absolute;
         top: 0;
         right: 0;
@@ -60,6 +59,7 @@
 
     &__thumb {
         position: relative;
+        z-index: 2;
         display: flex;
         place-items: center;
         aspect-ratio: 4 / 3;
@@ -95,6 +95,10 @@
             box-shadow: 1rem 1rem 0 0 rgba(black, 0.1);
             
             transition-duration: 0.5s;
+        }
+
+        #{$root}.prepare & {
+            --smooth-entry-from: 4rem;
         }
     }
 
@@ -149,6 +153,10 @@
         transform: translateY(1rem);
     
         transition-duration: 0.5s;
+    }
+
+    &.prepare figcaption {
+        --smooth-entry-from: -2rem;
     }
 
     b {

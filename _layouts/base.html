@@ -10,81 +10,24 @@
 
     <title>Dan Edmonds &raquo; Front-end Designer &amp; Developer</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}" rel="stylesheet">
 
 </head>
 
 <body class="{{ page.layout }}">
+    <div class="page">
+        {{ content }}
 
-    {{ content }}
-
-    <div class="container">
-        <footer>
-            <p>&copy; <span id="year"></span> Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
-        </footer>
+        <div class="container">
+            <footer>
+                <p>&copy; <span id="year"></span> Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
+            </footer>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-        (function () {
-            document.getElementById('year').innerHTML = new Date().getFullYear();
-        })();
-
-        // (function () {
-		// 	gsap.registerPlugin(ScrollTrigger);
-
-		// 	var animateElements = document.querySelectorAll('.animate');
-
-		// 	if (!animateElements) return;
-
-		// 	animateElements.forEach((element) => {
-		// 		element.classList.add('prepare');
-		// 	});
-
-		// 	var preparedElements = document.querySelectorAll('.prepare');
-
-		// 	if (!preparedElements) return;
-
-		// 	preparedElements.forEach((element) => {
-		// 		gsap.from(element, {
-		// 			scrollTrigger: {
-		// 				trigger: element,
-		// 				scrub: true,
-		// 				start: 'top 75%',
-		// 				end: 99999,
-		// 				toggleClass: 'in-view',
-		// 				//markers: true
-		// 			}
-		// 		});
-		// 	});
-		// })();
-
-        (function () {
-			gsap.registerPlugin(ScrollTrigger);
-
-			var elements = document.querySelectorAll('.project-entry.prepare h2, .project-entry.prepare h3, .project-entry.prepare p, .project-entry.prepare .project-entry__figure');
-
-			if (!elements.length) return;
-
-			elements.forEach((element) => {
-                var vh = (coef) => window.innerHeight * (coef/100);
-                var vw = (coef) => window.innerWidth * (coef/100);
-
-				gsap.timeline({
-					defaults: { duration: 1 },
-					scrollTrigger: {
-						trigger: element,
-						scrub: true,
-						start: 'top 90%',
-						end: 'top 60%',
-						//markers: true
-					}
-				}).to(element, { opacity: 1 }, 0);
-			});
-		})();
-    </script>
+    <script src="{{ "/assets/js/script.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}"></script>
 
 </body>
 </html>

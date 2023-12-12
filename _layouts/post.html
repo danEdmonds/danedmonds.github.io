@@ -3,9 +3,9 @@ layout: base
 ---
 
 <div class="container">
-    {% include nav.html is_subpage="true" %}
+    {% include nav.html %}
 
-    <main class="project-entry animate">
+    <main class="project-entry">
         {%- if page.client -%}
             <p>
                 <span class="project-entry__client">{{ page.client }}</span>

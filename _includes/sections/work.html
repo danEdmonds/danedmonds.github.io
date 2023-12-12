@@ -1,6 +1,6 @@
 {% assign projects = site.projects | sort: 'order' %}
 {%- if projects.size > 0 -%}
-    <div class="section {{ section.slug }}">
+    <div class="section {{ section.slug }} animate">
         <div class="container">
             <h2 id="{{ section.slug }}">{{ section.title }}</h2>
             
@@ -14,7 +14,9 @@
                         {% assign class_list = class_list | append: " project--" | append: post.slug %}
                     {% endif %}
 
-                    <a href="{{ post.url | relative_url }}" class="{{ class_list }}">
+                    <a href="{{ post.url | relative_url }}" class="{{ class_list }}" data-transition="true">
+                        <div class="project__background"></div>
+
                         <figure>
                             {% if post.thumbnail contains "centered" %}
                                 <div class="project__thumb project__thumb--centered">
