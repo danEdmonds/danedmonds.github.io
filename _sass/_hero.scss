@@ -26,8 +26,8 @@
         position: relative;
     }
 
-    .prepare & h1,
-    .prepare & p {
+    &.prepare h1,
+    &.prepare p {
         --smooth-entry-from: 3rem;
 
         animation-name: SmoothEntryY, FadeIn;
@@ -52,9 +52,9 @@
         @media screen and (min-width: 48em) {
             font-size: 2rem;
         }
+    }
 
-        .prepare & {
-            animation-delay: 0.55s; // + 0.05s
-        }
+    &.prepare p {
+        animation-delay: 0.55s; // + 0.05s
     }
 }

@@ -4,6 +4,25 @@
 .project-entry {
     $root: &;
 
+    .js & {
+        opacity: 0;
+
+        transition-property: opacity;
+        transition-duration: 1s;
+        transition-delay: 0.5s;
+    }
+    
+    .js .is-entering & {
+        opacity: 1;
+    }
+
+    .js .is-leaving & {
+        opacity: 0;
+
+        transition-duration: 0.25s;
+        transition-delay: 0s;
+    }
+
     &__client {
         display: inline-block;
         height: 2.5rem;

@@ -1,11 +1,63 @@
+gsap.registerPlugin(ScrollTrigger);
+
+
+// Set year in copyright statement
 (function () {
+    var year = document.getElementById('year').innerHTML = new Date().getFullYear();
+
+    if (!year) return;
+
     document.getElementById('year').innerHTML = new Date().getFullYear();
 })();
 
 
-(function () {
-    gsap.registerPlugin(ScrollTrigger);
+// Handle page transitions
+document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('a[data-transition]');
+    var page = document.querySelector('.page');
 
+    page.classList.add('is-entering');
+
+    if (!page || !links.length) return;
+
+    links.forEach((element) => {
+        element.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            if (element.href.includes('#') && element.pathname === window.location.pathname) {
+                var targetElement = document.getElementById(element.hash.substring(1));
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            } else if (element.href !== window.location.href) {
+                page.classList.remove('is-entering');
+                page.classList.add('is-leaving');
+
+                setTimeout(function () {
+                    window.location.href = element.href;
+                }, 250);
+            }
+        });
+    });
+});
+
+
+// (function () {
+//     var elements = document.querySelectorAll('.about-me h3, .about-me dl');
+
+//     if (!elements) return;
+
+//     elements.forEach((element) => {
+//         element.classList.add('animate');
+//     });
+// })();
+
+
+// Handle scroll triggered animations
+(function () {
     var animateElements = document.querySelectorAll('.animate');
 
     if (!animateElements) return;
@@ -33,36 +85,8 @@
 })();
 
 
-// (function () {
-//     gsap.registerPlugin(ScrollTrigger);
-
-//     var elements = document.querySelectorAll('.about-me h2, .about-me h3, .about-me p, .about-me dt, .about-me dd');
-
-//     if (!elements.length) return;
-
-//     elements.forEach((element) => {
-//         var vh = (coef) => window.innerHeight * (coef/100);
-//         var vw = (coef) => window.innerWidth * (coef/100);
-
-//         gsap.set(element, { opacity: 0, y: 48 });
-
-//         gsap.timeline({
-//             defaults: { duration: 1 },
-//             scrollTrigger: {
-//                 trigger: element,
-//                 scrub: true,
-//                 start: 'top bottom',
-//                 end: 'top 60%',
-//                 // markers: true
-//             }
-//         }).to(element, { opacity: 1, y: 0 }, 0);
-//     });
-// })();
-
-
+// Handle animating the projects on the homepage
 (function(){
-    gsap.registerPlugin(ScrollTrigger);
-
     var container = document.querySelector('.my-work'),
         projects = document.querySelectorAll('.project');
 
@@ -116,17 +140,16 @@
             duration: 250,
             easing: 'cubic-bezier(0, 0, 0.4, 1)',
             delay: setDelay(0, newIndex),
-            // delay: 500,
             fill: 'both'
         }).pause();
 
         projectBackground.animate([
             { top: '2rem', right: '-0.25rem', bottom: '2rem', left: '-0.25rem', borderTopLeftRadius: '8rem' }
         ], {
-            duration: 150,
+            // duration: 150,
+            duration: 250,
             easing: 'cubic-bezier(0.6, 0, 0.96, 0.8)',
             delay: setDelay(200, newIndex),
-            // delay: 700,
             fill: 'both'
         }).pause();
 
@@ -135,8 +158,8 @@
         ], {
             duration: 250,
             easing: 'cubic-bezier(0.06, 0.2, 0.4, 1)',
-            delay: setDelay(350, newIndex),
-            // delay: 850,
+            // delay: setDelay(350, newIndex),
+            delay: setDelay(450, newIndex),
             fill: 'both'
         }).pause();
     
@@ -144,8 +167,8 @@
         {
             duration: 250,
             easing: 'ease-out',
-            delay: setDelay(350, newIndex),
-            // delay: 850,
+            // delay: setDelay(350, newIndex),
+            delay: setDelay(500, newIndex),
             fill: 'both'
         }).pause();
 
@@ -153,8 +176,8 @@
         {
             duration: 500,
             easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
-            delay: setDelay(400, newIndex),
-            // delay: 900,
+            // delay: setDelay(400, newIndex),
+            delay: setDelay(500, newIndex),
             fill: 'both'
         }).pause();
     
@@ -163,16 +186,14 @@
             duration: 250,
             easing: 'ease-out',
             delay: setDelay(600, newIndex),
-            // delay: 1100,
             fill: 'both'
         }).pause();
 
         projectCaption.animate(SmoothEntryYKeyframes, 
         {
-            duration: 250,
+            duration: 500,
             easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
             delay: setDelay(600, newIndex),
-            // delay: 1100,
             fill: 'both'
         }).pause();
 
@@ -197,33 +218,26 @@
 })();
 
 
-// https://github.com/TylerPottsDev/js-page-transitions-basic/tree/main
+// (function () {
+//     var elements = document.querySelectorAll('.about-me h2, .about-me h3, .about-me p, .about-me dt, .about-me dd');
 
-// document.addEventListener('DOMContentLoaded', function () {
-// window.onload = () => {
-//     const anchors = document.querySelectorAll('a');
-//     const transition_el = document.querySelector('.transition');
+//     if (!elements.length) return;
 
-//     setTimeout(() => {
-//         transition_el.classList.remove('is-active');
-//     }, 500);
+//     elements.forEach((element) => {
+//         var vh = (coef) => window.innerHeight * (coef/100);
+//         var vw = (coef) => window.innerWidth * (coef/100);
 
-//     for (let i = 0; i < anchors.length; i++) {
-//         const anchor = anchors[i];
+//         gsap.set(element, { opacity: 0, y: 48 });
 
-//         anchor.addEventListener('click', e => {
-//             e.preventDefault();
-//             let target = e.target.href;
-
-//             console.log(transition_el);
-
-//             transition_el.classList.add('is-active');
-
-//             console.log(transition_el);
-
-//             setInterval(() => {
-//                 window.location.href = target;
-//             }, 500);
-//         })
-//     }
-// }
+//         gsap.timeline({
+//             defaults: { duration: 1 },
+//             scrollTrigger: {
+//                 trigger: element,
+//                 scrub: true,
+//                 start: 'top bottom',
+//                 end: 'top 60%',
+//                 // markers: true
+//             }
+//         }).to(element, { opacity: 1, y: 0 }, 0);
+//     });
+// })();

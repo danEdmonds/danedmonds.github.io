@@ -2,32 +2,12 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .container {
-    // --container-gutter: 2rem;
-    // --container-content-max-width: 960px;
-    // --container-content-size: min(100% - (var(--container-gutter) * 2), var(--container-content-max-width));
-    // --container-breakout-max-width: 1280px;
-    // --container-breakout-size: minmax(0, calc((var(--container-breakout-max-width) - var(--container-content-max-width)) / 2));
-
-    // display: grid;
-    // grid-template-columns: [full-start] minmax(var(--container-gutter), 1fr) [breakout-start] var(--container-breakout-size) [content-start] var(--container-content-size) [content-end] var(--container-breakout-size) [breakout-end] minmax(var(--container-gutter), 1fr) [full-end];
     width: calc(100% - 2rem);
     height: 100%;
     max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
-
-    // & > * {
-    //     grid-column: content;
-    // }
 }
-
-// .breakout {
-//     grid-column: breakout;
-// }
-
-// .full {
-//     grid-column: full;
-// }
 
 .section {
     --section-vertical-padding: 4rem;
@@ -37,6 +17,17 @@
 
     @media screen and (min-width: 48em) {
         --section-vertical-padding: 8rem;
+    }
+
+    .js & .container {
+        opacity: 1;
+
+        transition-property: opacity;
+        transition-duration: 0.25s;
+    }
+
+    .js .is-leaving & .container {
+        opacity: 0;
     }
 
     h2 {
@@ -66,7 +57,19 @@
         animation-fill-mode: both;
     }
 
-    &.prepare p {
+    @for $i from 1 through 3 {
+        &.prepare p:nth-child(#{$i}) {
+            animation-delay: ($i * 0.075) + 0.5s;
+        }
+    }
+}
+
+.about-me {
+    &.prepare h2,
+    &.prepare p,
+    &.prepare h3,
+    &.prepare dt,
+    &.prepare dd {
         --smooth-entry-from: 3rem;
 
         animation-name: SmoothEntryY, FadeIn;
@@ -76,9 +79,20 @@
         animation-fill-mode: both;
     }
 
-    @for $i from 1 through 3 {
+    @for $i from 1 through 5 {
         &.prepare p:nth-child(#{$i}) {
-            animation-delay: ($i * .075) + 0.5s;
+            animation-delay: ($i * 0.075) + 0.5s;
+        }
+    }
+
+    &.prepare h3 {
+        animation-delay: (6 * 0.075) + 0.5s;
+    }
+
+    @for $i from 1 through 10 {
+        &.prepare dt:nth-child(#{$i}),
+        &.prepare dd:nth-child(#{$i}) {
+            animation-delay: ($i * 0.075) + (6 * 0.075s) + 0.5s;
         }
     }
 }

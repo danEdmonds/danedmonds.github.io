@@ -11,6 +11,16 @@
     }
 }
 
+@keyframes FadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 @keyframes SmoothEntryX {
     from {
         transform: translateX(var(--smooth-entry-from, 1rem));

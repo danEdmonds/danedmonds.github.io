@@ -46,6 +46,11 @@
         border-radius: 1.5rem;
         border-top-left-radius: 8rem;
         background-color: $de-blue;
+        will-change: top, right, bottom, left, border-radius;
+        // -webkit-transform: translate3d(0, 0, 0);
+        // transform: translate3d(0, 0, 0);
+        // -webkit-transform-style: preserve-3d;
+        // transform-style: preserve-3d;
     }
 
     figure {
@@ -58,6 +63,8 @@
     }
 
     &__thumb {
+        --smooth-entry-from: 4rem;
+
         position: relative;
         z-index: 2;
         display: flex;
@@ -96,10 +103,6 @@
             
             transition-duration: 0.5s;
         }
-
-        #{$root}.prepare & {
-            --smooth-entry-from: 4rem;
-        }
     }
 
     img {
@@ -135,6 +138,8 @@
     }
 
     figcaption {
+        --smooth-entry-from: -2rem;
+
         padding: 1.5rem 1rem 3rem;
 
         transition-property: transform;
@@ -153,10 +158,6 @@
         transform: translateY(1rem);
     
         transition-duration: 0.5s;
-    }
-
-    &.prepare figcaption {
-        --smooth-entry-from: -2rem;
     }
 
     b {
