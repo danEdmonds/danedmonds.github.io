@@ -3,11 +3,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Set year in copyright statement
 (function () {
-    var year = document.getElementById('year').innerHTML = new Date().getFullYear();
+    var year = document.getElementById('year');
 
     if (!year) return;
 
-    document.getElementById('year').innerHTML = new Date().getFullYear();
+    year.innerHTML = new Date().getFullYear();
 })();
 
 
