@@ -16,27 +16,37 @@ nav {
         &:nth-child(2) {
             margin-left: auto;
         }
-    }
 
-    &.prepare a {
-        animation-name: SmoothEntryY, FadeIn;
-        animation-duration: 0.5s, 0.25s;
-        animation-delay: 1s;
-        animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
-        animation-fill-mode: both;
-        animation-play-state: paused;
-    }
+        .js & {
+            transform: translateY(1rem);
+            opacity: 0;
+    
+            transition-property: transform, opacity;
+            transition-duration: 0.5s, 0.25s;
+            transition-delay: 1s;
+            transition-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
+        }
 
-    &.prepare a:nth-child(2) {
-        animation-delay: 1.05s; // + 0.05s
-    }
+        .is-entering & {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
-    &.prepare a:nth-child(3) {
-        animation-delay: 1.1s; // + 0.05s
-    }
+        .is-entering &:nth-child(2) {
+            transition-delay: 1.25s;
+        }
 
-    &.in-view a {
-        animation-play-state: running;
+        .is-entering &:nth-child(3) {
+            transition-delay: 1.3s; // + 0.05s
+        }
+    
+        .is-leaving & {
+            transform: translateY(0);
+            opacity: 0;
+
+            transition-delay: 0s;
+            transition-timing-function: ease-out;
+        }
     }
 
     .logo {

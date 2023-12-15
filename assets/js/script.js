@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
+
+                    history.pushState(null, null, element.href);
                 }
             } else if (element.href !== window.location.href) {
                 page.classList.remove('is-entering');

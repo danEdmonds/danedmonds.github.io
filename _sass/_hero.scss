@@ -26,15 +26,21 @@
         position: relative;
     }
 
-    &.prepare h1,
-    &.prepare p {
-        --smooth-entry-from: 3rem;
+    .js & h1,
+    .js & p {
+        transform: translateY(3rem);
+        opacity: 0;
 
-        animation-name: SmoothEntryY, FadeIn;
-        animation-duration: 0.5s, 0.25s;
-        animation-delay: 0.5s;
-        animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
-        animation-fill-mode: both;
+        transition-property: transform, opacity;
+        transition-duration: 0.5s, 0.25s;
+        transition-delay: 0.5s;
+        transition-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
+    }
+
+    .is-entering & h1,
+    .is-entering & p  {
+        transform: translateY(0);
+        opacity: 1;
     }
 
     p {
@@ -54,7 +60,7 @@
         }
     }
 
-    &.prepare p {
-        animation-delay: 0.55s; // + 0.05s
+    .js & p {
+        transition-delay: 0.55s; // + 0.05s
     }
 }
