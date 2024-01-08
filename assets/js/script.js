@@ -13,63 +13,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Handle page transitions
-    (function () {
-        var links = document.querySelectorAll('a[data-transition]');
-        var page = document.querySelector('.page');
+    // (function () {
+    //     var links = document.querySelectorAll('a[data-transition]');
+    //     var page = document.querySelector('.page');
 
-        if (!page || !links.length) return;
+    //     if (!page || !links.length) return;
 
-        function enterPage() {
-            page.classList.add('is-entering');
-        }
+    //     function enterPage() {
+    //         page.classList.add('is-entering');
+    //     }
     
-        function leavePage(url) {
-            page.classList.remove('is-entering');
-            page.classList.add('is-leaving');
+    //     function leavePage(url) {
+    //         page.classList.remove('is-entering');
+    //         page.classList.add('is-leaving');
     
-            setTimeout(function () {
-                window.location.href = url;
-            }, 250);
-        }
+    //         setTimeout(function () {
+    //             window.location.href = url;
+    //         }, 250);
+    //     }
 
-        // page.classList.add('is-entering');
-        enterPage();
+    //     // page.classList.add('is-entering');
+    //     enterPage();
 
-        links.forEach((element) => {
-            element.addEventListener('click', function (event) {
-                event.preventDefault();
+    //     links.forEach((element) => {
+    //         element.addEventListener('click', function (event) {
+    //             event.preventDefault();
 
-                if (element.href.includes('#') && element.pathname === window.location.pathname) {
-                    var targetElement = document.getElementById(element.hash.substring(1));
+    //             if (element.href.includes('#') && element.pathname === window.location.pathname) {
+    //                 var targetElement = document.getElementById(element.hash.substring(1));
 
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+    //                 if (targetElement) {
+    //                     targetElement.scrollIntoView({
+    //                         behavior: 'smooth'
+    //                     });
 
-                        history.pushState(null, null, element.href);
-                    }
-                } else if (element.href !== window.location.href) {
-                    // page.classList.remove('is-entering');
-                    // page.classList.add('is-leaving');
+    //                     history.pushState(null, null, element.href);
+    //                 }
+    //             } else if (element.href !== window.location.href) {
+    //                 // page.classList.remove('is-entering');
+    //                 // page.classList.add('is-leaving');
 
-                    // setTimeout(function () {
-                    //     window.location.href = element.href;
-                    // }, 250);
+    //                 // setTimeout(function () {
+    //                 //     window.location.href = element.href;
+    //                 // }, 250);
 
-                    leavePage(element.href);
-                }
-            });
-        });
+    //                 leavePage(element.href);
+    //             }
+    //         });
+    //     });
 
-        window.addEventListener('popstate', function (event) {
-            if (event.state && event.state.page) {
-                enterPage();
-            } else {
-                leavePage(window.location.href);
-            }
-        });
-    })();
+    //     window.addEventListener('popstate', function (event) {
+    //         if (event.state && event.state.page) {
+    //             enterPage();
+    //         } else {
+    //             leavePage(window.location.href);
+    //         }
+    //     });
+    // })();
 
 
     // (function () {
