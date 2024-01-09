@@ -26,8 +26,10 @@
         position: relative;
     }
 
-    h1 {
-        font-size: 3.25rem;
+    @media screen and (max-width: 35.9375em) {
+        h1 {
+            font-size: 3.25rem;
+        }
     }
 
     p {
