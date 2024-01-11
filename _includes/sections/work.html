@@ -15,8 +15,6 @@
                     {% endif %}
 
                     <a href="{{ post.url | relative_url }}" class="{{ class_list }}" data-transition="true">
-                        <div class="project__background"></div>
-
                         <figure>
                             {% if post.thumbnail contains "centered" %}
                                 <div class="project__thumb project__thumb--centered">
@@ -32,7 +30,7 @@
                                 {{ post.title | escape }} 
                                 
                                 {% if post.client %}
-                                    <b><!-- <span>for</span> --> {{ post.client }}</b>
+                                    <b>{{ post.client }}</b>
                                 {% endif %}
                             </figcaption>
                         </figure>
