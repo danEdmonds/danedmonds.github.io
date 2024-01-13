@@ -60,12 +60,6 @@
         transition-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
     }
 
-    // .is-entering & h1,
-    // .is-entering & p  {
-    //     transform: translateY(0);
-    //     opacity: 1;
-    // }
-
     &.in-view h1,
     &.in-view p  {
         transform: translateY(0);

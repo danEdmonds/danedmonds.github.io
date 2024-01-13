@@ -13,10 +13,6 @@
     text-align: center;
     line-height: 1.5;
 
-    // @media screen and (min-width: 48em) {
-    //     --figure-border-width: 1rem;
-    // }
-
     @media screen and (min-width: 62em) {
         --figure-frame-width: 3rem;
         --figure-border-width: 1rem;
@@ -29,10 +25,6 @@
         width: calc(100% + 20rem);
         margin-left: -10rem;
     }
-
-    // & + & {
-    //     margin-top: 10rem;
-    // }
 
     & > div {
         padding: var(--figure-border-width);
@@ -63,15 +55,15 @@
         display: flex; 
         align-items: center; 
         min-height: 20rem;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
         text-align: center;
     }
 
     figcaption {
         max-width: 80ch;
         margin-top: 2rem;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
     }
 }

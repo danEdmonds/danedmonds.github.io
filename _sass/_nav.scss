@@ -30,27 +30,6 @@ nav {
             transition-delay: 1s;
             transition-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
         }
-
-        // .is-entering & {
-        //     transform: translateY(0);
-        //     opacity: 1;
-        // }
-
-        // .is-entering &:nth-child(2) {
-        //     transition-delay: 1.25s;
-        // }
-
-        // .is-entering &:nth-child(3) {
-        //     transition-delay: 1.3s; // + 0.05s
-        // }
-    
-        // .is-leaving & {
-        //     transform: translateY(0);
-        //     opacity: 0;
-
-        //     transition-delay: 0s;
-        //     transition-timing-function: ease-out;
-        // }
     }
 
     &.in-view a {

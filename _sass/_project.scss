@@ -16,26 +16,19 @@
         opacity: 1;
     }
 
-    // .js .is-leaving & {
-    //     opacity: 0;
-
-    //     transition-duration: 0.25s;
-    //     transition-delay: 0s;
-    // }
-
     &__client {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         height: 2.5rem;
         margin-left: -1rem;
-        padding-left: 1rem;
         padding-right: 0.75rem;
+        padding-left: 1rem;
         border-radius: 0.5rem;
         border-top-left-radius: 1.5rem;
         background-color: $de-blue;
         color: $de-green;
         font-size: 1.125rem;
         font-weight: 500;
-        line-height: 2.5rem;
         letter-spacing: 0.05em;
         text-transform: uppercase;
     }
