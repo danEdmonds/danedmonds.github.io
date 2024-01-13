@@ -113,136 +113,115 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Handle animating the projects on the homepage
-    // (function(){
-    //     var container = document.querySelector('.my-work'),
-    //         projects = document.querySelectorAll('.project');
+    (function(){
+        var container = document.querySelector('.my-work'),
+            projects = document.querySelectorAll('.project');
 
-    //     if (!container || !projects.length) return;
+        if (!container || !projects.length) return;
 
-    //     var initialDelay = 500,
-    //     delayIncrement = 250;
+        var initialDelay = 800,
+        delayIncrement = 250;
 
-    //     var FadeInKeyframes = [
-    //         { opacity: 0 },
-    //         { opacity: 1 }
-    //     ];
+        var FadeInKeyframes = [
+            { opacity: 0 },
+            { opacity: 1 }
+        ];
 
-    //     var SmoothEntryYKeyframes = [
-    //         { transform: 'translateY(var(--smooth-entry-from, 1rem))' },
-    //         { transform: 'translateY(0)' }
-    //     ];
+        var SmoothEntryYKeyframes = [
+            { transform: 'translateY(var(--smooth-entry-from, 1rem))' },
+            { transform: 'translateY(0)' }
+        ];
 
-    //     function setDelay(delay, index) {
-    //         delay = (initialDelay + delay) + (index * delayIncrement)
+        function setDelay(delay, index) {
+            delay = (initialDelay + delay) + (index * delayIncrement)
 
-    //         return delay;
-    //     }
+            return delay;
+        }
 
-    //     async function cancelAllAnimations(element) {
-    //         var animations = element.getAnimations();
+        async function cancelAllAnimations(element) {
+            var animations = element.getAnimations();
 
-    //         await Promise.all(animations.map(animation => animation.finished));
+            await Promise.all(animations.map(animation => animation.finished));
 
-    //         animations.forEach(animation => animation.cancel());
-    //     }
+            animations.forEach(animation => animation.cancel());
+        }
 
-    //     projects.forEach((project, index) => {
-    //         var projectBackground = project.querySelector('.project__background'),
-    //             projectThumb = project.querySelector('.project__thumb'),
-    //             projectCaption = project.querySelector('.project figcaption'),
-    //             newIndex = 0;
+        projects.forEach((project, index) => {
+            var projectBackground = project.querySelector('.project__background'),
+                projectThumb = project.querySelector('.project__thumb'),
+                projectCaption = project.querySelector('.project figcaption');
 
-    //         if (!container || !projectBackground || !projectThumb || !projectCaption) return;
+            if (!container || !projectBackground || !projectThumb || !projectCaption) return;
+            
+            // Background
+            projectBackground.animate(FadeInKeyframes, 
+            {
+                duration: 250,
+                easing: 'ease-out',
+                delay: setDelay(0, index),
+                fill: 'both'
+            }).pause();
 
-    //         if ((index - 1) % 3 === 0) {
-    //             newIndex = 2;
-    //         } else if ((index - 2) % 3 === 0) {
-    //             newIndex = 3;
-    //         }
+            projectBackground.animate(SmoothEntryYKeyframes, 
+            {
+                duration: 500,
+                easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
+                delay: setDelay(0, index),
+                fill: 'both'
+            }).pause();
 
-    //         projectBackground.animate([
-    //             { top: '50%', right: '50%', bottom: '50%', left: '50%', borderRadius: '1.5rem' },
-    //             { top: 'calc(50% - 2rem)', right: '0.5rem', bottom: 'calc(50% - 2rem)', left: '0.5rem', borderRadius: '1.5rem' }
-    //         ], {
-    //             duration: 250,
-    //             easing: 'cubic-bezier(0, 0, 0.4, 1)',
-    //             delay: setDelay(0, newIndex),
-    //             fill: 'both'
-    //         }).pause();
+            // Thumb
+            projectThumb.animate(FadeInKeyframes, 
+            {
+                duration: 250,
+                easing: 'ease-out',
+                delay: setDelay(100, index),
+                fill: 'both'
+            }).pause();
 
-    //         projectBackground.animate([
-    //             { top: '2rem', right: '-0.25rem', bottom: '2rem', left: '-0.25rem', borderTopLeftRadius: '8rem' }
-    //         ], {
-    //             // duration: 150,
-    //             duration: 250,
-    //             easing: 'cubic-bezier(0.6, 0, 0.96, 0.8)',
-    //             delay: setDelay(200, newIndex),
-    //             fill: 'both'
-    //         }).pause();
+            projectThumb.animate(SmoothEntryYKeyframes, 
+            {
+                duration: 500,
+                // easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
+                easing: 'cubic-bezier(0.18, 0.89, 0.67, 1.16)',
+                delay: setDelay(100, index),
+                fill: 'both'
+            }).pause();
 
-    //         projectBackground.animate([
-    //             { top: '0', right: '0', bottom: '0', left: '0', borderTopLeftRadius: '8rem' }
-    //         ], {
-    //             duration: 250,
-    //             easing: 'cubic-bezier(0.06, 0.2, 0.4, 1)',
-    //             // delay: setDelay(350, newIndex),
-    //             delay: setDelay(450, newIndex),
-    //             fill: 'both'
-    //         }).pause();
-        
-    //         projectThumb.animate(FadeInKeyframes, 
-    //         {
-    //             duration: 250,
-    //             easing: 'ease-out',
-    //             // delay: setDelay(350, newIndex),
-    //             delay: setDelay(500, newIndex),
-    //             fill: 'both'
-    //         }).pause();
+            // Caption
+            projectCaption.animate(FadeInKeyframes, 
+            {
+                duration: 250,
+                easing: 'ease-out',
+                delay: setDelay(200, index),
+                fill: 'both'
+            }).pause();
 
-    //         projectThumb.animate(SmoothEntryYKeyframes, 
-    //         {
-    //             duration: 500,
-    //             easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
-    //             // delay: setDelay(400, newIndex),
-    //             delay: setDelay(500, newIndex),
-    //             fill: 'both'
-    //         }).pause();
-        
-    //         projectCaption.animate(FadeInKeyframes, 
-    //         {
-    //             duration: 250,
-    //             easing: 'ease-out',
-    //             delay: setDelay(600, newIndex),
-    //             fill: 'both'
-    //         }).pause();
+            projectCaption.animate(SmoothEntryYKeyframes, 
+            {
+                duration: 500,
+                easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
+                delay: setDelay(200, index),
+                fill: 'both'
+            }).pause();
 
-    //         projectCaption.animate(SmoothEntryYKeyframes, 
-    //         {
-    //             duration: 500,
-    //             easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
-    //             delay: setDelay(600, newIndex),
-    //             fill: 'both'
-    //         }).pause();
+            ScrollTrigger.create({
+                trigger: container,
+                start: 'top 75%',
+                onEnter: () => {
+                    for (var i = index; i < index + 3 && i < projects.length; i++) {
+                        var inViewElements = projects[i].querySelectorAll('.project__background, .project__thumb, .project figcaption');
 
-    //         if (index % 3 === 0) {
-    //             ScrollTrigger.create({
-    //                 trigger: project,
-    //                 start: 'top 75%',
-    //                 onEnter: () => {
-    //                     for (var i = index; i < index + 3 && i < projects.length; i++) {
-    //                         var inViewElements = projects[i].querySelectorAll('.project__background, .project__thumb, .project figcaption');
+                        inViewElements.forEach(element => {
+                            element.getAnimations().forEach(animation => animation.play());
 
-    //                         inViewElements.forEach(element => {
-    //                             element.getAnimations().forEach(animation => animation.play());
-
-    //                             cancelAllAnimations(element);
-    //                         });
-    //                     }
-    //                 },
-    //             });
-    //         }
-    //     });
-    // })();
+                            cancelAllAnimations(element);
+                        });
+                    }
+                },
+            });
+        });
+    })();
 
 
     // (function () {

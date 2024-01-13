@@ -32,7 +32,7 @@
     line-height: 1.2;
     text-decoration: none;
 
-    &::before {
+    &__background {
         content: "";
         position: absolute;
         top: 0;
@@ -123,10 +123,6 @@
         transition-duration: 0.25s;
         transition-timing-function: cubic-bezier(0.35, 0, 0, 1);
     }
-
-    // &__thumb--centered img {
-    //     margin: 1rem;
-    // }
 
     &[href]:hover img,
     &[href]:focus img {

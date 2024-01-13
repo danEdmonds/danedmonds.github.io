@@ -22,6 +22,18 @@
         max-height: calc(100% - var(--section-vertical-padding));
     }
 
+    .js & .logo {
+        opacity: 0;
+
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+    }
+
+    &.in-view .logo  {
+        opacity: 1;
+    }
+
     .container {
         position: relative;
     }
