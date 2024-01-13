@@ -3,6 +3,7 @@ layout: post
 title:  "Motion Design"
 # categories: 
 permalink: /motion-design/
+publish: false
 thumbnail: thumb-centered.jpg
 order: 9
 ---
