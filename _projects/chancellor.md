@@ -8,7 +8,9 @@ client: "West Virginia University"
 order: 8
 ---
 
-To accommodate the ever-changing content and narrative storytelling used to present the chancellor’s story, initiatives, and impact, I expanded upon the components within the WVU Health design system to create an arrangement of page modules, or blocks, that can be reconfigured quickly and painlessly by editors.
+To accommodate the ever-changing content and narrative storytelling used to present the chancellor’s story, initiatives, and impact, I expanded upon the components within the [WVU Health](/wvu-health/) design system to create an arrangement of page modules, or blocks, that can be reconfigured quickly and painlessly by editors.
+
+[View the live website.](https://health.wvu.edu/chancellor/)
 
 {% figure image="chancellor/wvu-health-chancellor_home.jpg" caption="" %}
 

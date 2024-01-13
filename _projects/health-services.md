@@ -8,7 +8,7 @@ client: "West Virginia University"
 order: 4
 ---
 
-We worked with the WVU Health Sciences Communications team to organize and present the University’s health and wellness resources across several related microsites. Building upon the WVU Health design system, we unified the digital experiences for promoting awareness and helping students, staff, and patients find the appropriate resources.
+We worked with the WVU Health Sciences Communications team to organize and present the University’s health and wellness resources across several related microsites. Building upon the [WVU Health](/wvu-health/) design system, we unified the digital experiences for promoting awareness and helping students, staff, and patients find the appropriate resources.
 
 <!-- [screenshot of wellness footer] -->
 
@@ -26,7 +26,7 @@ We worked with the WVU Health Sciences Communications team to organize and prese
 
 {% video_figure poster="health-services/wvu-well-being_wheel_poster.jpg" mp4="health-services/wvu-well-being_wheel_h.264.mp4" caption="Showcasing the multi-dimensional Well-being Wheel was a must-have, and a previously used circular component was a perfect fit to create an engaging and interactive component." %}
 
-On the Paths to Well-being page, visitors are able to search and filter more than 100 health and wellness resources by name, audience, priority, and service. To create the most robust results possible, analytics are used to identify common search words and clicked items. 
+On the [Paths to Well-being page](https://health.wvu.edu/well-being/paths-to-well-being/), visitors are able to search and filter more than 100 health and wellness resources by name, audience, priority, and service. To create the most robust results possible, analytics are used to identify common search words and clicked items. 
 
 The cards at the top of this page are updated seasonally to highlight the most popular resources, each linking to a pre-filtered list of resources.
 

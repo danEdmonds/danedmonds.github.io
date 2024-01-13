@@ -8,7 +8,7 @@ client: "West Virginia University"
 order: 6
 ---
 
-A comprehensive profile is maintained for each staff member, faculty member, and associated patient care provider in the WVU Health Sciences Directory. 
+A comprehensive profile is maintained for each staff member, faculty member, and associated patient care provider in the [WVU Health Sciences Directory](https://directory.hsc.wvu.edu/). 
 
 Crafting in the browser, I collaborated with the creative director and the WVU Health Sciences Communications team to iterate over several versions of high-fidelity prototypes to equip members and providers with a beautiful and reliable platform to highlight their professional achievements and interests.
 
