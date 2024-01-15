@@ -17,6 +17,8 @@
 }
 
 .my-work {
+    $initial-delay: 0.25s;
+
     background-color: $de-dark-blue;
     background-image: radial-gradient(ellipse at center bottom, rgba(black, 0.2), rgba(black, 0.2) 50%, transparent 50%, transparent);
     background-position: center bottom -0.75rem;
@@ -29,19 +31,21 @@
 
         animation-name: SmoothEntryY, FadeIn;
         animation-duration: 0.5s, 0.25s;
-        animation-delay: 0.5s;
+        animation-delay: $initial-delay;
         animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
         animation-fill-mode: both;
     }
 
     @for $i from 1 through 3 {
         &.prepare p:nth-child(#{$i}) {
-            animation-delay: ($i * 0.075) + 0.5s;
+            animation-delay: ($i * 0.075) + $initial-delay;
         }
     }
 }
 
 .about-me {
+    $initial-delay: 0.25s;
+
     &.prepare h2,
     &.prepare p,
     &.prepare h3,
@@ -51,25 +55,25 @@
 
         animation-name: SmoothEntryY, FadeIn;
         animation-duration: 0.5s, 0.25s;
-        animation-delay: 0.5s;
+        animation-delay: $initial-delay;
         animation-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
         animation-fill-mode: both;
     }
 
     @for $i from 1 through 5 {
         &.prepare p:nth-child(#{$i}) {
-            animation-delay: ($i * 0.075) + 0.5s;
+            animation-delay: ($i * 0.075) + $initial-delay;
         }
     }
 
     &.prepare h3 {
-        animation-delay: (6 * 0.075) + 0.5s;
+        animation-delay: (6 * 0.075) + $initial-delay;
     }
 
     @for $i from 1 through 10 {
         &.prepare dt:nth-child(#{$i}),
         &.prepare dd:nth-child(#{$i}) {
-            animation-delay: ($i * 0.075) + (6 * 0.075s) + 0.5s;
+            animation-delay: ($i * 0.075) + (6 * 0.075s) + $initial-delay;
         }
     }
 }

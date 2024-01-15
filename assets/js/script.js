@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!container || !projects.length) return;
 
-        var initialDelay = 800,
+        var initialDelay = 550,
         delayIncrement = 250;
 
         var FadeInKeyframes = [
