@@ -6,4 +6,4 @@ layout: home
 title: Hello, I’m Dan Edmonds.
 ---
 
-I’m a passionate **front-end designer and developer** in the Lauren Highlands of Pennsylvania.
+I’m a passionate **front-end designer and developer** in Southwestern Pennsylvania.
