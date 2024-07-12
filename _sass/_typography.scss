@@ -23,12 +23,19 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3.75rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     text-shadow:
         1px 1px darken($silver, 20%),
-        2px 2px darken($silver, 20%),
-        8px 8px rgba(black, 0.5);
+        4px 4px rgba(black, 0.5);
+
+    @media screen and (min-width: 36em) {
+        font-size: 3.75rem;
+        text-shadow:
+            1px 1px darken($silver, 20%),
+            2px 2px darken($silver, 20%),
+            8px 8px rgba(black, 0.5);
+    }
 
     @media screen and (min-width: 48em) {
         font-size: 4.5rem;
@@ -40,8 +47,12 @@ h2, h3 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     line-height: 1.2;
+
+    @media screen and (min-width: 36em) {
+        font-size: 3rem;
+    }
 
     @media screen and (min-width: 48em) {
         font-size: 3.75rem;
@@ -49,15 +60,21 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.25;
+
+    @media screen and (min-width: 36em) {
+        font-size: 2.5rem;
+    }
 
     @media screen and (min-width: 48em) {
         font-size: 3rem;
     }
 }
 
-// p {}
+p {
+    line-height: 1.8;
+}
 
 header p,
 main p,

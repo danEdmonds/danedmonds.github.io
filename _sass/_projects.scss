@@ -8,11 +8,27 @@
     gap: 1.5rem 4rem;
     grid-template-rows: auto 1fr;
     grid-template-areas: "image" "details";
-    margin: 4rem 0 0;
+    margin-top: 2rem;
     text-wrap: pretty;
 
+    @media screen and (min-width: 36em) {
+        margin-top: 3rem;
+    }
+
+    @media screen and (min-width: 48em) {
+        margin-top: 4rem;
+    }
+
     & + & {
-        margin-top: 8rem;
+        margin-top: 4rem;
+
+        @media screen and (min-width: 36em) {
+            margin-top: 6rem;
+        }
+
+        @media screen and (min-width: 48em) {
+            margin-top: 8rem;
+        }
     }
 
     a {
