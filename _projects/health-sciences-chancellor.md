@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Health Sciences Chancellor"
-permalink: /chancellor/
+permalink: /health-sciences-chancellor/
 thumbnail: thumb-trailing.jpg
 summary: "Dynamic narrative modules showcase the chancellor’s impactful initiatives and achievements."
 order: 3
@@ -32,8 +32,8 @@ To accommodate the ever-changing content and narrative storytelling used to pres
     </div>
 </dl>
 
-{% figure image="chancellor/wvu-health-chancellor_home.jpg" caption="" %}
+{% figure image="health-sciences-chancellor/wvu-health-chancellor_home.jpg" caption="" %}
 
-{% video_figure poster="chancellor/wvu-health-chancellor_timeline_poster.jpg" mp4="chancellor/wvu-health-chancellor_timeline_h.264.mp4" caption="A scroll-triggered animated map graphic is a delightful way to show the Chancellor’s journey from West Virginia University to Ohio State University and back WVU." %}
+{% video_figure poster="health-sciences-chancellor/wvu-health-chancellor_timeline_poster.jpg" mp4="health-sciences-chancellor/wvu-health-chancellor_timeline_h.264.mp4" caption="A scroll-triggered animated map graphic is a delightful way to show the Chancellor’s journey from West Virginia University to Ohio State University and back WVU." %}
 
-{% figure image="chancellor/wvu-health-chancellor_reading-list.jpg" caption="" %}
+{% figure image="health-sciences-chancellor/wvu-health-chancellor_reading-list.jpg" caption="" %}

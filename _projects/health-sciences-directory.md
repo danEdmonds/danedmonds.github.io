@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Health Sciences Directory"
-permalink: /directory/
+permalink: /health-sciences-directory/
 thumbnail: thumb-trailing.jpg
 summary: "Streamlining the discovery of faculty and staff profiles and achievements."
 order: 0
@@ -31,8 +31,8 @@ Crafting in the browser, I collaborated with the creative director and the WVU H
 
 Users swiftly and effectively discover members using a search feature that retrieves and queries data from an internal API fed from a custom-built Directory Manager web application.
 
-{% figure image="directory/wvu-health-sciences-directory_home.jpg" caption="" %}
+{% figure image="health-sciences-directory/wvu-health-sciences-directory_home.jpg" caption="" %}
 
-{% figure image="directory/wvu-health-sciences-directory_results.jpg" caption="" %}
+{% figure image="health-sciences-directory/wvu-health-sciences-directory_results.jpg" caption="" %}
 
-{% figure image="directory/wvu-health-sciences-directory_profile.jpg" caption="" %}
+{% figure image="health-sciences-directory/wvu-health-sciences-directory_profile.jpg" caption="" %}

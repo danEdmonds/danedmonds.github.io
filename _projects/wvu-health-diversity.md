@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Health Sciences Diversity"
-permalink: /diversity/
+title:  "WVU Health Diversity"
+permalink: /wvu-health-diversity/
 thumbnail: thumb-centered.jpg
 summary: "A vibrant microsite presenting DEI initiatives and events."
 order: 2
@@ -32,8 +32,8 @@ Working with the University’s diversity, equity, and inclusion brand patterns 
     </div>
 </dl>
 
-{% figure image="diversity/wvu-health-diversity_homepage.jpg" caption="" %}
+{% figure image="wvu-health-diversity/wvu-health-diversity_homepage.jpg" caption="" %}
 
-{% video_figure poster="diversity/wvu-health-diversity_scroll-story_poster.jpg" mp4="diversity/wvu-health-diversity_scroll-story_h.264.mp4" caption="" %}
+{% video_figure poster="wvu-health-diversity/wvu-health-diversity_scroll-story_poster.jpg" mp4="wvu-health-diversity/wvu-health-diversity_scroll-story_h.264.mp4" caption="" %}
 
-{% video_figure poster="diversity/wvu-health-diversity_diversity-week_carousel_poster.jpg" mp4="diversity/wvu-health-diversity_diversity-week_carousel_h.264.mp4" caption="" %}
+{% video_figure poster="wvu-health-diversity/wvu-health-diversity_diversity-week_carousel_poster.jpg" mp4="wvu-health-diversity/wvu-health-diversity_diversity-week_carousel_h.264.mp4" caption="" %}
