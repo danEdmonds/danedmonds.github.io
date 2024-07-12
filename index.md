@@ -6,4 +6,4 @@ layout: home
 title: Hello, I’m Dan Edmonds.
 ---
 
-I’m a passionate **designer and front-end developer** based in Pittsburgh, PA.
+I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania. I’m currently a **user experience designer** at [West Virginia University Health Sciences](https://health.wvu.edu).

@@ -2,18 +2,20 @@
 layout: base
 ---
 
-<div class="container">
-    {% include nav.html %}
+<header>
+    <div class="container">
+        {% include nav.html %}
+    </div>
+</header>
 
-    <main class="project-entry animate">
-        {%- if page.client -%}
-            <p>
-                <span class="project-entry__client">{{ page.client }}</span>
-            </p>
-        {%- endif -%}
-
+<main class="project-entry animate">
+    <div class="container">
         <h1 data-heading="{{ page.title | escape }}">{{ page.title | escape }}</h1>
 
+        <!-- {%- if page.client -%}
+            <p class="project-entry__client"><b>{{ page.client }}</b></p>
+        {%- endif -%} -->
+
         {{ content }}
-    </main>
-</div>
+    </div>
+</main>

@@ -11,9 +11,7 @@ module Jekyll
             caption = @attributes['caption']
 
             output = "<figure class=\"figure\">"
-            output += "<div>"
-            output += "<img src=\"#{baseurl}/assets/images/#{image}\" alt=\"\" width=\"1600\" height=\"1200\" loading=\"lazy\">"
-            output += "</div>"
+            output += "<img src=\"#{baseurl}/assets/images/#{image}\" alt=\"\" width=\"1600\" height=\"1200\" loading=\"lazy\">"ç
 
             if !caption.nil? && !caption.empty?
                 output += "<figcaption>#{caption}</figcaption>"

@@ -1,6 +1,17 @@
 ---
 layout: base
 ---
-<h1>{{ page.title | escape }}</h1>
 
-{{ content }}
+<header>
+    <div class="container">
+        {% include nav.html %}
+    </div>
+</header>
+
+<main class="project-entry">
+    <div class="container">
+        <h1 data-heading="{{ page.title | escape }}">{{ page.title | escape }}</h1>
+
+        {{ content }}
+    </div>
+</main>

@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dan Edmonds &raquo; Front-end Designer &amp; Developer</title>
+    <!-- <title>{{ page.title | escape }} &raquo; Dan Edmonds &raquo; Designer &amp; Front-end Developer</title> -->
+    <title>{% if page.url != "/" %}{{ page.title | escape }} &raquo; {% endif %}Dan Edmonds &raquo; Designer &amp; Front-end Developer</title>
 
     <link href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}" rel="stylesheet">
 
@@ -23,14 +24,27 @@
 
         <div class="container">
             <footer>
-                <p>&copy; <span id="year"></span> Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
+                <p>&copy; <span id="year"></span>. Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
             </footer>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="{{ "/assets/js/script.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="{{ "/assets/js/script.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}"></script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set year in copyright statement
+            (function () {
+                var year = document.getElementById('year');
+
+                if (!year) return;
+
+                year.innerHTML = new Date().getFullYear();
+            })();
+        });
+    </script>
 
 </body>
 </html>

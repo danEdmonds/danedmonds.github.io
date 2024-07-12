@@ -2,13 +2,11 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: $de-dark-blue;
+    margin-bottom: 4rem;
+    background-color: var(--de-header-bg);
+    background-image: radial-gradient(ellipse farthest-side at center bottom, rgba(white, 0.015), rgba(white, 0) 125%);
 
-    nav {
-        margin-bottom: 0;
+    @media screen and (min-width: 48em) {
+        margin-bottom: 8rem;
     }
 }

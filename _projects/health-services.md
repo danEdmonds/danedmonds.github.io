@@ -1,16 +1,36 @@
 ---
 layout: post
 title:  "Health Services"
-# categories: 
 permalink: /health-services/
 thumbnail: thumb-centered.jpg
-client: "West Virginia University"
+summary: "Unifying health and well-being resources to enhance access and awareness."
 order: 4
 ---
 
 We worked with the WVU Health Sciences Communications team to organize and present the University’s health and wellness resources across several related microsites. Building upon the [WVU Health](/wvu-health/) design system, we unified the digital experiences for promoting awareness and helping students, staff, and patients find the appropriate resources.
 
 <!-- [screenshot of wellness footer] -->
+
+<dl class="meta">
+    <div>
+        <dt>Disciplines</dt>
+        <dd>Design lead</dd>
+        <dd>Visual design</dd>
+        <dd>Motion design</dd>
+        <dd>Front-end development</dd>
+    </div>
+    <div>
+        <dt>Tools</dt>
+        <dd>HTML/CSS</dd>
+        <dd>JavaScript</dd>
+        <dd>GSAP</dd>
+        <dd>Umbraco CMS</dd>
+    </div>
+    <div>
+        <dt>Timeline</dt>
+        <dd>October 2022</dd>
+    </div>
+</dl>
 
 ## WVU Student Health.
 
@@ -32,14 +52,14 @@ The cards at the top of this page are updated seasonally to highlight the most p
 
 {% figure image="health-services/wvu-well-being_paths-to-well-being.jpg" caption="" %}
 
-## Other health services.
+<!-- ## Other health services.
 
-{% figure image="health-services/wvu-health-services_clinic.jpg" caption="" %}
+{% figure image="health-services/wvu-health-services_clinic.jpg" caption="" %} -->
 
-## COVID-19 awareness.
+<!-- ## COVID-19 awareness.
 
 When the COVID-19 pandemic occured in March 2020, we were tasked with building a comprehenisble and flexible microsite capable of quickly communicating information that was rapidly changing day-to-day. 
 
 The clear solution was to utilize the modularity of the newly created WVU Health design system to quickly build an informative, engaging, and scalable website.
 
-{% figure image="health-services/wvu-coronavirus.jpg" caption="" %}
+{% figure image="health-services/wvu-coronavirus.jpg" caption="" %} -->

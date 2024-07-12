@@ -3,53 +3,34 @@
 
 nav {
     display: flex; 
+    flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
-    margin-bottom: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-block: 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
 
-    @media screen and (min-width: 48em) {
-        margin-bottom: 8rem;
+    @media screen and (max-width: 35.9375em) {
+        justify-content: center;
+
+        a:has(.logo) {
+            display: flex;
+            justify-content: center;
+            flex: 100%;
+        }
     }
 
-    a {
-        font-size: 1.25rem;
-        font-weight: 700;
-
-        &:nth-child(2) {
+    @media screen and (min-width: 36em) {
+        a:nth-child(2) {
             margin-left: auto;
         }
-
-        .js & {
-            transform: translateY(1rem);
-            opacity: 0;
-    
-            transition-property: transform, opacity;
-            transition-duration: 0.5s, 0.25s;
-            transition-delay: 1s;
-            transition-timing-function: cubic-bezier(0.18, 0.89, 0.67, 1.16), ease-out;
-        }
-    }
-
-    &.in-view a {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    &.in-view a:nth-child(2) {
-        transition-delay: 1.25s;
-    }
-
-    &.in-view a:nth-child(3) {
-        transition-delay: 1.3s; // + 0.05s
     }
 
     .logo {
         transform: translateY(0);
         width: 6rem;
         fill: darken($de-green, 20%);
-        filter: drop-shadow(0.25rem 0.25rem 0 rgba(black, 0));
+        filter: drop-shadow(4px 4px 0 rgba(black, 0));
 
         transition-property: transform, fill, filter;
         transition-duration: 0.25s;
@@ -63,7 +44,7 @@ nav {
     a:hover .logo, 
     a:focus .logo {
         transform: translate(-0.125rem, -0.125rem);
-        filter: drop-shadow(0.25rem 0.25rem 0 rgba(black, .25));
+        filter: drop-shadow(4px 4px 0 rgba(black, 0.5));
 
         transition-duration: 0.5s;
     }

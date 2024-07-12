@@ -1,14 +1,33 @@
 ---
 layout: post
 title:  "School of Medicine"
-# categories: 
 permalink: /school-of-medicine/
 thumbnail: thumb-trailing.jpg
-client: "West Virginia University"
-order: 3
+summary: "Efficient, intuitive access to comprehensive program and department information."
+order: 5
 ---
 
 As one of the largest websites at West Virginia University, the focus of the School of Medicine homepage is to welcome a broad audience to the school and efficiently guide them to the information they need.
+
+<dl class="meta">
+    <div>
+        <dt>Disciplines</dt>
+        <dd>Design lead</dd>
+        <dd>Visual design</dd>
+        <dd>Motion design</dd>
+        <dd>Front-end development</dd>
+    </div>
+    <div>
+        <dt>Tools</dt>
+        <dd>HTML/CSS</dd>
+        <dd>JavaScript</dd>
+        <dd>GSAP</dd>
+    </div>
+    <div>
+        <dt>Timeline</dt>
+        <dd>July 2023</dd>
+    </div>
+</dl>
 
 {% video_figure poster="school-of-medicine/wvu-school-of-medicine_homepage_poster.jpg" mp4="school-of-medicine/wvu-school-of-medicine_homepage_h.264.mp4" %}
 

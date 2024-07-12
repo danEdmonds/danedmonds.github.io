@@ -19,11 +19,11 @@
 .my-work {
     $initial-delay: 0.25s;
 
-    background-color: $de-dark-blue;
-    background-image: radial-gradient(ellipse at center bottom, rgba(black, 0.2), rgba(black, 0.2) 50%, transparent 50%, transparent);
-    background-position: center bottom -0.75rem;
-    background-repeat: no-repeat;
-    background-size: 150% 2rem;
+    // background-color: $de-dark-blue;
+    // background-image: radial-gradient(ellipse at center bottom, rgba(black, 0.2), rgba(black, 0.2) 50%, transparent 50%, transparent);
+    // background-position: center bottom -0.75rem;
+    // background-repeat: no-repeat;
+    // background-size: 150% 2rem;
 
     &.prepare h2,
     &.prepare p {

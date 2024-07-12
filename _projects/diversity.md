@@ -1,16 +1,36 @@
 ---
 layout: post
 title:  "Health Sciences Diversity"
-# categories: 
 permalink: /diversity/
 thumbnail: thumb-centered.jpg
-client: "West Virginia University"
-order: 7
+summary: "A vibrant microsite presenting DEI initiatives and events."
+order: 2
 ---
 
 Working with the University’s diversity, equity, and inclusion brand patterns and colors, I created a clean, colorful, and engaging microsite to highlight DEI initiatives and events at WVU Health Sciences.
 
 [View the live website.](https://health.wvu.edu/diversity/)
+
+<dl class="meta">
+    <div>
+        <dt>Disciplines</dt>
+        <dd>Design lead</dd>
+        <dd>Visual design</dd>
+        <dd>Motion design</dd>
+        <dd>Front-end development</dd>
+    </div>
+    <div>
+        <dt>Tools</dt>
+        <dd>HTML/CSS</dd>
+        <dd>JavaScript</dd>
+        <dd>GSAP</dd>
+        <dd>Umbraco CMS</dd>
+    </div>
+    <div>
+        <dt>Timeline</dt>
+        <dd>June 2020</dd>
+    </div>
+</dl>
 
 {% figure image="diversity/wvu-health-diversity_homepage.jpg" caption="" %}
 

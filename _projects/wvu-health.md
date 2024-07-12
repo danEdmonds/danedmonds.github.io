@@ -1,20 +1,40 @@
 ---
 layout: post
 title:  "WVU Health"
-# categories: 
 permalink: /wvu-health/
+summary: "Presenting the health education and patient care initiatives."
 thumbnail: thumb-centered.jpg
-client: "West Virginia University"
 order: 1
 ---
 
 The [WVU Health website](https://health.wvu.edu/) focuses on West Virginia University’s health education and patient care initiatives by highlighting the unique culture within the five health schools and the advanced technology and practices being used. 
 
+<dl class="meta">
+    <div>
+        <dt>Disciplines</dt>
+        <dd>Design lead</dd>
+        <dd>Visual design</dd>
+        <dd>Motion design</dd>
+        <dd>Front-end development</dd>
+    </div>
+    <div>
+        <dt>Tools</dt>
+        <dd>HTML/CSS</dd>
+        <dd>JavaScript</dd>
+        <dd>GSAP</dd>
+        <dd>Umbraco CMS</dd>
+    </div>
+    <div>
+        <dt>Timeline</dt>
+        <dd>March 2020</dd>
+    </div>
+</dl>
+
+{% video_figure poster="wvu-health/wvu-health_homepage_poster.jpg" mp4="wvu-health/wvu-health_homepage_h.264.mp4" %}
+
 We collaborated with the WVU Health Sciences Communications team to create a visual design that feels innovative and agile, and breaks through the traditional structure of a higher education website. Bold typography, in-the-moment photos, and concise sections ensure that every page layout feels as impactful as its content, with an emphasis on using animation to guide the audience throughout.
 
 A collaborative approach to design, development, and content strategy ensured that WVU Health’s priorities are at the focus of every decision.
-
-{% video_figure poster="wvu-health/wvu-health_homepage_poster.jpg" mp4="wvu-health/wvu-health_homepage_h.264.mp4" %}
 
 ## The cover.
 

@@ -13,11 +13,9 @@ module Jekyll
             caption = @attributes['caption']
 
             output = "<figure class=\"figure\">"
-            output += "<div>"
             output += "<video poster=\"#{baseurl}/assets/images/#{poster}\" controls muted loop style=\"width: 100%; height: auto;\">"
             output += "<source src=\"#{baseurl}/assets/images/#{mp4}\" type=\"video/mp4\" />"
             output += "</video>"
-            output += "</div>"
 
             if !caption.nil? && !caption.empty?
                 output += "<figcaption>#{caption}</figcaption>"

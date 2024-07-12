@@ -7,10 +7,10 @@ layout: base
         {% include nav.html %}
     </div>
 
-    <div class="section hero animate">
-        <svg viewBox="0 0 128 99.63" class="logo" aria-hidden="true">
+    <div class="hero animate">
+        <!-- <svg viewBox="0 0 128 99.63" class="logo" aria-hidden="true">
             <path d="M34.43 11.38C45.45.36 63.31.36 74.32 11.38l17.73 17.73a3.138 3.138 0 0 0 4.43 0l8.87-8.87a3.138 3.138 0 0 1 4.43 0l13.3 13.3a3.138 3.138 0 0 1 0 4.43L80.97 80.08a6.27 6.27 0 0 1-8.87 0L47.72 55.7a3.138 3.138 0 0 1 0-4.43l4.43-4.43a3.138 3.138 0 0 1 4.43 0l8.87 8.87a3.138 3.138 0 0 0 4.43 0l2.22-2.22a6.27 6.27 0 0 0 0-8.87l-13.3-13.3a6.27 6.27 0 0 0-8.87 0L32.21 49.05a6.27 6.27 0 0 0 0 8.87l19.95 19.95a3.138 3.138 0 0 1 0 4.43l-13.3 13.3a3.138 3.138 0 0 1-4.43 0L12.26 73.43c-11.02-11.02-11.02-28.88 0-39.89l22.17-22.16z" />
-        </svg>
+        </svg> -->
 
         <div class="container">
             {%- if page.title -%}
@@ -23,32 +23,34 @@ layout: base
 </header>
 
 <main>
-    {% assign sections = site.sections | sort: 'order' %}
-    {% for section in sections %}
-        {% if section.include != null %}
-            {% include {{ section.include }} %}
-        {% else %}
-            {% include sections/default.html %}
-        {% endif %}
-    {% endfor %}
+    {% assign projects = site.projects | sort: 'order' | reverse %}
+    {%- if projects.size > 0 -%}
+        <div class="container">
+            <h2 id="my-work">My work.</h2>
+
+            {%- for post in projects -%}
+                {% assign class_list = "project" %}
+
+                {% if post.publish != false %}
+                    {% if post.slug %}
+                        {% assign class_list = class_list | append: " project--" | append: post.slug %}
+                    {% endif %}
+                  
+                    <div class="{{ class_list }}">
+                        <div class="project__details">
+                            <h3 class="project__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+
+                            {% if post.summary %}
+                                <p class="project__summary">{{ post.summary }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <a href="{{ post.url | relative_url }}" class="project__image" aria-label="View the {{ post.title | escape }} project.">
+                            <img src="{{ site.baseurl }}/assets/images/{{ post.url }}/{{ post.thumbnail }}" alt="" width="480" height="360">
+                        </a>
+                    </div>
+                {% endif %}
+            {%- endfor -%}
+        </div>
+    {%- endif -%}
 </main>
-
-<!-- <script>
-    var titleWrapper = document.querySelector('h1');
-    var titleText = titleWrapper.textContent;
-    titleWrapper.innerHTML = '';
-
-    for (var i = 0; i < titleText.length; i++) {
-        var char = titleText[i];
-
-        // Check if the character is not a whitespace character
-        if (char.trim() !== '') {
-            var charSpan = document.createElement('span');
-            charSpan.textContent = char;
-            titleWrapper.appendChild(charSpan);
-        } else {
-            // If it's a whitespace character, just add it as is
-            titleWrapper.appendChild(document.createTextNode(char));
-        }
-    }
-</script> -->

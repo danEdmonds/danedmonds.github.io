@@ -2,18 +2,12 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 footer {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding-top: 2rem;
-    border-top: 0.125rem solid $de-blue;
+    margin-block: 4rem 2rem;
+    padding-top: 1em;
+    border-top: 2px solid rgba(white, 0.075);
     text-align: center;
 
     @media screen and (min-width: 48em) {
-        margin-top: 8rem;
-    }
-
-    .home & {
-        margin-top: 0;
-        border-color: $de-dark-blue;
+        margin-block-start: 8rem;
     }
 }

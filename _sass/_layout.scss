@@ -2,13 +2,6 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .container {
-    width: calc(100% - 2rem);
-    height: 100%;
-    max-width: 60rem;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.home {
-    background-color: $de-blue;
+    width: min(60rem, 100% - 2rem);
+    margin-inline: auto;
 }

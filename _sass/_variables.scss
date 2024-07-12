@@ -1,8 +1,36 @@
 // Colors
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$de-blue: #2b3973;
-$de-dark-blue: #263366;
-$de-light-blue: #4f66bf;
-$de-green: #70d1aa;
-$de-orange: #f76c6c;
+$asbestos: #99a3a4;
+$green-sea: #73c6b6;
+$midnight-blue: #17202a;
+$pumpkin: #e59866;
+$silver: #f8f9f9;
+$wet-asphalt: #1b2631;
+
+$de-green: $green-sea;
+$de-orange: $pumpkin;
+
+:root {
+    // --de-body-bg: #f2f4f4;
+    // --de-body-bg: #eaeded;
+    // --de-header-bg: #d5dbdb;
+    // --de-body-color: #212529;
+    // --de-heading-color: #424949;
+    // --de-link-color: #0d6efd;
+    // --de-link-decoration: underline;
+    // --de-link-hover-color: #0a58ca;
+    // --de-emphasis-color: #{$de-orange};
+
+    // @media (prefers-color-scheme: dark) {
+        --de-body-bg: #{$midnight-blue};
+        --de-header-bg: #{$wet-asphalt};
+        --de-body-color: #{$asbestos};
+        --de-heading-color: #{$silver};
+        --de-link-color: #{$silver};
+        --de-link-hover-color: inherit;
+        --de-link-decoration-color: #{$de-green};
+        --de-link-decoration-hover-color: #{$de-orange};
+        --de-emphasis-color: #{$de-orange};
+    // }
+}
