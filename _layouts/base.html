@@ -18,15 +18,12 @@
 </head>
 
 <body class="{{ page.layout }}">
-    
-    <div class="page is-entering">
-        {{ content }}
+    {{ content }}
 
-        <div class="container">
-            <footer>
-                <p>&copy; <span id="year"></span>. Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
-            </footer>
-        </div>
+    <div class="container">
+        <footer>
+            <p>&copy; <span id="year"></span>. Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
+        </footer>
     </div>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
@@ -45,6 +42,5 @@
             })();
         });
     </script>
-
 </body>
 </html>
