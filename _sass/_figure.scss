@@ -10,7 +10,9 @@
     }
 
     @media screen and (min-width: 82.5em) {
-        margin-inline: -10rem;
+        &:not(:has(iframe)) {
+            margin-inline: -10rem;
+        }
     }
 
     img, video {
@@ -28,9 +30,8 @@
     // }
 
     figcaption {
-        // max-width: 60ch;
         padding-block: 1rem;
-        border-bottom: 2px solid rgba(white, 0.075);
+        border-bottom: 1px solid rgba(white, 0.075);
     }
 }
 

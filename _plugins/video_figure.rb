@@ -13,7 +13,7 @@ module Jekyll
             caption = @attributes['caption']
 
             output = "<figure class=\"figure\">"
-            output += "<video poster=\"#{baseurl}/assets/images/#{poster}\" autoplay muted loop>"
+            output += "<video poster=\"#{baseurl}/assets/images/#{poster}\" autoplay muted loop playsinline>"
             output += "<source src=\"#{baseurl}/assets/images/#{mp4}\" type=\"video/mp4\" />"
             output += "</video>"
 
