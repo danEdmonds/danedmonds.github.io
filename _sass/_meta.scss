@@ -5,8 +5,7 @@
     display: grid; 
     column-gap: 3rem;
     grid-template-columns: repeat(auto-fill, minmax(10ch, 1fr));
-    margin-block: 2em;
-    padding-bottom: 2.25rem;
+    padding-bottom: 1.5em;
     border-block: 1px solid rgba(white, 0.075);
 
     dt, dd {
@@ -14,7 +13,7 @@
     }
 
     dt {
-        // margin-bottom: 0.5em;
+        margin-block-start: 1.5em;
         font-weight: 600;
     }
 

@@ -11,8 +11,6 @@ I appreciate simplicity and user centered design, taking particular delight in m
 
 **I’m eager to break habits and learn new things.**
 
-[My LinkedIn.](https://www.linkedin.com/in/edmondsdan/)
-
 ### My experience.
 
 <dl>
@@ -31,3 +29,5 @@ I appreciate simplicity and user centered design, taking particular delight in m
         Fargo Design Co., <em>Pittsburgh, PA</em></dt>
     <dd>February 2011–May 2011</dd>
 </dl>
+
+[My LinkedIn.](https://www.linkedin.com/in/edmondsdan/)
