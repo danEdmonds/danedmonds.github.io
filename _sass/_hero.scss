@@ -2,7 +2,9 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .hero {
+    // position: relative;
     padding-block: 4rem;
+    // overflow: hidden;
     
     @media screen and (min-width: 48em) {
         padding-block: 8rem;
@@ -10,9 +12,30 @@
 
     // .logo {
     //     position: absolute;
-    //     width: 100%;
-    //     height: auto;
-    //     max-width: 80rem;
-    //     max-height: calc(100% - var(--section-vertical-padding));
+    //     top: 100%;
+    //     left: 50%;
+    //     translate: -50% -50%;
+    //     // width: 100%;
+    //     width: 80rem;
+    //     // height: auto;
+    //     // max-width: 80rem;
+    //     // max-height: calc(100% - var(--section-vertical-padding));
+    //     fill: rgba($de-green, 0.03);
     // }
+
+    // .container {
+    //     isolation: isolate;
+    // }
+
+    @media screen and (min-width: 36em) {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (min-width: 48em) {
+        p {
+            font-size: 1.75rem;
+        }
+    }
 }

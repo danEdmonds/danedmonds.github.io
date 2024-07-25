@@ -4,7 +4,7 @@
 header {
     margin-bottom: 4rem;
     background-color: var(--de-header-bg);
-    background-image: radial-gradient(ellipse farthest-side at center bottom, rgba(white, 0.015), rgba(white, 0) 125%);
+    // background-image: radial-gradient(ellipse farthest-side at center bottom, rgba(white, 0.015), rgba(white, 0) 125%);
 
     @media screen and (min-width: 48em) {
         margin-bottom: 8rem;

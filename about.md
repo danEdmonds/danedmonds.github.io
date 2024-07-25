@@ -16,18 +16,18 @@ I appreciate simplicity and user centered design, taking particular delight in m
 <dl>
     <dt><strong>User Experience Designer,</strong><br>
         WVU Health Sciences, <em>Morgantown, WV</em></dt>
-    <dd>January 2015–Present</dd>
+    <dd>January 2015&ndash;Present</dd>
     <dt><strong>Multimedia Producer,</strong><br>
         PMI, <em>Pittsburgh, PA</em></dt>
-    <dd>November 2011–December 2014</dd>
+    <dd>November 2011&ndash;December 2014</dd>
     <dt><strong>Freelance Front-end Designer & Developer</strong></dt>
-    <dd>June 2008–December 2014</dd>
+    <dd>June 2008&ndash;December 2014</dd>
     <dt><strong>User Experience Designer,</strong><br>
         Careerimp Inc., <em>Pittsburgh, PA</em></dt>
-    <dd>May 2011–November 2011</dd>
+    <dd>May 2011&ndash;November 2011</dd>
     <dt><strong>Multimedia Developer,</strong><br>
         Fargo Design Co., <em>Pittsburgh, PA</em></dt>
-    <dd>February 2011–May 2011</dd>
+    <dd>February 2011&ndash;May 2011</dd>
 </dl>
 
 [My LinkedIn.](https://www.linkedin.com/in/edmondsdan/)
