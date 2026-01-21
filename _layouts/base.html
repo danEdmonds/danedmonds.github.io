@@ -3,21 +3,27 @@
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <title>{{ page.title | escape }} &raquo; Dan Edmonds &raquo; Designer &amp; Front-end Developer</title> -->
     <title>{% if page.url != "/" %}{{ page.title | escape }} &raquo; {% endif %}Dan Edmonds &raquo; Designer &amp; Front-end Developer</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
     <link href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}" rel="stylesheet">
 
     <script>document.querySelector('html').classList.add('js');</script>
-
 </head>
 
 <body class="{{ page.layout }}">
+    <header role="banner">
+        <div class="container">
+            {% include nav.html %}
+        </div>
+    </header>
+
     {{ content }}
 
     <div class="container">
@@ -25,10 +31,6 @@
             <p>&copy; <span id="year"></span>. Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
         </footer>
     </div>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
-    <!-- <script src="{{ "/assets/js/script.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}"></script> -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <title>{{ page.title | escape }} &raquo; Dan Edmonds &raquo; Designer &amp; Front-end Developer</title> -->
+    <title>{% if page.url != "/" %}{{ page.title | escape }} &raquo; {% endif %}Dan Edmonds &raquo; Designer &amp; Front-end Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
+    <link href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}" rel="stylesheet">
+
+    <script>document.querySelector('html').classList.add('js');</script>
+
+</head>
+
+<body class="{{ page.layout }}">
+    <header role="banner">
+        <div class="container">
+            {% include nav.html %}
+        </div>
+    </header>
+
+    {{ content }}
+
+    <div class="container">
+        <footer>
+            <p>&copy; <span id="year"></span>. Built with <a href="https://jekyllrb.com/">Jekyll</a>. The source is available on <a href="https://github.com/danEdmonds/danedmonds.github.io">GitHub</a>.</p>
+        </footer>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="{{ "/assets/js/script.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}"></script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set year in copyright statement
+            (function () {
+                var year = document.getElementById('year');
+
+                if (!year) return;
+
+                year.innerHTML = new Date().getFullYear();
+            })();
+        });
+    </script>
+
+    <script>
+        const projectPagePattern = new URLPattern({
+            pathname: "/:project",
+            baseURL: window.origin
+        });
+
+        const isProjectPage = (url) => {
+            const match = projectPagePattern.exec(url);
+
+            if (match) {
+
+                // The matched project name
+                const project = match.pathname.groups.project;
+
+                // Exclude "home" or "about"
+                return project !== "" && project !== "about";
+            }
+
+            return false;
+        };
+
+        const extractProjectNameFromUrl = (url) => {
+            const match = projectPagePattern.exec(url);
+            
+            return match?.pathname.groups.project;
+        }
+
+        // Test cases
+        // console.log(isProjectPage("https://example.com/home")); // false (excluded explicitly)
+        // console.log(isProjectPage("https://example.com/about")); // false (excluded explicitly)
+        // console.log(isProjectPage("https://example.com/some-project")); // true
+        // console.log(isProjectPage("https://example.com/")); // false (empty project name)
+        // console.log(isProjectPage("https://example.com/contact-us")); // true
+
+        const setTemporaryViewTransitionNames = async (entries, vtPromise) => {
+            for (const [$el, name] of entries) {
+                $el.style.viewTransitionName = name;
+            }
+
+            await vtPromise;
+
+            for (const [$el, name] of entries) {
+                $el.style.viewTransitionName = '';
+            }
+
+        }
+
+        const projects = document.querySelectorAll('.project a');
+
+        projects.forEach((project) => {
+            project.addEventListener('click', (event) => {
+                // event.preventDefault();
+
+                project.parentElement.style.viewTransitionName = 'project';
+            });
+        });
+
+        // window.addEventListener('pageswap', async (event) => {
+        //     if (!event.viewTransition) return;
+
+        //     const currentUrl = event.activation.from?.url ? new URL(e.activation.from.url) : null;
+        //     const targetUrl = new URL(event.activation.entry.url);
+
+        //     // Only transition to same basePath
+        //     // ~> SKIP!
+        //     // if (!targetUrl.pathname.startsWith(basePath)) {
+        //     //     e.viewTransition.skipTransition();
+        //     // }
+
+        //     // Going from profile page to homepage
+        //     // ~> The big img and title are the ones!
+        //     // if (isProfilePage(currentUrl) && isHomePage(targetUrl)) {
+        //     //     setTemporaryViewTransitionNames([
+        //     //         [document.querySelector(`#detail main h1`), 'name'],
+        //     //         [document.querySelector(`#detail main img`), 'avatar'],
+        //     //     ], e.viewTransition.finished);
+        //     // }
+
+        //     // Going to profile page
+        //     // ~> The clicked items are the ones!
+        //     if (isProjectPage(targetUrl)) {
+        //         const project = extractProjectNameFromUrl(targetUrl);
+
+        //         setTemporaryViewTransitionNames([
+        //             // [document.querySelector(`#${profile} span`), 'name'],
+        //             [document.querySelector(`.project--${project}`), 'project']
+        //         ], event.viewTransition.finished);
+        //     }
+        // });
+    </script>
+</body>
+</html>

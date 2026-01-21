@@ -2,16 +2,8 @@
 layout: base
 ---
 
-<header role="banner">
-    <div class="container">
-        {% include nav.html %}
-    </div>
-</header>
+<main class="grid project-entry">
+    <h1 data-heading="{{ page.title | escape }}">{{ page.title | escape }}</h1>
 
-<main class="project-entry">
-    <div class="container">
-        <h1 data-heading="{{ page.title | escape }}">{{ page.title | escape }}</h1>
-
-        {{ content }}
-    </div>
+    {{ content }}
 </main>
