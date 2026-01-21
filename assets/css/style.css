@@ -77,14 +77,14 @@ $de-orange: $pumpkin; */
     --de-border-color: color-mix(in oklch, var(--de-obsidian), white 90%);
     --de-logo-color: currentColor;
 
-    /* @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: dark) {
         --de-body-bg: var(--de-obsidian);
         --de-body-color: color-mix(in oklch, var(--de-obsidian), white 57%);
         --de-header-bg: var(--de-slate);
         --de-heading-color: color-mix(in oklch, var(--de-obsidian), white 97%);
         --de-link-color: color-mix(in oklch, var(--de-obsidian), white 97%);
         --de-border-color: rgb(255 255 255 / 0.075);
-    } */
+    }
 }
 
 
