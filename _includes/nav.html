@@ -1,16 +1,12 @@
 {% assign url = "/" | relative_url %}
 
 <nav class="animate">
-    {% if page.layout == "home" %}
-        <h1>
-            {% include logo.html %}
-        </h1>
-    {% else %}
+    {% if page.layout != "home" %}
         <a href="{{ url }}" aria-label="Home">
             {% include logo.html %}
         </a>
     {% endif %}
     
-    <a href="{{ url }}#my-work">My work.</a>
+    <a href="{{ url }}">My work.</a>
     <a href="/about">About me.</a>
 </nav>

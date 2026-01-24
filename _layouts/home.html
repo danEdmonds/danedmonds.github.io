@@ -4,30 +4,40 @@ layout: base
 
 <main>
     <div class="container">
-        {{ content }}
+        <div class="hero">
+            {% include logo.html %}
+
+            {{ content }}
+        </div>
 
         {%- if site.posts.size > 0 -%}
-            {%- for post in site.posts -%}
-                {% assign class_list = "project" %}
+            <div>
+                {%- for post in site.posts -%}
+                    {% assign class_list = "project" %}
 
-                {% if post.slug %}
-                    {% assign class_list = class_list | append: " project--" | append: post.slug %}
-                {% endif %}
-                
-                <div class="{{ class_list }}">
-                    <div class="project__details">
-                        <h2 class="project__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-
-                        {% if post.summary %}
-                            <p class="project__summary">{{ post.summary }}</p>
-                        {% endif %}
-                    </div>
+                    {% if post.slug %}
+                        {% assign class_list = class_list | append: " project--" | append: post.slug %}
+                    {% endif %}
                     
-                    <a href="{{ post.url | relative_url }}" class="project__image" aria-label="View the {{ post.title | escape }} project.">
-                        <img src="{{ site.baseurl }}/assets/images/{{ post.url }}/{{ post.thumbnail }}" alt="" width="480" height="360">
-                    </a>
-                </div>
-            {%- endfor -%}
+                    <div class="{{ class_list }}">
+                        <div class="project__details">
+                            <h2 class="project__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+
+                            {% if post.summary %}
+                                <p class="project__summary">{{ post.summary }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <a href="{{ post.url | relative_url }}" class="project__image glowing-border" aria-label="View the {{ post.title | escape }} project.">
+                            <!-- <svg class="border-svg">
+                                <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="16" ry="16" pathLength="100" />
+                            </svg> -->
+
+                            <img src="{{ site.baseurl }}/assets/images/{{ post.url }}/{{ post.thumbnail }}" alt="" width="480" height="360">
+                        </a>
+                    </div>
+                {%- endfor -%}
+            </div>
         {%- endif -%}
     </div>
 </main>
