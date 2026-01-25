@@ -6,4 +6,4 @@ layout: home
 title: Hello, I’m Dan Edmonds.
 ---
 
-I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
+Hello, I’m Dan Edmonds. I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
