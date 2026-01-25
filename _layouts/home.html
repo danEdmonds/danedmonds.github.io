@@ -5,7 +5,9 @@ layout: base
 <main>
     <div class="container">
         <div class="hero">
-            {% include logo.html %}
+            <h1>
+                {% include logo.html %}
+            </h1>
 
             {{ content }}
         </div>
@@ -13,22 +15,22 @@ layout: base
         {%- if site.posts.size > 0 -%}
             <div>
                 {%- for post in site.posts -%}
-                    {% assign class_list = "project" %}
+                    {% assign class_list = "post" %}
 
                     {% if post.slug %}
-                        {% assign class_list = class_list | append: " project--" | append: post.slug %}
+                        {% assign class_list = class_list | append: " post--" | append: post.slug %}
                     {% endif %}
                     
                     <div class="{{ class_list }}">
-                        <div class="project__details">
-                            <h2 class="project__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                        <div class="post__details">
+                            <h2 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
 
                             {% if post.summary %}
-                                <p class="project__summary">{{ post.summary }}</p>
+                                <p class="post__summary">{{ post.summary }}</p>
                             {% endif %}
                         </div>
                         
-                        <a href="{{ post.url | relative_url }}" class="project__image glowing-border" aria-label="View the {{ post.title | escape }} project.">
+                        <a href="{{ post.url | relative_url }}" class="post__image" aria-label="View {{ post.title | escape }}.">
                             <!-- <svg class="border-svg">
                                 <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="16" ry="16" pathLength="100" />
                             </svg> -->
