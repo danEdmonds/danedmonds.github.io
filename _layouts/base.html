@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">   
     <link href="{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}" rel="stylesheet">
 
-    <script>document.querySelector('html').classList.add('js');</script>
+    <!-- <script>document.querySelector('html').classList.add('js');</script> -->
 </head>
 
 <!-- <body class="{{ page.layout }}"></body> -->
@@ -33,17 +33,6 @@
         </footer>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set year in copyright statement
-            (function () {
-                var year = document.getElementById('year');
-
-                if (!year) return;
-
-                year.innerHTML = new Date().getFullYear();
-            })();
-        });
-    </script>
+    <script src="{{ "/assets/js/script.js" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}"></script>
 </body>
 </html>

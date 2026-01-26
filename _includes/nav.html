@@ -2,11 +2,11 @@
 
 <nav class="animate">
     {% if page.layout != "home" %}
-        <a href="{{ url }}" aria-label="Home" style="view-transition-name: nav-link-home;">
+        <a href="{{ url }}" aria-label="Home">
             {% include logo.html %}
         </a>
     {% endif %}
     
-    <a href="{{ url }}" style="view-transition-name: nav-link-work;">My work.</a>
-    <a href="/about" style="view-transition-name: nav-link-about;">About me.</a>
+    <a href="{{ url }}#my-work">My work.</a>
+    <a href="/about">About me.</a>
 </nav>

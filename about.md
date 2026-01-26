@@ -3,7 +3,7 @@ layout: page
 title: About me.
 ---
 
-I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
+Hello, I'm Dan Edmonds. I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
 
 **With over a decade of experience,** my creativity and appreciation for web standards complement my meticulous attention to detail and writing creative markup. I transition comfortably between design and front-end development environments, thriving on moving projects from conception to launch.
 
@@ -13,12 +13,20 @@ I appreciate simplicity and user centered design, taking particular delight in m
 
 **I’m eager to break habits and learn new things.**
 
+[Instagram.](https://www.instagram.com/danedmonds.motion/)
+
 ### My experience.
 
 <dl>
-    <dt><strong>Assistant Director of Digital, Communications & Marketing</strong><br>
+    <dt><strong>Assistant Director of Digital</strong><br>
         WVU Health Sciences, <em>Morgantown, WV</em></dt>
-    <dd>January 2015&ndash;Present</dd>
+    <dd>October 2025&ndash;Present</dd>
+    <dt><strong>Creative Development Lead</strong><br>
+        WVU Health Sciences, <em>Morgantown, WV</em></dt>
+    <dd>March 2019&ndash;October 2025</dd>
+    <dt><strong>Senior Web Developer</strong><br>
+        WVU Health Sciences, <em>Morgantown, WV</em></dt>
+    <dd>January 2015&ndash;March 2019</dd>
     <dt><strong>Multimedia Producer</strong><br>
         PMI, <em>Pittsburgh, PA</em></dt>
     <dd>November 2011&ndash;December 2014</dd>
@@ -31,5 +39,3 @@ I appreciate simplicity and user centered design, taking particular delight in m
         Fargo Design Co., <em>Pittsburgh, PA</em></dt>
     <dd>February 2011&ndash;May 2011</dd>
 </dl>
-
-[My LinkedIn.](https://www.linkedin.com/in/edmondsdan/)
