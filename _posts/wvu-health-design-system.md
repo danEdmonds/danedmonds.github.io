@@ -1,11 +1,29 @@
 ---
 layout: post
-title:  "WVU Health"
+title:  "Inside the WVU Health Design System"
 permalink: /wvu-health-design-system/
 summary: "Presenting the health education and patient care initiatives."
 thumbnail: thumb-centered.jpg
 order: 1
 ---
+
+<!-- <div style="display: none;">
+~~## Striving for consistency, not uniformity~~
+
+~~The framework is intentionally consistent in structure, naming and functionality without being rigidly uniform. This reflects a mature approach, ensuring clear code standards without sacrificing design flexibility or creativity. While not every component needs to look identical, each follows the same core principles and utilizes established patterns and code.~~
+
+~~## Managing Styles and Specificity~~
+
+~~Following a modified ITCSS architecture with BEM methodology, the system leverages native Cascade Layers to explicitly manage specificity and prevent style conflicts. Sass is used exclusively to organize partials within these layers and handle logic-driven tasks, including managing nesting, defining variables for block-level classes, creating mixins, performing calculations, and handling iterations.~~
+
+~~The system pairs a thoughtfully-structured HTML hierarchy with purpose-driven class selectors, avoiding HTML element selectors and utility classes to reduce specificity and keep styles consistent, reusable, and maintainable. Adding additional levels of HTML with distinct, non-competing classes is often encouraged, as it creates clearer structure and is preferable to stacking multiple responsibilities onto a single element.~~
+
+~~While Sass nesting continues to be a necessary part of structuring CSS, thoughtful nesting is prioritized by restraining selector depth at two levels. This helps keep styles easy to read and maintain, and prevents unintentional over-specificity.~~
+
+~~CSS variables drive all configurable properties and design tokens, including colors, fonts and decorative values. This allows for greater flexibility, improved support for runtime theming, and alignment with modern CSS standards. To avoid up-front clutter, components define their own default variable values locally rather than globally at the root.~~
+
+~~Using simple grids, such as halves, thirds, and fourths, promote design consistency and improve code readability through a predictable, reusable structure.~~
+</div> -->
 
 The [WVU Health website](https://health.wvu.edu/) focuses on West Virginia University’s health education and patient care initiatives by highlighting the unique culture within the five health schools and the advanced technology and practices being used. 
 
@@ -14,8 +32,8 @@ The [WVU Health website](https://health.wvu.edu/) focuses on West Virginia Unive
         <dt>Disciplines</dt>
         <dd>Design lead</dd>
         <dd>Visual design</dd>
-        <dd>Motion design</dd>
         <dd>Front-end development</dd>
+        <dd>Motion design</dd>
     </div>
     <div>
         <dt>Tools</dt>

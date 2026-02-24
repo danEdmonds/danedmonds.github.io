@@ -34,19 +34,34 @@ layout: base
                         </div>
                         
                         <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
-                            <img src="{{ site.baseurl }}/assets/images/{{ post.url }}/{{ post.thumbnail }}" alt="" width="480" height="360">
+                            <picture>
+                                {% assign thumbs = post.thumbnail | split: "," %}
+                                {% capture img_base %}{{ site.baseurl }}/assets/images/{{ post.url }}{% endcapture %}
 
-                            <svg>
+                                {% for thumb in thumbs %}
+                                    {% assign thumb_path = thumb | strip %}
+                                    
+                                    {% if forloop.last %}
+                                        <img src="{{ img_base }}/{{ thumb_path }}" alt="" loading="lazy" aria-hidden="true">
+                                    {% else %}
+                                        <source srcset="{{ img_base }}/{{ thumb_path }}" media="(min-width: 768px)">
+                                    {% endif %}
+                                {% endfor %}
+                            </picture>
+
+                            <!-- <img src="{{ site.baseurl }}/assets/images/{{ post.url }}/{{ post.thumbnail }}" alt="" width="480" height="360"> -->
+
+                            <!-- <svg>
                                 <defs>
                                     <filter id="handDrawn">
-                                        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" result="noise" />
+                                        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
                                         
                                         <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
                                     </filter>
                                 </defs>
 
                                 <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" fill="none" stroke-width="4" filter="url(#handDrawn)" vector-effect="non-scaling-stroke" pathLength="100" />
-                            </svg>
+                            </svg> -->
                         </a>
                     </div>
                 {%- endfor -%}

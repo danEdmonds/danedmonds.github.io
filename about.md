@@ -7,7 +7,7 @@ Hello, I'm Dan Edmonds. I’m a passionate **designer** and **front-end develope
 
 **With over a decade of experience,** my creativity and appreciation for web standards complement my meticulous attention to detail and writing creative markup. I transition comfortably between design and front-end development environments, thriving on moving projects from conception to launch.
 
-I’m currently the **Assistant Director of Digital** at [West Virginia University Health Sciences](https://health.wvu.edu). As a member of the digital team, I conceptualize and build web experiences using quality, hand-crafted, reusable components while pushing the boundaries of set brand patterns.
+I’m currently the **Assistant Director of Digital** at [West Virginia University Health Sciences](https://health.wvu.edu). With a focus on <strong>design systems</strong>, I conceptualize and build web experiences using quality, hand-crafted, reusable components while pushing the boundaries of set brand patterns.
 
 I appreciate simplicity and user centered design, taking particular delight in microinteractions and using motion to guide users. 
 
