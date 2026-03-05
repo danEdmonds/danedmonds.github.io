@@ -3,7 +3,7 @@ layout: page
 title: About me.
 ---
 
-Hello, I'm Dan Edmonds. I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
+I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
 
 **With over a decade of experience,** my creativity and appreciation for web standards complement my meticulous attention to detail and writing creative markup. I transition comfortably between design and front-end development environments, thriving on moving projects from conception to launch.
 
