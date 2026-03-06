@@ -43,7 +43,9 @@
 
     @media (prefers-color-scheme: dark) {
         --de-body-bg: var(--de-black);
-        --de-body-color: white;
+        --de-body-color: rgb(255 255 255 / 0.75);
+        --de-heading-color: white;
+        --de-link-color: white;
         --de-link-decoration-color: var(--de-orange);
         --de-link-decoration-hover-color: var(--de-green);
         --de-emphasis-color: var(--de-green);
@@ -109,7 +111,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    margin-block: 0;
+    margin-block-start: 0;
     font-size: 3rem;
     line-height: 1.2;
     text-wrap: pretty;
@@ -144,13 +146,20 @@ main p {
     margin-block-end: 0;
 }
 
+main h1 + p {
+    margin-block-start: 0;
+}
+
 dl {
     margin-block: 1em 0;
-    color: var(--de-heading-color);
     line-height: 1.5;
 
     &:not([class]) {
         margin-block-end: 1.5rem;
+    }
+
+    dt {
+        color: var(--de-heading-color);
     }
 
     &:not([class]) dt:nth-child(n+2) {
@@ -159,7 +168,7 @@ dl {
 
     dd {
         margin-inline-start: 0;
-        color: var(--de-body-color);
+        /* color: var(--de-body-color); */
     }
 }
 
@@ -317,6 +326,7 @@ nav {
     }
 
     h1 {
+        margin-block-end: 0;
         line-height: 1;
 
         span {
@@ -454,6 +464,7 @@ nav {
     line-height: 1.25;
 
     a {
+        color: var(--de-link-color);
         text-decoration: none;
     }
 }

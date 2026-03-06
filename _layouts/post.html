@@ -3,7 +3,9 @@ layout: base
 ---
 
 <main class="grid">
-    <h1 data-heading="{{ page.title | escape }}">{{ page.title | escape }}</h1>
+    <h1>{{ page.title | escape }}</h1>
+
+    <!-- <p>{{ page.summary | escape }}</p> -->
 
     {{ content }}
 </main>
