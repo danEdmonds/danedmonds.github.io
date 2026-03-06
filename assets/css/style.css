@@ -112,9 +112,13 @@ h1, h2, h3 {
 
 h1 {
     margin-block-start: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     text-wrap: pretty;
+
+    @media screen and (min-width: 36em) {
+        font-size: 3rem;
+    }
 }
 
 h2, h3 {
