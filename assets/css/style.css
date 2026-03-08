@@ -358,6 +358,10 @@ nav {
         @media screen and (min-width: 40em) {
             font-size: 2rem;
         }
+
+        &:last-child {
+            margin-block-end: 0;
+        }
     }
 }
 
