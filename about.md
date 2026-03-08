@@ -15,7 +15,7 @@ I appreciate simplicity and user centered design, taking particular delight in m
 
 [Instagram.](https://www.instagram.com/danedmonds.motion/)
 
-### My experience.
+## My experience.
 
 <dl>
     <dt><strong>Assistant Director of Digital</strong><br>
