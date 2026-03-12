@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me.
+title: About me
 ---
 
 I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
