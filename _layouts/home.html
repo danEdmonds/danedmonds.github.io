@@ -23,7 +23,7 @@ layout: base
                     {% assign class_list = class_list | append: " animate" %}
                 {% endif %}
                 
-                <div class="{{ class_list }}">
+                <article class="{{ class_list }}">
                     <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
                         <picture>
                             {% assign thumbs = post.thumbnail | split: "," %}
@@ -48,7 +48,7 @@ layout: base
                             <p class="post__summary">{{ post.summary }}</p>
                         {% endif %}
                     </div>
-                </div>
+                </article>
             {%- endfor -%}
         </div>
     {%- endif -%}
