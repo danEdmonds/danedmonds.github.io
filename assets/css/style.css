@@ -209,12 +209,12 @@ img, video {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .container {
-    width: min(45rem, 100% - 4rem);
+    width: min(45rem, 100% - 2rem);
     margin-inline: auto;
 }
 
 .grid {
-    --padding-inline: 2rem;
+    --padding-inline: 1rem;
     --content-max-width: 45rem;
     --breakout-max-width: 75rem;
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
