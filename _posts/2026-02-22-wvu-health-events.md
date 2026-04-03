@@ -35,3 +35,5 @@ Stay tuned for more shots!
 {% figure image="wvu-health-events/wvu-health-events--mobile.png" caption="" breakout="true" %}
 
 {% figure image="wvu-health-events/wvu-health-event--desktop.png" caption="" breakout="true" %}
+
+{% figure image="wvu-health-events/wvu-health-event-registration.png" caption="" breakout="true" %}

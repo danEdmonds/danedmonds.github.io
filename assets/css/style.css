@@ -542,6 +542,10 @@ nav {
         grid-column: full;
     }
 
+    & + & {
+        margin-block-start: 1.5rem;
+    }
+
     h1 + & {
         margin-block-start: 0;
     }
@@ -549,6 +553,7 @@ nav {
     img, video {
         width: 100%; 
         height: auto;
+        /* border: 1px solid var(--de-border-color); */
     }
 
     figcaption {
