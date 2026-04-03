@@ -9,8 +9,12 @@ module Jekyll
             baseurl = context['site']['baseurl']
             image = @attributes['image']
             caption = @attributes['caption']
+            breakout = @attributes['breakout']
 
-            output = "<figure class=\"grid figure\">"
+            classes = ['grid', 'figure']
+            classes << 'figure--breakout' if breakout == 'true'
+
+            output = "<figure class=\"#{classes.join(' ')}\">"
             output += "<img src=\"#{baseurl}/assets/images/#{image}\" alt=\"\" width=\"1600\" height=\"1200\" loading=\"lazy\">"
 
             if !caption.nil? && !caption.empty?

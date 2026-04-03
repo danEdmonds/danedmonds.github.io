@@ -28,9 +28,9 @@
     --de-black: #17202A;
 
     --de-body-bg: var(--de-off-white);
-    --de-body-color: var(--de-black);
-    --de-heading-color: var(--de-body-color);
-    --de-link-color: var(--de-body-color);
+    --de-body-color: rgb(from var(--de-black) r g b / 0.75);
+    --de-heading-color: var(--de-black);
+    --de-link-color: var(--de-black);
     --de-link-hover-color: inherit;
     --de-link-decoration-color: var(--de-green);
     --de-link-decoration-hover-color: var(--de-orange);
@@ -120,7 +120,7 @@ h1 {
     font-weight: 900;
     line-height: 1.2;
     text-align: center;
-    text-wrap: balance;
+    text-wrap: pretty;
 
     @media screen and (min-width: 36em) {
         font-size: 3rem;
@@ -129,10 +129,6 @@ h1 {
     @media screen and (min-width: 48em) {
         font-size: 4.5rem;
         line-height: 1.1;
-    }
-
-    @media screen and (min-width: 60em) {
-        font-size: 6rem;
     }
 }
 
@@ -225,10 +221,6 @@ img, video {
     & > * {
         grid-column: content;
     }
-
-    h1 {
-        grid-column: breakout;
-    }
 }
 
 
@@ -238,10 +230,6 @@ img, video {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 main {
-    
-    /* h1 {
-        grid-column: breakout;
-    } */
 
     p, ul, dl {
         font-size: 1.25rem;
@@ -364,10 +352,6 @@ nav {
         font-size: 3rem;
         line-height: 1;
 
-        /* @media screen and (min-width: 36em) {
-            font-size: 4.5rem;
-        } */
-
         span {
             display: block;
         }
@@ -375,13 +359,6 @@ nav {
 
     .logo {
         width: 15rem;
-
-        /* path:nth-child(n+2) {
-            stroke: var(--de-emphasis-color);
-            stroke-miterlimit: 10;
-            stroke-width: 2px;
-            vector-effect: non-scaling-stroke;
-        } */
     }
 
     p {
@@ -455,12 +432,11 @@ nav {
             linear-gradient(black, black) border-box,
             linear-gradient(black, black) padding-box;
         mask-composite: subtract;
-        /* box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 0.15); */
         pointer-events: none;
     }
 
     img, &::after {
-        transform-origin: center top;
+        /* transform-origin: center top; */
 
         transition-property: scale, box-shadow;
         transition-duration: 0.4s;
@@ -566,8 +542,11 @@ nav {
         grid-column: full;
     }
 
+    h1 + & {
+        margin-block-start: 0;
+    }
+
     img, video {
-        grid-column: breakout;
         width: 100%; 
         height: auto;
     }
@@ -580,6 +559,10 @@ nav {
     & + * {
         margin-block-start: 3rem;
     }
+}
+
+.figure--breakout img {
+    grid-column: breakout;
 }
 
 

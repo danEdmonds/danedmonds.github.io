@@ -6,7 +6,7 @@ thumbnail: thumb--1200x1600.png, thumb--1600x1200.png
 summary: "A scalable, principle-driven framework promoting consistency, accessibility, and sustainability."
 ---
 
-<!-- {% figure image="wvu-health-design-system/wvu-health-design-system.jpg" caption="" %} -->
+{% figure image="wvu-health-design-system/thumb--1600x1200.png" caption="" %}
 
 The <a href="https://health.wvu.edu/">WVU Health</a> design system is built on strong core design principles and a scalable foundation that supports consistency, accessibility and long-term growth.
 
