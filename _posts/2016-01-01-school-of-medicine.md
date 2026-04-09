@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "WVU School of Medicine"
-permalink: /wvu-school-of-medicine/
+title:  "School of Medicine"
+permalink: /school-of-medicine/
 thumbnail: thumb--1200x1600.png, thumb--1600x1200.png
 summary: "Efficient, intuitive access to comprehensive program and department information."
 ---
@@ -32,8 +32,8 @@ We collaborated with the school’s communications team to build a robust list o
 
 Structured and focused templates provide smaller groups with the tools they need to beautifully tailer individual program information to cater to the appropriate audience, while the school’s communications team ensures governance and brand consistency across the website.
 
-{% figure image="wvu-school-of-medicine/wvu-school-of-medicine--homepage.png" caption="" breakout="true" %}
+{% figure image="school-of-medicine/school-of-medicine-homepage.png" caption="" breakout="true" %}
 
-{% figure image="wvu-school-of-medicine/wvu-school-of-medicine--undergraduate-programs.jpg" caption="" breakout="true" %}
+{% figure image="school-of-medicine/school-of-medicine-undergraduate-programs.jpg" caption="" breakout="true" %}
 
-{% figure image="wvu-school-of-medicine/wvu-school-of-medicine--residents.png" caption="" breakout="true" %}
+{% figure image="school-of-medicine/school-of-medicine-residents.png" caption="" breakout="true" %}

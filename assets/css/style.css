@@ -569,7 +569,8 @@ nav {
     }
 }
 
-.figure--breakout img {
+.figure--breakout img,
+.figure--breakout video {
     grid-column: breakout;
 }
 

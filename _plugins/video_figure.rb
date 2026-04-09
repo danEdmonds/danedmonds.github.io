@@ -11,8 +11,12 @@ module Jekyll
             # webm = @attributes['webm']
             mp4 = @attributes['mp4']
             caption = @attributes['caption']
+            breakout = @attributes['breakout']
 
-            output = "<figure class=\"grid figure\">"
+            classes = ['grid', 'figure']
+            classes << 'figure--breakout' if breakout == 'true'
+
+            output = "<figure class=\"#{classes.join(' ')}\">"
             output += "<video poster=\"#{baseurl}/assets/images/#{poster}\" autoplay muted loop playsinline>"
             output += "<source src=\"#{baseurl}/assets/images/#{mp4}\" type=\"video/mp4\" />"
             output += "</video>"
