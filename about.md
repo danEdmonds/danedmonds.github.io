@@ -3,8 +3,6 @@ layout: page
 title: About me
 ---
 
-I’m a passionate **designer** and **front-end developer** based in Pittsburgh, Pennsylvania.
-
 **With over a decade of experience,** my creativity and appreciation for web standards complement my meticulous attention to detail and writing creative markup. I transition comfortably between design and front-end development environments, thriving on moving projects from conception to launch.
 
 I’m currently the **Assistant Director of Digital** at [West Virginia University Health Sciences](https://health.wvu.edu). With a focus on <strong>design systems</strong>, I conceptualize and build web experiences using quality, hand-crafted, reusable components while pushing the boundaries of set brand patterns.

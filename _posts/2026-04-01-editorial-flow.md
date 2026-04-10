@@ -30,6 +30,8 @@ This flow-based rich text editor supports an editorial approach to content creat
 
 {% figure image="editorial-flow/wvu-health-backoffice.png" caption="" breakout="true" %}
 
+<!-- {% figure image="editorial-flow/wvu-health-card-slider--desktop.png" caption="" breakout="true" %} -->
+
 {% video_figure poster="editorial-flow/wvu-health-card-slider--desktop.png" mp4="editorial-flow/wvu-health-card-slider--desktop.mp4" breakout="true" %}
 
 {% video_figure poster="editorial-flow/wvu-health-map--desktop.png" mp4="editorial-flow/wvu-health-map--desktop.mp4" breakout="true" %}
