@@ -14,23 +14,23 @@ This flow-based rich text editor supports an editorial approach to content creat
         <dd>Design lead</dd>
         <dd>Visual design</dd>
         <dd>Front-end development</dd>
+        <dd>.Net Core</dd>
     </div>
     <div>
         <dt>Tools</dt>
         <dd>HTML/CSS</dd>
         <dd>Sass</dd>
+        <dd>Umbraco</dd>
     </div>
     <div>
         <dt>Timeline</dt>
-        <dd>January 2026</dd>
+        <dd>December 2025</dd>
     </div>
 </dl>
 
 {% figure image="editorial-flow/wvu-health-academics--full.png" caption="" breakout="true" %}
 
-{% figure image="editorial-flow/wvu-health-backoffice.png" caption="" breakout="true" %}
-
-<!-- {% figure image="editorial-flow/wvu-health-card-slider--desktop.png" caption="" breakout="true" %} -->
+{% figure image="editorial-flow/wvu-health-backoffice.png" caption="The TipTap editor in Umbraco editor, blocks are inserted naturally within the flow of content." breakout="true" %}
 
 {% video_figure poster="editorial-flow/wvu-health-card-slider--desktop.png" mp4="editorial-flow/wvu-health-card-slider--desktop.mp4" breakout="true" %}
 
