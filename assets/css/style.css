@@ -347,7 +347,7 @@ nav {
     text-align: center;
 
     @media screen and (min-width: 48em) {
-        margin-block-end: 12rem;;
+        margin-block-end: 12rem;
     }
 
     h1 {
@@ -371,6 +371,7 @@ nav {
 
         @media screen and (min-width: 40em) {
             font-size: 2rem;
+            line-height: 1.4;
         }
 
         &:last-child {
@@ -557,7 +558,6 @@ nav {
 
     figcaption {
         padding-block-start: 1rem;
-        /* border-bottom: 1px solid var(--de-border-color); */
     }
 
     & + * {
@@ -568,6 +568,13 @@ nav {
 .figure--breakout img,
 .figure--breakout video {
     grid-column: breakout;
+}
+
+@media screen and (max-width: 47.9375em) {
+    .figure--mobile img {
+        aspect-ratio: 9 / 20;
+        object-fit: cover;
+    }
 }
 
 

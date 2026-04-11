@@ -30,7 +30,7 @@ In the <a href="/design-system/">WVU Health design system</a>, the flow-based ri
 
 {% figure image="editorial-flow/wvu-health-academics--full.png" caption="" breakout="true" %}
 
-{% figure image="editorial-flow/wvu-health-academics--mobile.png" caption="" breakout="true" %}
+{% figure image="editorial-flow/wvu-health-academics--mobile.png" type="mobile" caption="" breakout="true" %}
 
 {% figure image="editorial-flow/wvu-health-backoffice.png" caption="The TipTap editor in Umbraco&mdash;blocks are inserted naturally within the flow of content." breakout="true" %}
 
