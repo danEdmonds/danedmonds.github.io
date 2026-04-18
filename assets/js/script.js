@@ -13,31 +13,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Handle scroll triggered animations
-    var animateElements = document.querySelectorAll('.animate');
+    const animateElements = document.querySelectorAll('[data-animate]');
 
-    if (!animateElements) return;
+    if (!animateElements.length) return;
 
-    animateElements.forEach((element) => {
-        element.classList.add('prepare');
-    });
+    const postsContainer = document.querySelector('.posts');
 
-    const preparedElements = document.querySelectorAll('.prepare');
+    if (postsContainer) {
+        const rect = postsContainer.getBoundingClientRect();
+        const containerAboveFold = rect.top < window.innerHeight * 0.25;
 
-    if (!preparedElements) return;
+        if (containerAboveFold) {
+            animateElements.forEach(el => el.dataset.animate = 'done');
+            return;
+        }
+    } else {
+        animateElements.forEach(el => el.dataset.animate = 'done');
+        return;
+    }
+
+    animateElements.forEach(el => el.dataset.animate = 'prepare');
+
+    const preparedElements = document.querySelectorAll('[data-animate="prepare"]');
+
+    if (!preparedElements.length) return;
 
     const options = {
         root: null,
-        // This creates a trigger line 25% up from the bottom of the screen
-        // Format: top, right, bottom, left
-        rootMargin: "0px 0px -25% 0px", 
-        threshold: 0 
+        rootMargin: "0px 0px -25% 0px",
+        threshold: 0
     };
 
     const observerCallback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
+                entry.target.dataset.animate = 'in-view';
+
+                entry.target.addEventListener('animationend', () => {
+                    entry.target.dataset.animate = 'done';
+                }, { once: true });
+
+                observer.unobserve(entry.target);
             }
         });
     };

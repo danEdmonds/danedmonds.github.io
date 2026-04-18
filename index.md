@@ -7,3 +7,5 @@ title: Hello, I’m Dan Edmonds.
 ---
 
 I'm a **designer** and **front-end developer** based in Pittsburgh, Pennsylvania. With over a decade of experience, I focus on design systems and motion.
+
+<!-- <p data-animate="smoothEntryX" data-offset="-1rem" data-delay="450">I'm a **designer** and **front-end developer** based in Pittsburgh, Pennsylvania. With over a decade of experience, I focus on design systems and motion.</p> -->

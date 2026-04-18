@@ -5,7 +5,7 @@ layout: base
 <main class="grid">
     <div class="hero">
         <h1>
-            <span>Hello, I’m</span> 
+            <span>Hello, I’m</span>
             
             {% include logo.html %}
         </h1>
@@ -20,10 +20,9 @@ layout: base
 
                 {% if post.slug %}
                     {% assign class_list = class_list | append: " post--" | append: post.slug %}
-                    {% assign class_list = class_list | append: " animate" %}
                 {% endif %}
                 
-                <article class="{{ class_list }}">
+                <article class="{{ class_list }}" data-animate>
                     <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
                         <picture>
                             {% assign thumbs = post.thumbnail | split: "," %}
