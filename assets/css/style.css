@@ -26,6 +26,7 @@
     --de-link-decoration-hover-color: var(--de-orange);
     --de-emphasis-color: var(--de-orange);
     --de-border-color: color-mix(in srgb, var(--de-off-white), var(--de-black) 15%);
+    --de-header-bg-color: rgb(0 0 0 / 0.075);
     --de-logo-color: currentColor;
     /* --de-post-border-color: var(--de-black); */
     /* --de-post-box-shadow-color: rgb(from var(--de-black) r g b / 0.1); */
@@ -43,6 +44,7 @@
         --de-link-decoration-hover-color: var(--de-green);
         --de-emphasis-color: var(--de-green);
         --de-border-color: color-mix(in srgb, var(--de-black), var(--de-off-white) 15%);
+        --de-header-bg-color: rgb(0 0 0 / 0.15);
         /* --de-post-border-color: black; */
         /* --de-post-box-shadow-color: rgb(from black r g b / 0.25); */
         /* --de-post-box-shadow-hover-color: rgb(from black r g b / 0.15); */
@@ -103,6 +105,7 @@ a {
 
 h1, h2, h3 {
     scroll-margin-top: 3em;
+    margin-block: 1.5em 0.5em;
     color: var(--de-heading-color);
 }
 
@@ -111,7 +114,6 @@ h1 {
     font-size: 2.5rem;
     font-weight: 900;
     line-height: 1.2;
-    text-align: center;
     text-wrap: pretty;
 
     @media screen and (min-width: 36em) {
@@ -122,10 +124,6 @@ h1 {
         font-size: 4.5rem;
         line-height: 1.1;
     }
-}
-
-h2, h3 {
-    margin-block-start: 1.5em;
 }
 
 h2 {
@@ -150,7 +148,7 @@ dl {
     }
 
     &:not([class]) dt:nth-child(n+2) {
-        margin-block-start: 1.5em;
+        margin-block-start: 1em;
     }
 
     dd {
@@ -233,6 +231,7 @@ main {
 
     p, ul, dl {
         font-size: 1.25rem;
+        line-height: 1.6;
     }
 
     & > p {
@@ -269,8 +268,8 @@ main {
 
 .logo {
     display: block;
-    width: 7.5rem;
-    height: auto;
+    width: 120px;
+    height: 62px;
     margin-inline: auto;
     fill: var(--de-logo-color);
 }
@@ -278,25 +277,42 @@ main {
 
 
 
-/* Nav
+/* Header & Nav
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+header {
+    display: grid;
+    align-items: center;
+    min-block-size: 86px;
+    margin-block-end: 4.5rem;
+    padding-block: 1.5rem;
+
+    &:has(.logo) {
+        margin-block-end: 6rem;
+        padding-block-start: 0.75rem;
+        /* border-block-end: 1px solid var(--de-border-color); */
+        background-color: rgb(0 0 0 / 0.125);
+        background-color: rgb(0 0 0 / 0.075);
+        background-color: var(--de-header-bg-color);
+
+        @media screen and (min-width: 36em) {
+            padding-block-end: 0.75rem;
+        }
+    }
+}
 
 nav {
     display: flex; 
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 0.75rem 3rem;
     justify-content: center;
     align-items: center;
-    margin-block: 3rem 6rem;
     font-size: 1.25rem;
     font-weight: 600;
 
-    &:has(.logo) {
-        gap: 1.25rem 1.5rem;
-        margin-block-start: 2.25rem;
-
-        @media screen and (min-width: 36em) {
-            column-gap: 4.5rem;
+    @media screen and (min-width: 36em) {
+        &:has(.logo) {
+            column-gap: 3.75rem;
         }
     }
 
@@ -353,6 +369,7 @@ nav {
 
     @media screen and (min-width: 48em) {
         margin-block-end: 12rem;
+        margin-block-end: 9rem;
     }
 
     h1 {
@@ -376,7 +393,8 @@ nav {
     .logo {
         --smooth-entry-from: -0.75rem;
 
-        width: 15rem;
+        width: 320px;
+        height: 166px;
 
         animation-name: FadeIn, SmoothEntryY;
         animation-duration: 0.4s;
@@ -388,8 +406,9 @@ nav {
     p {
         --smooth-entry-from: -1rem;
 
-        margin-block-start: 1.5rem;
+        margin-block: 1.5rem 0;
         font-size: 1.5rem;
+        line-height: 1.5;
         text-wrap: pretty;
 
         animation-name: FadeIn, SmoothEntryY;
@@ -399,12 +418,8 @@ nav {
         animation-fill-mode: backwards;
 
         @media screen and (min-width: 40em) {
-            font-size: 2rem;
+            font-size: 1.75rem;
             line-height: 1.4;
-        }
-
-        &:last-child {
-            margin-block-end: 0;
         }
     }
 }
@@ -417,6 +432,10 @@ nav {
 
 .post {
     text-wrap: pretty;
+
+    & + & {
+        margin-block-start: 6rem;
+    }
 }
 
 .post__image {
@@ -432,7 +451,6 @@ nav {
         box-shadow: 
             0px 18px 36px -18px var(--de-post-soft-shadow-color), 
             0px 24px 48px -24px var(--de-post-sharp-shadow-color);
-        /* cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='64' height='64'%3E%3Cpath d='M31.8.2c-17.6 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32Zm12 24.5v18.1h-4.6V28L23 44.2 19.8 41 36 24.8H21.1v-4.6h22.6v4.5Z' fill='%2373c6b6' stroke-width='0'/%3E%3C/svg%3E") 32 32, pointer; */
 
         transition-duration: 0.25s;
     }
@@ -441,29 +459,21 @@ nav {
         [data-animate] & {
             --smooth-entry-from: -1rem;
 
-            animation-name: FadeIn, SmoothEntryY;
+            /* animation-name: FadeIn, SmoothEntryY; */
             animation-duration: 0.4s;
             animation-delay: 0.25s;
             animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
             animation-fill-mode: both;
         }
 
-        [data-animate]:nth-child(even) & {
-            animation-delay: 0.4s;
-        }
-
         [data-animate]:nth-child(1) & {
             animation-delay: 0.75s;
-        }
-
-        [data-animate]:nth-child(2) & {
-            animation-delay: 0.9s;
         }
     }
 
     img {
         width: 100%;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3 / 2;
         object-fit: cover;
         object-position: top;
         border-radius: 0.25rem;
@@ -496,22 +506,14 @@ nav {
         [data-animate] & {
             --smooth-entry-from: -1rem;
 
-            animation-name: FadeIn, SmoothEntryY;
+            /* animation-name: FadeIn, SmoothEntryY; */
             animation-duration: 0.4s;
             animation-delay: 0.4s;
             animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
             animation-fill-mode: both;
 
-            [data-animate]:nth-child(even) & {
-                animation-delay: 0.55s;
-            }
-
             [data-animate]:nth-child(1) & {
                 animation-delay: 0.9s;
-            }
-
-            [data-animate]:nth-child(2) & {
-                animation-delay: 1.05s;
             }
         }
     }
@@ -526,8 +528,6 @@ nav {
 
 .post__name {
     margin-block: 1.5rem 0;
-    font-size: 1.75rem;
-    line-height: 1.25;
 
     a {
         color: var(--de-link-color);
@@ -537,13 +537,6 @@ nav {
 
 .post__summary {
     margin-block: 0.5em 0;
-}
-
-.posts {
-    display: grid;
-    gap: 6rem 3rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
-    grid-column: breakout;
 }
 
 
@@ -619,7 +612,8 @@ nav {
 }
 
 @media screen and (max-width: 47.9375em) {
-    .figure--mobile img {
+    .figure--mobile img,
+    .figure--mobile video {
         aspect-ratio: 9 / 20;
         object-fit: cover;
     }
@@ -634,7 +628,7 @@ nav {
 footer {
     margin-block: 6rem 1.5rem;
     padding-block-start: 1.5rem;
-    border-top: 2px solid var(--de-border-color);
+    border-block-start: 1px solid var(--de-border-color);
     text-align: center;
 
     p {
