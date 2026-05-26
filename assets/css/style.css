@@ -225,7 +225,7 @@ main {
     &:not(:has(.hero)) {
         animation-name: FadeIn;
         animation-duration: 0.4s;
-        animation-delay: 0.25s;
+        animation-delay: 0.5s;
         animation-fill-mode: both;
     }
 
