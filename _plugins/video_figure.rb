@@ -12,9 +12,11 @@ module Jekyll
             mp4 = @attributes['mp4']
             caption = @attributes['caption']
             breakout = @attributes['breakout']
+            type = @attributes['type']
 
             classes = ['grid', 'figure']
             classes << 'figure--breakout' if breakout == 'true'
+            classes << 'figure--mobile' if type == 'mobile'
 
             output = "<figure class=\"#{classes.join(' ')}\">"
             output += "<video poster=\"#{baseurl}/assets/images/#{poster}\" autoplay muted loop playsinline>"
