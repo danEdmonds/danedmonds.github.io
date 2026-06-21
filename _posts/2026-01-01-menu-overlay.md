@@ -12,10 +12,12 @@ summary: "A scalable, three-panel system organizing the full site structure into
         <dd>Design lead</dd>
         <dd>Visual design</dd>
         <dd>Motion design</dd>
+        <dd>Design System</dd>
         <dd>Front-end development</dd>
     </div>
     <div>
         <dt>Tools</dt>
+        <dd>Figma</dd>
         <dd>HTML/CSS</dd>
         <dd>Sass</dd>
         <dd>JavaScript</dd>

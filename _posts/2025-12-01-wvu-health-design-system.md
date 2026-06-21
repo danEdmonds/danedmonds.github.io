@@ -11,6 +11,7 @@ summary: "A scalable, principle-driven framework promoting consistency, accessib
         <dt>Disciplines</dt>
         <dd>Design lead</dd>
         <dd>Visual design</dd>
+        <dd>Design System</dd>
         <dd>Front-end development</dd>
     </div>
     <div>
