@@ -3,15 +3,25 @@ layout: page
 title: About me
 ---
 
-**With over a decade of experience,** my creativity and appreciation for web standards complement my meticulous attention to detail and writing creative markup. I transition comfortably between design and front-end development environments, thriving on moving projects from conception to launch.
+For more than 15 years, I've enjoyed crafting digital experiences where design and front-end development overlap. I love turning ideas into thoughtful, production-ready experiences, whether that means designing reusable components, refining interactions, or simplifying a user experience.
 
-I’m currently the **Assistant Director of Digital** at [West Virginia University Health Sciences](https://health.wvu.edu). With a focus on <strong>design systems</strong>, I conceptualize and build web experiences using quality, hand-crafted, reusable components while pushing the boundaries of set brand patterns.
+I’m currently the **Assistant Director of Digital** at [West Virginia University Health Sciences](https://health.wvu.edu), where I lead the design and evolution of a mature design system that supports a large ecosystem of websites. My work spans UX and interface design, front-end development, accessibility, and design system governance, with an emphasis on building scalable, flexible, maintainable components that are intuitive to use.
 
-I appreciate simplicity and user centered design, taking particular delight in microinteractions and using motion to guide users. 
+I care a lot about craft and quality, especially in well-structured systems. I’m drawn to clear hierarchy, consistent patterns, and purposeful restraint that let interfaces feel intentional and refined.
 
-**I’m eager to break habits and learn new things.**
+Motion and microinteractions aren’t decoration. They provide feedback, reinforce structure, and make interfaces more enjoyable to use.
 
-[Instagram.](https://www.instagram.com/danedmonds.motion/)
+I’m always learning, whether by mentoring others, challenging my perspective, or using AI to work more effectively.
+
+## Personal Life
+
+Outside of work, my wife and I are avid LEGO builders, and our collection has taken over our home. I also enjoy Formula 1 and Pixar films. I'm often listening to a podcast or music. I love female-fronted rock bands, pop punk, and Taylor Swift. I'm an occasional gamer, and I prefer single-player indie games that I can pick up and play.
+
+We enjoy traveling and discovering breweries in different cities, or staying local and visiting breweries along the [Laurel Highlands Pour Tour](https://www.golaurelhighlands.com/pour-tour/). My two cats do their part by supervising the day, claiming the warmest seat in the house, and reminding me to take the occasional break.
+
+
+I've always been passionate about animation and I've been spending more time exploring motion design, and sharing my journey on [Instagram](https://www.instagram.com/danedmonds.motion/).
+
 
 ## My experience.
 
