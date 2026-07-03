@@ -21,7 +21,6 @@ I enjoy traveling and discovering breweries in different cities or staying local
 
 I’ve always been passionate about animation, and lately I’ve been spending more time exploring motion design while sharing my journey on [Instagram](https://www.instagram.com/danedmonds.motion/).
 
-
 ## My experience.
 
 <dl>
