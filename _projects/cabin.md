@@ -4,6 +4,8 @@ title:  "Cabin"
 permalink: /cabin/
 thumbnail: thumb.jpg
 summary: "Simple, modular project management for meetings, tasks, and events."
+order: 3
+legacy: true
 ---
 
 Built on the Umbraco content management system, Cabin is a simple project management tool for sharing meeting minutes, loosely tracking tasks, and providing awareness of noteworthy events.

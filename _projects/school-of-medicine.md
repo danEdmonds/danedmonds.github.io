@@ -4,6 +4,8 @@ title:  "School of Medicine"
 permalink: /school-of-medicine/
 thumbnail: thumb--1200x1600.png, thumb--1600x1200.png
 summary: "Efficient, intuitive access to comprehensive program and department information."
+order: 2
+legacy: true
 ---
 
 As one of the largest websites at West Virginia University, the focus of the School of Medicine homepage is to welcome a broad audience to the school and efficiently guide them to the information they need.

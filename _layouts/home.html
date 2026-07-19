@@ -15,42 +15,70 @@ layout: base
         </div>
     </div>
 
-    {%- if site.posts.size > 0 -%}
+    {%- if site.projects.size > 0 -%}
         <div id="my-work" class="posts">
-            {%- for post in site.posts -%}
-                {% assign class_list = "post" %}
+            {% assign projects = site.projects | where_exp: "project", "project.legacy != true" | sort: "order" | reverse %}
 
-                {% if post.slug %}
-                    {% assign class_list = class_list | append: " post--" | append: post.slug %}
-                {% endif %}
-                
-                <article class="{{ class_list }}" data-animate>
-                    <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
-                        <picture>
-                            {% assign thumbs = post.thumbnail | split: "," %}
-                            {% capture img_base %}{{ site.baseurl }}/assets/images/{{ post.url }}{% endcapture %}
+            {%- if projects.size > 0 -%}
+                {%- for post in projects -%}
+                    {% assign class_list = "post" %}
 
-                            {% for thumb in thumbs %}
-                                {% assign thumb_path = thumb | strip %}
-                                
-                                {% if forloop.last %}
-                                    <img src="{{ img_base }}/{{ thumb_path }}" alt="" loading="lazy" aria-hidden="true">
-                                {% else %}
-                                    <!-- <source srcset="{{ img_base }}/{{ thumb_path }}" media="(min-width: 768px)"> -->
-                                {% endif %}
-                            {% endfor %}
-                        </picture>
-                    </a>
+                    {% if post.slug %}
+                        {% assign class_list = class_list | append: " post--" | append: post.slug %}
+                    {% endif %}
+                    
+                    <article class="{{ class_list }}" data-animate>
+                        <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
+                            <picture>
+                                {% assign thumbs = post.thumbnail | split: "," %}
+                                {% capture img_base %}{{ site.baseurl }}/assets/images/{{ post.url }}{% endcapture %}
 
-                    <div class="post__details">
-                        <h2 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                                {% for thumb in thumbs %}
+                                    {% assign thumb_path = thumb | strip %}
+                                    
+                                    {% if forloop.last %}
+                                        <img src="{{ img_base }}/{{ thumb_path }}" alt="" loading="lazy" aria-hidden="true">
+                                    {% else %}
+                                        <!-- <source srcset="{{ img_base }}/{{ thumb_path }}" media="(min-width: 768px)"> -->
+                                    {% endif %}
+                                {% endfor %}
+                            </picture>
+                        </a>
 
-                        {% if post.summary %}
-                            <p class="post__summary">{{ post.summary }}</p>
-                        {% endif %}
-                    </div>
-                </article>
-            {%- endfor -%}
+                        <div class="post__details">
+                            <h2 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+
+                            {% if post.summary %}
+                                <p class="post__summary">{{ post.summary }}</p>
+                            {% endif %}
+                        </div>
+                    </article>
+                {%- endfor -%}
+            {%- endif -%}
+
+            {% assign legacy_projects = site.projects | where: "legacy", true | sort: "order" | reverse %}
+
+            {%- if legacy_projects.size > 0 -%}
+                <h2>Earlier work</h2>
+
+                {%- for post in legacy_projects -%}
+                    {% assign class_list = "post" %}
+
+                    {% if post.slug %}
+                        {% assign class_list = class_list | append: " post--" | append: post.slug %}
+                    {% endif %}
+                    
+                    <article class="{{ class_list }}" data-animate>
+                        <div class="post__details">
+                            <h3 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+
+                            {% if post.summary %}
+                                <p class="post__summary">{{ post.summary }}</p>
+                            {% endif %}
+                        </div>
+                    </article>
+                {%- endfor -%}
+            {%- endif -%}
         </div>
     {%- endif -%}
 </main>

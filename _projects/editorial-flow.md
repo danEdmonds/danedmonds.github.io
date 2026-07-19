@@ -4,6 +4,7 @@ title:  "Editorial Flow"
 permalink: /editorial-flow/
 thumbnail: thumb--1024x768.png
 summary: "A flexible, flow-based editorial experience for building rich, consistent landing pages."
+order: 5
 ---
 
 <dl class="meta">

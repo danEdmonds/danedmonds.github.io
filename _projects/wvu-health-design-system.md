@@ -4,6 +4,7 @@ title:  "WVU Health Design System"
 permalink: /wvu-health-design-system/
 thumbnail: thumb--1200x1600.png, thumb--1600x1200.png
 summary: "A scalable, principle-driven framework promoting consistency, accessibility, and sustainability."
+order: 6
 ---
 
 <dl class="meta">
