@@ -31,13 +31,13 @@ layout: base
                         <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
                             <picture>
                                 {% assign thumbs = post.thumbnail | split: "," %}
-                                {% capture img_base %}{{ site.baseurl }}/assets/images/{{ post.url }}{% endcapture %}
+                                {% capture img_base %}{{ site.baseurl }}/assets/images{{ post.url }}{% endcapture %}
 
                                 {% for thumb in thumbs %}
                                     {% assign thumb_path = thumb | strip %}
                                     
                                     {% if forloop.last %}
-                                        <img src="{{ img_base }}/{{ thumb_path }}" alt="" loading="lazy" aria-hidden="true">
+                                        <img src="{{ img_base }}{{ thumb_path }}" alt="" loading="lazy" aria-hidden="true">
                                     {% else %}
                                         <!-- <source srcset="{{ img_base }}/{{ thumb_path }}" media="(min-width: 768px)"> -->
                                     {% endif %}
