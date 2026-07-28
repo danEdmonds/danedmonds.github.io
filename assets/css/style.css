@@ -45,9 +45,11 @@
         --de-emphasis-color: var(--de-green);
         --de-border-color: color-mix(in srgb, var(--de-black), var(--de-off-white) 15%);
         --de-header-bg-color: rgb(0 0 0 / 0.15);
+
         /* --de-post-border-color: black; */
         /* --de-post-box-shadow-color: rgb(from black r g b / 0.25); */
         /* --de-post-box-shadow-hover-color: rgb(from black r g b / 0.15); */
+
         --de-post-soft-shadow-color: rgb(0 0 0 / 0.2);
         --de-post-sharp-shadow-color: rgb(0 0 0 / 0.3);
         --de-figure-bg-color: rgb(255 255 255 / 0.025);
@@ -96,7 +98,8 @@ a {
     text-decoration-thickness: 3px;
 
     transition-property: background-color, color, text-decoration-color;
-    transition-duration: 0.15s;
+    /* transition-duration: 0.15s; */
+    transition-duration: 0.2s;
 
     &:hover, &:focus {
         text-decoration-color: var(--de-link-decoration-hover-color);
@@ -112,7 +115,6 @@ h1, h2, h3 {
 h1 {
     margin-block-start: 0;
     font-size: 2.5rem;
-    font-weight: 900;
     line-height: 1.2;
     text-wrap: pretty;
 
@@ -124,6 +126,10 @@ h1 {
         font-size: 4.5rem;
         line-height: 1.1;
     }
+}
+
+h2, h3 {
+    font-weight: 600;
 }
 
 h2 {
@@ -281,19 +287,29 @@ main {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 header {
+    /* color: rgb(255 255 255 / 0.75);
+    --de-heading-color: white;
+    --de-link-color: white;
+    --de-link-decoration-color: var(--de-orange);
+    --de-link-decoration-hover-color: var(--de-green);
+    --de-emphasis-color: var(--de-green); */
+
     display: grid;
     align-items: center;
     min-block-size: 86px;
     margin-block-end: 4.5rem;
     padding-block: 1.5rem;
 
+    /* background-color: var(--de-black); */
+
     &:has(.logo) {
         margin-block-end: 6rem;
         padding-block-start: 0.75rem;
         /* border-block-end: 1px solid var(--de-border-color); */
-        background-color: rgb(0 0 0 / 0.125);
-        background-color: rgb(0 0 0 / 0.075);
-        background-color: var(--de-header-bg-color);
+        /* background-color: rgb(0 0 0 / 0.125); */
+        /* background-color: rgb(0 0 0 / 0.075); */
+        /* background-color: var(--de-header-bg-color); */
+        border-block-end: 1px solid var(--de-border-color);
 
         @media screen and (min-width: 36em) {
             padding-block-end: 0.75rem;
@@ -305,18 +321,23 @@ nav {
     display: flex; 
     flex-wrap: wrap;
     gap: 0.75rem 3rem;
+    column-gap: 3.75rem;
+    column-gap: 4.5rem;
     justify-content: center;
     align-items: center;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
 
-    @media screen and (min-width: 36em) {
+    /* @media screen and (min-width: 36em) {
         &:has(.logo) {
             column-gap: 3.75rem;
         }
-    }
+    } */
 
     a {
+        /* text-decoration-color: transparent; */
+
         animation-name: FadeIn, SmoothEntryX;
         animation-duration: 0.4s;
         animation-delay: 0.5s;
@@ -364,18 +385,35 @@ nav {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .hero {
+    /* color: rgb(255 255 255 / 0.75);
+    --de-heading-color: white;
+    --de-link-color: white;
+    --de-link-decoration-color: var(--de-orange);
+    --de-link-decoration-hover-color: var(--de-green);
+    --de-emphasis-color: var(--de-green); */
+
+    grid-column: full;
+
     margin-block: -1.5rem 6rem;
+    /* padding-block: 4.5rem 9rem; */
+    /* margin-block-start: 0; */
+
+    /* background-color: var(--de-black); */
+
     text-align: center;
 
     @media screen and (min-width: 48em) {
-        margin-block-end: 12rem;
         margin-block-end: 9rem;
+        /* margin-block-end: 6rem; */
     }
 
     h1 {
         margin-block: 0.25em 0;
+        margin-block: 0;
         font-size: 3rem;
+        font-weight: 900;
         line-height: 1;
+        text-transform: uppercase;
 
         span {
             --smooth-entry-from: 0.75rem;
@@ -395,6 +433,7 @@ nav {
 
         width: 320px;
         height: 166px;
+        margin-block-start: -0.75rem;
 
         animation-name: FadeIn, SmoothEntryY;
         animation-duration: 0.4s;
@@ -529,6 +568,9 @@ nav {
 
 .post__name {
     margin-block-end: 0;
+    /* font-size: 1.5rem; */
+    /* font-size: 1.5rem;
+    line-height: 1.25; */
 
     .post:has(.post__image) & {
         margin-block-start: 1.5rem;
@@ -536,6 +578,7 @@ nav {
 
     a {
         color: var(--de-link-color);
+        /* text-decoration-color: transparent; */
     }
 }
 
