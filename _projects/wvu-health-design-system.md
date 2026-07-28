@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "WVU Health Design System"
+title:  "Building a scalable design system"
 permalink: /wvu-health-design-system/
 thumbnail: thumb--3x2.png
-summary: "A scalable, principle-driven framework promoting consistency, accessibility, and sustainability."
+summary: "A flexible design system that brings consistency, accessibility, and sustainability to an ecosystem of higher education websites websites."
 order: 6
 ---
 

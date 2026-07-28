@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Editorial Flow"
+title:  "Designing flexible page layouts"
 permalink: /editorial-flow/
 thumbnail: thumb--1024x768.png
-summary: "A flexible, flow-based editorial experience for building rich, consistent landing pages."
+summary: "A flexible editorial experience that makes it easier for communicators to create rich, consistent landing pages."
 order: 5
 ---
 

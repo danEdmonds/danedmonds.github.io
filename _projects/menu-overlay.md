@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Menu Overlay"
+title:  "Simplifying navigation for multiple audiences"
 permalink: /menu-overlay/
 thumbnail: menu-overlay--thumb.png
 summary: "A scalable, three-panel system organizing the full site structure into a single, animated navigation overlay."

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "School of Medicine"
+title:  "WVU School of Medicine"
 permalink: /school-of-medicine/
 thumbnail: thumb--1200x1600.png, thumb--1600x1200.png
 summary: "Efficient, intuitive access to comprehensive program and department information."
