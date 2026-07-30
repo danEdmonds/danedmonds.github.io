@@ -1,32 +1,21 @@
 ---
 layout: post
-title:  "Designing flexible page layouts"
+title:  Designing flexible page layouts
 permalink: /editorial-flow/
 thumbnail: thumb--1024x768.png
-summary: "A flexible editorial experience that makes it easier for communicators to create rich, consistent landing pages."
+summary: A flexible editorial experience that makes it easier for communicators to create rich, consistent landing pages.
+disciplines:
+  - Design lead
+  - Visual design
+  - Design system
+  - Front-end development
+tools:
+  - Figma
+  - HTML/CSS
+  - Umbraco
+timeline: December 2025
 order: 5
 ---
-
-<dl class="meta">
-    <div>
-        <dt>Disciplines</dt>
-        <dd>Design lead</dd>
-        <dd>Visual design</dd>
-        <dd>Design System</dd>
-        <dd>Front-end development</dd>
-    </div>
-    <div>
-        <dt>Tools</dt>
-        <dd>Figma</dd>
-        <dd>HTML/CSS</dd>
-        <dd>Sass</dd>
-        <dd>Umbraco</dd>
-    </div>
-    <div>
-        <dt>Timeline</dt>
-        <dd>December 2025</dd>
-    </div>
-</dl>
 
 ## The Problem
 

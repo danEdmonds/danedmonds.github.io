@@ -1,31 +1,23 @@
 ---
 layout: post
-title:  "Cabin"
+title:  Cabin
 permalink: /cabin/
 thumbnail: thumb.jpg
-summary: "Simple, modular project management for meetings, tasks, and events."
+summary: Simple, modular project management for meetings, tasks, and events.
+disciplines:
+  - Design lead
+  - Visual design
+  - Product design
+  - Front-end development
+tools:
+  - HTML/CSS
+  - Umbraco
+timeline: November 2023
 order: 3
 legacy: true
 ---
 
 Built on the Umbraco content management system, Cabin is a simple project management tool for sharing meeting minutes, loosely tracking tasks, and providing awareness of noteworthy events.
-
-<dl class="meta">
-    <div>
-        <dt>Disciplines</dt>
-        <dd>Product design</dd>
-        <dd>Front-end development</dd>
-    </div>
-    <div>
-        <dt>Tools</dt>
-        <dd>HTML/CSS</dd>
-        <dd>Umbraco CMS</dd>
-    </div>
-    <div>
-        <dt>Timeline</dt>
-        <dd>November 2023</dd>
-    </div>
-</dl>
 
 This simple and clean interface is reinforced by a modular design system, keeping scalability in mind to build upon as new features are added.
 

@@ -1,33 +1,23 @@
 ---
 layout: post
-title:  "PMI"
+title:  PMI
 permalink: /pmi/
 thumbnail: pmi--homepage.jpg
-summary: "A visual storyteller and reliable distribution partner."
+summary: A visual storyteller and reliable distribution partner.
+disciplines:
+  - Design lead
+  - Visual design
+  - Front-end development
+tools:
+  - HTML/CSS
+  - JavaScript
+  - WordPress
+timeline: 2015
 order: 1
 legacy: true
 ---
 
 I designed the PMI website to showcase their high-end creative production and technical syndication services.
-
-<dl class="meta">
-    <div>
-        <dt>Disciplines</dt>
-        <dd>Design lead</dd>
-        <dd>Visual design</dd>
-        <dd>Front-end development</dd>
-    </div>
-    <div>
-        <dt>Tools</dt>
-        <dd>HTML/CSS</dd>
-        <dd>JavaScript</dd>
-        <dd>WordPress</dd>
-    </div>
-    <div>
-        <dt>Timeline</dt>
-        <dd>2015</dd>
-    </div>
-</dl>
 
 {% figure image="pmi/pmi--homepage.jpg" caption="" breakout="true" %}
 

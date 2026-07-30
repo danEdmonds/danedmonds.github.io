@@ -9,5 +9,20 @@ layout: base
         <p>{{ page.summary }}</p>
     {% endif %} -->
 
+    <dl class="meta">
+        <div>
+            <dt><strong>Disciplines</strong></dt>
+            <dd>{{ page.disciplines | join: ", " }}</dd>
+        </div>
+        <div>
+            <dt><strong>Tools</strong></dt>
+            <dd>{{ page.tools | join: ", " }}</dd>
+        </div>
+        <div>
+            <dt><strong>Timeline</strong></dt>
+            <dd>{{ page.timeline }}</dd>
+        </div>
+    </dl>
+
     {{ content }}
 </main>

@@ -1,32 +1,21 @@
 ---
 layout: post
-title:  "Building a scalable design system"
+title: Building a scalable design system
 permalink: /wvu-health-design-system/
 thumbnail: thumb--3x2.png
-summary: "A flexible design system that brings consistency, accessibility, and sustainability to an ecosystem of higher education websites."
+summary: A flexible design system that brings consistency, accessibility, and sustainability to an ecosystem of higher education websites.
+disciplines:
+  - Design lead
+  - Visual design
+  - Design system
+  - Front-end development
+tools:
+  - Figma
+  - HTML/CSS
+  - Umbraco
+timeline: Fall 2025–Present
 order: 6
 ---
-
-<dl class="meta">
-    <div>
-        <dt>Disciplines</dt>
-        <dd>Design lead</dd>
-        <dd>Visual design</dd>
-        <dd>Design System</dd>
-        <dd>Front-end development</dd>
-    </div>
-    <div>
-        <dt>Tools</dt>
-        <dd>Figma</dd>
-        <dd>HTML/CSS</dd>
-        <dd>Sass</dd>
-        <dd>Umbraco</dd>
-    </div>
-    <div>
-        <dt>Timeline</dt>
-        <dd>Fall 2025&ndash;Preset</dd>
-    </div>
-</dl>
 
 ## The Problem
 

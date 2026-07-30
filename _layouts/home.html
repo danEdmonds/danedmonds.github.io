@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<main class="grid">
+<main>
     <div class="hero">
         <div class="container">
             <h1>
@@ -15,70 +15,72 @@ layout: base
         </div>
     </div>
 
-    {%- if site.projects.size > 0 -%}
-        <div id="my-work" class="posts">
-            {% assign projects = site.projects | where_exp: "project", "project.legacy != true" | sort: "order" | reverse %}
+    <div class="container">
+        {%- if site.projects.size > 0 -%}
+            <div id="my-work" class="posts">
+                {% assign projects = site.projects | where_exp: "project", "project.legacy != true" | sort: "order" | reverse %}
 
-            {%- if projects.size > 0 -%}
-                {%- for post in projects -%}
-                    {% assign class_list = "post" %}
+                {%- if projects.size > 0 -%}
+                    {%- for post in projects -%}
+                        {% assign class_list = "post" %}
 
-                    {% if post.slug %}
-                        {% assign class_list = class_list | append: " post--" | append: post.slug %}
-                    {% endif %}
-                    
-                    <article class="{{ class_list }}" data-animate>
-                        <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
-                            <picture>
-                                {% assign thumbs = post.thumbnail | split: "," %}
-                                {% capture img_base %}{{ site.baseurl }}/assets/images{{ post.url }}{% endcapture %}
+                        {% if post.slug %}
+                            {% assign class_list = class_list | append: " post--" | append: post.slug %}
+                        {% endif %}
+                        
+                        <article class="{{ class_list }}" data-animate>
+                            <a href="{{ post.url | relative_url }}" class="post__image" aria-hidden="true">
+                                <picture>
+                                    {% assign thumbs = post.thumbnail | split: "," %}
+                                    {% capture img_base %}{{ site.baseurl }}/assets/images{{ post.url }}{% endcapture %}
 
-                                {% for thumb in thumbs %}
-                                    {% assign thumb_path = thumb | strip %}
-                                    
-                                    {% if forloop.last %}
-                                        <img src="{{ img_base }}{{ thumb_path }}" alt="" loading="lazy" aria-hidden="true">
-                                    {% else %}
-                                        <!-- <source srcset="{{ img_base }}/{{ thumb_path }}" media="(min-width: 768px)"> -->
-                                    {% endif %}
-                                {% endfor %}
-                            </picture>
-                        </a>
+                                    {% for thumb in thumbs %}
+                                        {% assign thumb_path = thumb | strip %}
+                                        
+                                        {% if forloop.last %}
+                                            <img src="{{ img_base }}{{ thumb_path }}" alt="" loading="lazy" aria-hidden="true">
+                                        {% else %}
+                                            <!-- <source srcset="{{ img_base }}/{{ thumb_path }}" media="(min-width: 768px)"> -->
+                                        {% endif %}
+                                    {% endfor %}
+                                </picture>
+                            </a>
 
-                        <div class="post__details">
-                            <h2 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                            <div class="post__details">
+                                <h2 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
 
-                            {% if post.summary %}
-                                <p class="post__summary">{{ post.summary }}</p>
-                            {% endif %}
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {%- endif -%}
+                                {% if post.summary %}
+                                    <p class="post__summary">{{ post.summary }}</p>
+                                {% endif %}
+                            </div>
+                        </article>
+                    {%- endfor -%}
+                {%- endif -%}
 
-            {% assign legacy_projects = site.projects | where: "legacy", true | sort: "order" | reverse %}
+                {% assign legacy_projects = site.projects | where: "legacy", true | sort: "order" | reverse %}
 
-            {%- if legacy_projects.size > 0 -%}
-                <h2>Earlier work</h2>
+                {%- if legacy_projects.size > 0 -%}
+                    <h2>Earlier work</h2>
 
-                {%- for post in legacy_projects -%}
-                    {% assign class_list = "post" %}
+                    {%- for post in legacy_projects -%}
+                        {% assign class_list = "post" %}
 
-                    {% if post.slug %}
-                        {% assign class_list = class_list | append: " post--" | append: post.slug %}
-                    {% endif %}
-                    
-                    <article class="{{ class_list }}" data-animate>
-                        <div class="post__details">
-                            <h3 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+                        {% if post.slug %}
+                            {% assign class_list = class_list | append: " post--" | append: post.slug %}
+                        {% endif %}
+                        
+                        <article class="{{ class_list }}" data-animate>
+                            <div class="post__details">
+                                <h3 class="post__name"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
 
-                            {% if post.summary %}
-                                <p class="post__summary">{{ post.summary }}</p>
-                            {% endif %}
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {%- endif -%}
-        </div>
-    {%- endif -%}
+                                {% if post.summary %}
+                                    <p class="post__summary">{{ post.summary }}</p>
+                                {% endif %}
+                            </div>
+                        </article>
+                    {%- endfor -%}
+                {%- endif -%}
+            </div>
+        {%- endif -%}
+    </div>
 </main>

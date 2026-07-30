@@ -1,33 +1,22 @@
 ---
 layout: post
-title:  "Simplifying navigation for multiple audiences"
+title:  Simplifying navigation for multiple audiences
 permalink: /menu-overlay/
 thumbnail: menu-overlay--thumb.png
-summary: "A scalable, three-panel system organizing the full site structure into a single, animated navigation overlay."
+summary: A scalable, three-panel system organizing the full site structure into a single, animated navigation overlay.
+disciplines:
+  - Design lead
+  - Visual design
+  - Motion design
+  - Design system
+  - Front-end development
+tools:
+  - Figma
+  - HTML/CSS
+  - JavaScript
+timeline: Fall 2025
 order: 4
 ---
-
-<dl class="meta">
-    <div>
-        <dt>Disciplines</dt>
-        <dd>Design lead</dd>
-        <dd>Visual design</dd>
-        <dd>Motion design</dd>
-        <dd>Design System</dd>
-        <dd>Front-end development</dd>
-    </div>
-    <div>
-        <dt>Tools</dt>
-        <dd>Figma</dd>
-        <dd>HTML/CSS</dd>
-        <dd>Sass</dd>
-        <dd>JavaScript</dd>
-    </div>
-    <div>
-        <dt>Timeline</dt>
-        <dd>Fall 2025</dd>
-    </div>
-</dl>
 
 ## Strategy & UX
 
