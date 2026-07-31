@@ -6,4 +6,4 @@ layout: home
 title: Hello, I’m Dan Edmonds.
 ---
 
-I'm a **designer** and **front-end coder,** building digital experiences with a focus on **design systems** and **interaction design**.
+I'm a **designer** and **front-end coder**. I build scalable, accessible digital experiences through **design systems** and **interaction design**.
