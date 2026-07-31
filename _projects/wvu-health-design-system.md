@@ -23,13 +23,13 @@ Before this system existed, each Health Sciences website had evolved independent
 
 ## Consistency Without Uniformity
 
-The <a href="https://health.wvu.edu/">WVU Health</a> design system is built on strong core design principles and a scalable foundation that supports consistency, accessibility and long-term growth.
+The [WVU Health](https://health.wvu.edu/) design system is built on strong core design principles and a scalable foundation that supports consistency, accessibility and long-term growth.
 
-By unifying layouts, styles and behaviors across websites, the system reduces redundancy while ensuring alignment with <a href="https://scm.wvu.edu/brand/">WVU brand patterns</a>, and adherence to accessibility standards.
+By unifying layouts, styles and behaviors across websites, the system reduces redundancy while ensuring alignment with [WVU brand patterns](https://scm.wvu.edu/brand/), and adherence to accessibility standards.
 
 The framework prioritizes **consistency without rigid uniformity**, balancing clear standards with design flexibility. Components share core principles and patterns rather than identical appearances&mdash;allowing each website to carry its own visual character without drifting from the system.
 
-{% figure image="wvu-health-design-system/consistency-without-uniformity.png" caption="The West Virginia Poison Center and Farm to You West Virginia websites are built on the same system, each with a distinct visual identity layered on top." breakout="true" %}
+{% figure image="wvu-health-design-system/consistency-without-uniformity.png" caption="The [West Virginia Poison Center](https://wvpoisoncenter.org/) and [Farm to You West Virginia](https://farmtoyouwv.org/) websites are built on the same system, each with a distinct visual identity layered on top." breakout="true" %}
 
 ## A Predictable Foundation
 

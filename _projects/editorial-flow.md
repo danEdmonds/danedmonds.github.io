@@ -19,7 +19,7 @@ order: 5
 
 ## The Problem
 
-The editing experience of the previous <a href="https://health.wvu.edu">WVU Health website</a> in Umbraco 7 was locked down. Each unique page had a fixed layout with fixed fields, and editors couldn't reorder content or add a new section without relying on a developer. Editors were filling in blanks rather than making decisions. That sounds efficient, but the layout and content go stale quickly, and fields end up repurposed for things they were never meant to hold.
+The editing experience of the previous [WVU Health website](https://health.wvu.edu) in Umbraco 7 was locked down. Each unique page had a fixed layout with fixed fields, and editors couldn't reorder content or add a new section without relying on a developer. Editors were filling in blanks rather than making decisions. That sounds efficient, but the layout and content go stale quickly, and fields end up repurposed for things they were never meant to hold.
 
 ## Strategy & UX
 

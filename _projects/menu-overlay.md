@@ -22,7 +22,7 @@ order: 4
 
 Designing for multiple audiences above the fold is a losing proposition. Prioritize one group and you compromise the others. Try to serve everyone and you serve no one. The page becomes a cluttered index rather than an experience.
 
-The decision was to stop trying. The <a href="https://health.wvu.edu/">WVU Health homepage</a> makes a single, bold impression and asks nothing of the visitor except to feel something. Navigation becomes the place where audiences find their own path. A three-panel overlay packages the full sitemap into one cohesive space, moving through layers of hierarchy the way you'd move through a physical environment.
+The decision was to stop trying. The [WVU Health homepage](https://health.wvu.edu/) makes a single, bold impression and asks nothing of the visitor except to feel something. Navigation becomes the place where audiences find their own path. A three-panel overlay packages the full sitemap into one cohesive space, moving through layers of hierarchy the way you'd move through a physical environment.
 
 Each panel has room for more than just links. Supporting resources, social media, promotional callouts, and a news teaser travel with the user as they drill deeper, making the menu less of a utility and more of an entry point into the organization itself.
 

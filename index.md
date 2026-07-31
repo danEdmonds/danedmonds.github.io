@@ -6,4 +6,4 @@ layout: home
 title: Hello, I’m Dan Edmonds.
 ---
 
-I design and build well-crafted digital experiences with a focus on **design systems**, **interaction design**, and **front-end architecture**.
+I'm a **designer** and **front-end coder,** building digital experiences with a focus on **design systems** and **interaction design**.
