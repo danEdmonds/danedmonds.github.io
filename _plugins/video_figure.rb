@@ -23,8 +23,12 @@ module Jekyll
             output += "<source src=\"#{baseurl}/assets/images/#{mp4}\" type=\"video/mp4\" />"
             output += "</video>"
 
-            if !caption.nil? && !caption.empty?
-                output += "<figcaption>#{caption}</figcaption>"
+            unless caption.to_s.empty?
+                converter = context.registers[:site].find_converter_instance(Jekyll::Converters::Markdown)
+                caption_html = converter.convert(caption)
+                caption_html = caption_html.sub(/\A<p>/, '').sub(/<\/p>\s*\z/, '')
+
+                output += "<figcaption>#{caption_html}</figcaption>"
             end
 
             output += "</figure>"

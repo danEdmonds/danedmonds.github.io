@@ -19,8 +19,12 @@ module Jekyll
             output = "<figure class=\"#{classes.join(' ')}\">"
             output += "<img src=\"#{baseurl}/assets/images/#{image}\" alt=\"\" width=\"1600\" height=\"1200\" loading=\"lazy\">"
 
-            if !caption.nil? && !caption.empty?
-                output += "<figcaption>#{caption}</figcaption>"
+            unless caption.to_s.empty?
+                converter = context.registers[:site].find_converter_instance(Jekyll::Converters::Markdown)
+                caption_html = converter.convert(caption)
+                caption_html = caption_html.sub(/\A<p>/, '').sub(/<\/p>\s*\z/, '')
+
+                output += "<figcaption>#{caption_html}</figcaption>"
             end
 
             output += "</figure>"
