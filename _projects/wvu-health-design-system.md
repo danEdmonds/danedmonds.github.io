@@ -19,7 +19,7 @@ order: 6
 
 ## The Problem
 
-Before this system existed, each Health Sciences website had evolved independently&mdash;different markup, different CSS, its own brand interpretation. Some sites were more evolved than others, and loosely shared components had quietly diverged over time. There were no documented design standards, which meant decisions were inconsistent and onboarding new team members was harder than it needed to be. The migration from Umbraco 7 to Umbraco Cloud was the opportunity to fix that from the ground up.
+Before this system existed, each Health Sciences website had evolved independently, with different markup, different CSS, its own brand interpretation. Some sites were more evolved than others, and loosely shared components had quietly diverged over time. There were no documented design standards, which meant decisions were inconsistent and onboarding new team members was harder than it needed to be. The migration from Umbraco 7 to Umbraco Cloud was the opportunity to fix that from the ground up.
 
 ## Consistency Without Uniformity
 
@@ -46,7 +46,7 @@ The system uses a modified ITCSS architecture with BEM methodology, leveraging n
 
 ## Intention Before Implementation
 
-Every component and layout begins in Figma before a line of code is written. This ensures a deliberate exploration step rather than designing directly in the browser — a discipline that keeps decisions intentional and reviewable.
+Every component and layout begins in Figma before a line of code is written. This ensures a deliberate exploration step rather than designing directly in the browser, keeping decisions intentional and reviewable.
 
 Design tokens are defined in CSS and reflected in Figma, creating a shared vocabulary between design and development. WVU brand tokens establish the core color and type values, with a set of Health Sciences-specific variables layered on top for system-level defaults like link color, border treatments, and component shadows.
 

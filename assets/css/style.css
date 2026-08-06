@@ -205,7 +205,7 @@ img, video {
 
 .grid {
     display: grid;
-    grid-template-columns: [full-start] minmax(1rem, 1fr) [breakout-start] minmax(0, calc((75rem - 45rem) / 2)) [content-start] min(100% - (1rem * 2), 45rem) [content-end] minmax(0, calc((75rem - 45rem) / 2)) [breakout-end] minmax(1rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(1rem, 1fr) [breakout-start] minmax(0, calc((90rem - 45rem) / 2)) [content-start] min(100% - (1rem * 2), 45rem) [content-end] minmax(0, calc((90rem - 45rem) / 2)) [breakout-end] minmax(1rem, 1fr) [full-end];
     overflow-x: clip;
 
     & > * {
@@ -227,6 +227,16 @@ main {
         animation-delay: 0.5s;
         animation-fill-mode: both;
     }
+
+    /* & > :is(h2, h3, h4, p, dl),
+    li {
+        animation-name: SmoothEntryY, FadeIn;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+        
+        animation-timeline: view();
+        animation-range: entry-crossing 0px entry-crossing 20vh;
+    } */
 
     p, ul, dl {
         font-size: 1.25rem;
@@ -408,7 +418,6 @@ nav {
 
         margin-block: 1.5rem 0;
         font-size: 1.5rem;
-        line-height: 1.5;
         text-wrap: balance;
 
         animation-name: FadeIn, SmoothEntryY;
@@ -602,20 +611,24 @@ nav {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .figure {
+    grid-column: full;
     margin: 3rem 0 0;
+    margin-block-start: 6rem;
+    font-size: 1.125rem;
     line-height: 1.5;
-
-    &:not(:has(iframe)) {
-        grid-column: full;
+    
+    & + * {
+        margin-block-start: 9rem;
     }
 
-    & + & {
+    & + &,
+    & + .gallery {
         margin-block-start: 3rem;
     }
 
-    h1 + & {
+    /* h1 + & {
         margin-block-start: 0;
-    }
+    } */
 
     img, video {
         width: 100%; 
@@ -626,17 +639,11 @@ nav {
     figcaption {
         padding-block-start: 1rem;
     }
-
-    & + * {
-        margin-block-start: 6rem;
-    }
 }
 
 .figure--breakout img,
 .figure--breakout video {
     grid-column: breakout;
-
-    border: 1px solid rgb(0 0 0 / 0.5);
 }
 
 @media screen and (max-width: 47.9375em) {
@@ -644,6 +651,29 @@ nav {
     .figure--mobile video {
         aspect-ratio: 9 / 20;
         object-fit: cover;
+    }
+}
+
+.gallery {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column: breakout;
+    margin-block-start: 6rem;
+
+    & + * {
+        margin-block-start: 9rem;
+    }
+
+    & + &,
+    & + .figure {
+        margin-block-start: 3rem;
+    }
+
+    .figure {
+        display: block;
+        margin-block-start: 0;
+        grid-column: auto;
     }
 }
 
