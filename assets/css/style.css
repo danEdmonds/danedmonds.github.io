@@ -613,17 +613,33 @@ nav {
 .figure {
     grid-column: full;
     margin: 3rem 0 0;
-    margin-block-start: 6rem;
     font-size: 1.125rem;
     line-height: 1.5;
+
+    @media screen and (min-width: 60em) {
+        margin-block-start: 6rem;
+    }
     
     & + * {
-        margin-block-start: 9rem;
+        margin-block-start: 6rem;
+    }
+
+    @media screen and (min-width: 60em) {
+        & + * {
+            margin-block-start: 9rem;
+        }
     }
 
     &:not(:has(figcaption)) + &,
     &:not(:has(figcaption)) + .gallery {
-        margin-block-start: 3rem;
+        margin-block-start: 1.5rem;
+    }
+
+    @media screen and (min-width: 60em) {
+        &:not(:has(figcaption)) + &,
+        &:not(:has(figcaption)) + .gallery {
+            margin-block-start: 3rem;
+        }
     }
 
     img, video {
@@ -658,19 +674,36 @@ nav {
 
 .gallery {
     display: grid;
-    gap: 3rem;
+    gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
     grid-column: breakout;
     margin-block-start: 6rem;
 
+    @media screen and (min-width: 60em) {
+        gap: 3rem;
+    }
+
     & + * {
-        margin-block-start: 9rem;
+        margin-block-start: 6rem;
+    }
+
+    @media screen and (min-width: 60em) {
+        & + * {
+            margin-block-start: 9rem;
+        }
     }
 
     & + &,
     & + .figure {
-        margin-block-start: 3rem;
+        margin-block-start: 1.5rem;
+    }
+
+    @media screen and (min-width: 60em) {
+        & + &,
+        & + .figure {
+            margin-block-start: 3rem;
+        }
     }
 
     .figure {
@@ -687,12 +720,16 @@ nav {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .pagination {
-    margin-block-start: 12rem;
+    margin-block-start: 6rem;
     color: var(--de-link-color);
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
     text-decoration-color: transparent;
+
+    @media screen and (min-width: 60em) {
+        margin-block-start: 12rem;
+    }
 
     &:hover,
     &:focus-visible {
