@@ -621,14 +621,10 @@ nav {
         margin-block-start: 9rem;
     }
 
-    & + &,
-    & + .gallery {
+    &:not(:has(figcaption)) + &,
+    &:not(:has(figcaption)) + .gallery {
         margin-block-start: 3rem;
     }
-
-    /* h1 + & {
-        margin-block-start: 0;
-    } */
 
     img, video {
         width: 100%; 
@@ -654,10 +650,17 @@ nav {
     }
 }
 
+
+
+
+/* Gallery
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 .gallery {
     display: grid;
     gap: 3rem;
     grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
     grid-column: breakout;
     margin-block-start: 6rem;
 
@@ -672,9 +675,36 @@ nav {
 
     .figure {
         display: block;
-        margin-block-start: 0;
+        margin-block-start: 0 !important;
         grid-column: auto;
     }
+}
+
+
+
+
+/* Pagination
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.pagination {
+    margin-block-start: 12rem;
+    color: var(--de-link-color);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration-color: transparent;
+
+    &:hover,
+    &:focus-visible {
+        text-decoration-color: var(--de-link-decoration-hover-color);
+    }
+}
+
+.pagination__label {
+    margin-block-end: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.5;
 }
 
 

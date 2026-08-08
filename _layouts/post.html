@@ -25,4 +25,28 @@ layout: base
     </dl>
 
     {{ content }}
+
+    {% assign projects = site.projects | where_exp: "project", "project.legacy != true" | sort: "order" | reverse %}
+
+    {% for project in projects %}
+        {% if project.url == page.url %}
+            {% assign next_index = forloop.index0 | plus: 1 %}
+            {% assign next_project = projects[next_index] %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    {% if next_project %}
+        <a href="{{ next_project.url | relative_url }}" class="pagination">
+            <div class="pagination__label">Next project →</div>
+            
+            {{ next_project.title | escape }}
+        </a>
+    {% else %}
+        <a href="{{ "/" | relative_url }}" class="pagination">
+            <div class="pagination__label">Up next →</div>
+
+            Back to the homepage
+        </a>
+    {% endif %}
 </main>
