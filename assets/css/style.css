@@ -678,10 +678,11 @@ nav {
     grid-template-columns: 1fr 1fr;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr));
     grid-column: breakout;
-    margin-block-start: 6rem;
+    margin-block-start: 3rem;
 
     @media screen and (min-width: 60em) {
         gap: 3rem;
+        margin-block-start: 6rem;
     }
 
     & + * {
