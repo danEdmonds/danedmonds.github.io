@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-**For more than 15 years**, I’ve been crafting digital experiences where design and front-end development overlap. I enjoy turning ideas into thoughtful, production-ready experiences, whether that means designing reusable components, refining interactions, or simplifying a user experience.
+I'm Dan Edmonds. **For more than 15 years**, I’ve been crafting digital experiences where design and front-end development overlap. I enjoy turning ideas into thoughtful, production-ready experiences, whether that means designing reusable components, refining interactions, or simplifying a user experience.
 
 I’m currently the **Assistant Director of Digital** at [West Virginia University Health Sciences](https://health.wvu.edu), where I lead the design and evolution of a mature design system that supports a large ecosystem of websites. My work spans UX and interface design, front-end development, accessibility, and design system governance, with an emphasis on building scalable, flexible, maintainable components that are intuitive to use.
 
