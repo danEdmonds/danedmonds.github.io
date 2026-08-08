@@ -283,6 +283,20 @@ main {
     fill: var(--de-logo-color);
 }
 
+.logo__fill {
+    fill: var(--de-link-decoration-hover-color);
+    translate: 0 -100%;
+
+    transition-property: translate;
+    transition-duration: 0.2s;
+    animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
+
+    a[href]:hover &,
+    a[href]:focus-visible & {
+        translate: 0;
+    }
+}
+
 
 
 
@@ -353,16 +367,6 @@ nav {
         &:has(.logo) a:nth-child(2) {
             order: -1;
         }
-    }
-
-    .logo {
-        transition-property: fill;
-        transition-duration: 0.15s;
-    }
-
-    a:hover .logo,
-    a:focus-visible .logo {
-        fill: var(--de-link-decoration-hover-color);
     }
 }
 
