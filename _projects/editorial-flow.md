@@ -14,7 +14,7 @@ tools:
   - HTML/CSS
   - Umbraco
 timeline: December 2025
-order: 5
+order: 6
 ---
 
 {% figure image="flexible-page-layouts/hero--wvu-health--collage.png" caption="" breakout="true" %}
