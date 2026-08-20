@@ -287,7 +287,7 @@ main {
     fill: var(--de-link-decoration-hover-color);
     translate: 0 -100%;
 
-    transition-property: translate;
+    transition-property: translate, rotate;
     transition-duration: 0.2s;
     animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
 
@@ -598,11 +598,6 @@ nav {
         margin-block-start: 1.5em;
     }
 
-    dd {
-        padding-inline-start: 0.5em;
-        text-indent: -0.5em;
-    }
-
     & + p {
         margin-block-start: 3rem;
     }
@@ -721,6 +716,24 @@ nav {
 
 
 
+/* Code block
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+pre {
+    margin-block-start: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    background-color: rgb(0 0 0 / 0.2);
+    color: rgb(from var(--de-off-white) r g b / 0.8);
+    font-family: "Source Code Pro";
+    font-size: 0.875rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+
+
+
 /* Pagination
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -747,6 +760,7 @@ nav {
     font-size: 1.125rem;
     font-weight: normal;
     line-height: 1.5;
+    /* text-decoration: none; */
 }
 
 
