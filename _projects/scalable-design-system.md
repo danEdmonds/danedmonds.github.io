@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Building a scalable design system
-permalink: /wvu-health-design-system/
-thumbnail: thumb--3x2.png
+permalink: /scalable-design-system/
+thumbnail: thumb--figma--wvu-masthead.png
 summary: A flexible design system that brings consistency, accessibility, and sustainability to an ecosystem of higher education websites.
 disciplines:
   - Design lead
@@ -17,6 +17,8 @@ timeline: Fall 2025–Present
 order: 5
 ---
 
+{% figure image="scalable-design-system/hero--figma--wvu-masthead.png" caption="" breakout="true" %}
+
 ## The Problem
 
 Before this system existed, each Health Sciences website had evolved independently, with different markup, different CSS, its own brand interpretation. Some sites were more evolved than others, and loosely shared components had quietly diverged over time. There were no documented design standards, which meant decisions were inconsistent and onboarding new team members was harder than it needed to be. The migration from Umbraco 7 to Umbraco Cloud was the opportunity to fix that from the ground up.
@@ -29,7 +31,7 @@ By unifying layouts, styles and behaviors across websites, the system reduces re
 
 The framework prioritizes **consistency without rigid uniformity**, balancing clear standards with design flexibility. Components share core principles and patterns rather than identical appearances&mdash;allowing each website to carry its own visual character without drifting from the system.
 
-{% figure image="wvu-health-design-system/consistency-without-uniformity.png" caption="The [West Virginia Poison Center](https://wvpoisoncenter.org/) and [Farm to You West Virginia](https://farmtoyouwv.org/) websites are built on the same system, each with a distinct visual identity layered on top." breakout="true" %}
+{% figure image="scalable-design-system/consistency-without-uniformity.png" caption="The [West Virginia Poison Center](https://wvpoisoncenter.org/) and [Farm to You West Virginia](https://farmtoyouwv.org/) websites are built on the same system, each with a distinct visual identity layered on top." breakout="true" %}
 
 ## A Predictable Foundation
 
@@ -42,7 +44,74 @@ The system uses a modified ITCSS architecture with BEM methodology, leveraging n
 - **CSS variables drive all configurable properties and design tokens**, including colors, fonts and decorative values. Components define their own default variable values locally rather than globally at the root.
 - **Simple grids**, such as halves, thirds, and fourths, promote predictable, reusable structures.
 
-{% figure image="wvu-health-design-system/thumb--1600x1200.png" caption="Component stylesheets are organized and imported within a dedicated cascade layer." %}
+### Design System CSS
+
+In the core design system stylesheet, imports are organized by responsibility and specificity into native cascade layers to create a predictable hierarchy.
+
+<pre>
+// Define the order of cascade layers
+@layer generic, base, objects, components;
+
+
+// Settings
+settings.variables.wvu-colors
+settings.variables.wvu-fonts
+...
+
+// Tools
+tools.layout
+tools.visually-hidden
+...
+
+@layer generic {
+  generic.normalize
+  ...
+}
+
+@layer base {
+  base.root
+  base.typography
+  ...
+}
+
+@layer objects {
+  objects.layout
+  objects.buttons
+  ...
+}
+
+@layer components {
+  components.wvu-masthead
+  components.wvu-footer
+  components.media-block
+  ...
+}
+</pre>
+
+### Theme CSS
+
+Individual themes extend that same structure through a separate stylesheet, overriding or adding styles within the appropriate cascade layer.
+
+<pre>
+@layer base {
+  base.root
+  ...
+}
+
+@layer objects {
+  objects.buttons
+  ...
+}
+
+@layer components {
+  components.media-block
+  ...
+
+  // Theme-specific imports
+  components.hero
+  ...
+}
+</pre>
 
 ## Intention Before Implementation
 
@@ -52,13 +121,13 @@ Design tokens are defined in CSS and reflected in Figma, creating a shared vocab
 
 Deeper integration between the Figma library and the coded system is an active area of development as the system matures.
 
-{% figure image="wvu-health-design-system/intention-before-implementation.png" caption="An early layout exploration of a collage layout for the WVU Health homepage." breakout="true" %}
+{% figure image="scalable-design-system/intention-before-implementation.png" caption="Defining the final layout and design for a reusable publication list component in Figma." breakout="true" %}
 
 ## Organized for Scale
 
 The system is organized into four layers: tokens and layout helpers that establish the core visual language, foundational components like buttons, cards, and forms that everything else builds on, a growing library of patterns that compose those foundations into more complex UI, and full page templates that define how it all comes together.
 
-{% figure image="wvu-health-design-system/organized-for-scale.png" caption="" breakout="true" %}
+{% figure image="scalable-design-system/organized-for-scale.png" caption="" breakout="true" %}
 
 ## What It Made Possible
 
@@ -66,6 +135,6 @@ The system launched driving the primary WVU Health website and 30+ sub-sites wit
 
 The result is a cohesive web presence that stakeholders have responded to well, with consistent typography, layout, and interaction patterns across every site in the network.
 
-{% figure image="wvu-health-design-system/what-it-made-possible-2.png" caption="" breakout="true" %}
+{% figure image="scalable-design-system/what-it-made-possible--wvu-health--homepage.png" caption="" breakout="true" %}
 
-{% figure image="wvu-health-design-system/what-it-made-possible-1.png" caption="" breakout="true" %}
+{% figure image="scalable-design-system/what-it-made-possible--collage.png" caption="" breakout="true" %}
