@@ -17,7 +17,7 @@ timeline: December 2025
 order: 6
 ---
 
-{% figure image="flexible-page-layouts/hero--wvu-health--collage.png" caption="" breakout="true" %}
+{% figure image="flexible-page-layouts/hero--wvu-health--collage.png" caption="" breakout="true" class="post-hero" %}
 
 ## The Problem
 

@@ -17,7 +17,7 @@ timeline: Fall 2025–Present
 order: 5
 ---
 
-{% figure image="scalable-design-system/hero--figma--wvu-masthead.png" caption="" breakout="true" %}
+{% figure image="scalable-design-system/hero--figma--wvu-masthead.png" caption="" breakout="true" class="post-hero" %}
 
 ## The Problem
 

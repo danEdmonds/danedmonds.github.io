@@ -1,10 +1,6 @@
 /* danedmonds.net
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-/* @view-transition {
-    navigation: auto;
-} */
-
 
 
 
@@ -221,12 +217,12 @@ img, video {
 
 main {
 
-    &:not(:has(.hero)) {
+    /* &:not(:has(.hero)) {
         animation-name: FadeIn;
         animation-duration: 0.4s;
         animation-delay: 0.5s;
         animation-fill-mode: both;
-    }
+    } */
 
     /* & > :is(h2, h3, h4, p, dl),
     li {
@@ -340,11 +336,11 @@ nav {
         color: var(--de-off-white);
         text-decoration-color: transparent;
 
-        animation-name: FadeIn, SmoothEntryX;
+        /* animation-name: FadeIn, SmoothEntryX;
         animation-duration: 0.4s;
         animation-delay: 0.5s;
         animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-        animation-fill-mode: backwards;
+        animation-fill-mode: backwards; */
         
         @media screen and (max-width: 35.9375em) {
             &:has(.logo) {
@@ -352,15 +348,15 @@ nav {
             }
         }
 
-        &:last-child {
+        /* &:last-child {
             --smooth-entry-from: -1rem;
-        }
+        } */
 
-        &:has(.logo) {
+        /* &:has(.logo) {
             animation-name: FadeIn, SmoothEntryY;
 
             animation-delay: 0.25s;
-        }
+        } */
     }
 
     @media screen and (min-width: 36em) {
@@ -391,15 +387,15 @@ nav {
         line-height: 1;
 
         span {
-            --smooth-entry-from: 0.75rem;
+            /* --smooth-entry-from: 0.75rem; */
 
             display: block;
 
-            animation-name: FadeIn, SmoothEntryY;
+            /* animation-name: FadeIn, SmoothEntryY;
             animation-duration: 0.4s;
             animation-delay: 0.25s;
             animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-            animation-fill-mode: backwards;
+            animation-fill-mode: backwards; */
         }
     }
 
@@ -410,25 +406,25 @@ nav {
         height: 166px;
         margin-block-start: -0.75rem;
 
-        animation-name: FadeIn, SmoothEntryY;
+        /* animation-name: FadeIn, SmoothEntryY;
         animation-duration: 0.4s;
         animation-delay: 0.25s;
         animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-        animation-fill-mode: backwards;
+        animation-fill-mode: backwards; */
     }
 
     p {
-        --smooth-entry-from: -1rem;
+        /* --smooth-entry-from: -1rem; */
 
         margin-block: 1.5rem 0;
         font-size: 1.5rem;
         text-wrap: balance;
 
-        animation-name: FadeIn, SmoothEntryY;
+        /* animation-name: FadeIn, SmoothEntryY;
         animation-duration: 0.4s;
         animation-delay: 0.5s;
         animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-        animation-fill-mode: backwards;
+        animation-fill-mode: backwards; */
 
         @media screen and (min-width: 40em) {
             font-size: 1.75rem;
@@ -568,12 +564,12 @@ nav {
     font-size: 1.125rem;
 }
 
-.posts {
+/* .posts {
     animation-name: FadeIn;
     animation-duration: 0.4s;
     animation-delay: 0.5s;
     animation-fill-mode: both;
-}
+} */
 
 
 
@@ -906,4 +902,75 @@ footer {
 [data-animate="done"] *::before,
 [data-animate="done"] *::after {
     animation: none !important;
+}
+
+
+
+
+/* View transitions
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@view-transition { 
+    navigation: auto; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    @view-transition { 
+        navigation: none; 
+    }
+}
+
+::view-transition-group(root) {
+    /* animation: none; */
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+::view-transition-old(root) {
+    /* animation: none;
+    opacity: 0; */
+    animation-duration: 0.15s;
+}
+
+::view-transition-new(root) {
+    /* animation-name: FadeIn; */
+    /* animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1); */
+    animation-delay: 0.15s;
+}
+
+/* header {
+    view-transition-name: header;
+} */
+
+/* ::view-transition-group(header),
+::view-transition-old(header),
+::view-transition-new(header) {
+    animation: none;
+} */
+
+.post-hero img { 
+    view-transition-name: post-hero; 
+}
+
+::view-transition-group(post-hero) {
+    animation-duration: 0.4s; 
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+    /* animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    animation-delay: 0.15s;
+}
+
+::view-transition-new(post-hero) {
+    /* animation-duration: 0.4s;  */
+    /* animation-timing-function: cubic-bezier(0.2, 0, 0, 1); */
+    /* animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    /* animation-delay: 0.15s; */
+}
+
+::view-transition-old(post-hero) {
+    /* animation: none;
+    opacity: 0; */
+    /* animation-duration: 0.15s; */
+    /* animation-timing-function: linear; */
+    /* animation-timing-function: revert; */
 }

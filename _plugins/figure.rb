@@ -11,10 +11,12 @@ module Jekyll
             caption = @attributes['caption']
             breakout = @attributes['breakout']
             type = @attributes['type']
+            custom_class = @attributes['class']
 
             classes = ['grid', 'figure']
             classes << 'figure--breakout' if breakout == 'true'
             classes << 'figure--mobile' if type == 'mobile'
+            classes << custom_class unless custom_class.to_s.empty?
 
             output = "<figure class=\"#{classes.join(' ')}\">"
             output += "<img src=\"#{baseurl}/assets/images/#{image}\" alt=\"\" width=\"1600\" height=\"1200\" loading=\"lazy\">"

@@ -84,3 +84,86 @@ layout: base
         {%- endif -%}
     </div>
 </main>
+
+<script>
+    (function setupCaseMorph() {
+        const cards = Array.from(document.querySelectorAll('.post'));
+
+        // Remove any view-transition-name values that were added to the posts.
+        const clearNames = () => {
+            cards.forEach(card => {
+                const img = card.querySelector('.post__image img');
+                // const title = card.querySelector('.post__name');
+
+                if (img) img.style.viewTransitionName = '';
+                // if (title) title.style.viewTransitionName = '';
+            });
+        };
+
+        // Find the post that matches the incoming or outgoing page URL.
+        const getMatchingCard = url => {
+            if (!url) return null;
+
+            const targetUrl = new URL(url, window.location.origin);
+
+            return cards.find(card => {
+                const link = card.querySelector('.post__image[href]');
+
+                if (!link) return false;
+
+                const cardUrl = new URL(link.href);
+
+                return cardUrl.pathname === targetUrl.pathname;
+            });
+        };
+
+        // Apply the transition names to a specific post.
+        const setNames = card => {
+            if (!card) return;
+
+            const img = card.querySelector('.post__image img');
+            // const title = card.querySelector('.post__name');
+
+            if (img) img.style.viewTransitionName = 'post-hero';
+            // if (title) title.style.viewTransitionName = 'post-title';
+        };
+
+        // `pageswap` runs when navigating AWAY from this page.
+        window.addEventListener('pageswap', (event) => {
+            if (!event.viewTransition) return;
+
+            clearNames();
+
+            const toUrl = event.activation?.entry?.url;
+            const card = getMatchingCard(toUrl);
+
+            if (!card) return;
+
+            setNames(card);
+
+            event.viewTransition.finished.finally(() => {
+                clearNames();
+            });
+        });
+
+        // `pagereveal` runs when navigating TO this page.
+        window.addEventListener('pagereveal', async (event) => {
+            if (!event.viewTransition) return;
+
+            clearNames();
+
+            const fromUrl = window.navigation?.activation?.from?.url;
+            const card = getMatchingCard(fromUrl);
+
+            if (!card) return;
+
+            setNames(card);
+
+            try {
+                await event.viewTransition.ready;
+            } finally {
+                clearNames();
+            }
+        });
+    })();
+</script>
