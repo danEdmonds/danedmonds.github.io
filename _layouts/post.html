@@ -50,3 +50,15 @@ layout: base
         </a>
     {% endif %}
 </main>
+
+<script>
+    document.querySelectorAll('.pagination').forEach((link) => {
+        link.addEventListener('click', () => {
+            const hero = document.querySelector('.post-hero img');
+
+            if (hero) {
+                hero.style.viewTransitionName = 'none';
+            }
+        });
+    });
+</script>

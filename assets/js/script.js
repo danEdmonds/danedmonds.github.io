@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    if (document.activeViewTransition) {
+        document.documentElement.classList.add('is-view-transition');
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
     // Set year in copyright statement
-    (function () {
-        var year = document.getElementById('year');
+    var year = document.getElementById('year');
 
-        if (!year) return;
+    if (!year) return;
 
-        year.innerHTML = new Date().getFullYear();
-    })();
+    year.innerHTML = new Date().getFullYear();
 });
 
 

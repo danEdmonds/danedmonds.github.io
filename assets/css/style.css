@@ -112,18 +112,9 @@ h1, h2, h3 {
 
 h1 {
     margin-block-start: 0;
-    /* font-size: 2.5rem; */
     font-size: clamp(2.5rem, 9.375vw, 4.5rem);
     line-height: 1.2;
     text-wrap: pretty;
-
-    /* @media screen and (min-width: 36em) {
-        font-size: 3rem;
-    }
-
-    @media screen and (min-width: 48em) {
-        font-size: 4.5rem;
-    } */
 }
 
 h2, h3 {
@@ -217,13 +208,6 @@ img, video {
 
 main {
 
-    /* &:not(:has(.hero)) {
-        animation-name: FadeIn;
-        animation-duration: 0.4s;
-        animation-delay: 0.5s;
-        animation-fill-mode: both;
-    } */
-
     /* & > :is(h2, h3, h4, p, dl),
     li {
         animation-name: SmoothEntryY, FadeIn;
@@ -285,7 +269,7 @@ main {
 
     transition-property: translate, rotate;
     transition-duration: 0.2s;
-    animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
+    animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
 
     a[href]:hover &,
     a[href]:focus-visible & {
@@ -335,33 +319,39 @@ nav {
     a {
         color: var(--de-off-white);
         text-decoration-color: transparent;
-
-        /* animation-name: FadeIn, SmoothEntryX;
-        animation-duration: 0.4s;
-        animation-delay: 0.5s;
-        animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-        animation-fill-mode: backwards; */
         
         @media screen and (max-width: 35.9375em) {
             &:has(.logo) {
                 flex: 100%;
             }
         }
-
-        /* &:last-child {
-            --smooth-entry-from: -1rem;
-        } */
-
-        /* &:has(.logo) {
-            animation-name: FadeIn, SmoothEntryY;
-
-            animation-delay: 0.25s;
-        } */
     }
 
     @media screen and (min-width: 36em) {
         &:has(.logo) a:nth-child(2) {
             order: -1;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        html:not(.is-view-transition) & a {
+            animation-name: FadeIn, SmoothEntryX;
+            animation-duration: 0.4s;
+            animation-delay: 0.4s;
+            animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
+            animation-fill-mode: backwards;
+
+            &:last-child {
+                --smooth-entry-from: -1rem;
+            }
+
+            &:has(.logo) {
+                animation-name: FadeIn, SmoothEntryY;
+            }
+
+            &:has(.logo) ~ & {
+                animation-delay: 0.6s;
+            }
         }
     }
 }
@@ -387,48 +377,50 @@ nav {
         line-height: 1;
 
         span {
-            /* --smooth-entry-from: 0.75rem; */
-
             display: block;
-
-            /* animation-name: FadeIn, SmoothEntryY;
-            animation-duration: 0.4s;
-            animation-delay: 0.25s;
-            animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-            animation-fill-mode: backwards; */
         }
     }
 
     .logo {
-        --smooth-entry-from: -0.75rem;
-
         width: 320px;
         height: 166px;
         margin-block-start: -0.75rem;
-
-        /* animation-name: FadeIn, SmoothEntryY;
-        animation-duration: 0.4s;
-        animation-delay: 0.25s;
-        animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-        animation-fill-mode: backwards; */
     }
 
     p {
-        /* --smooth-entry-from: -1rem; */
-
         margin-block: 1.5rem 0;
         font-size: 1.5rem;
         text-wrap: balance;
 
-        /* animation-name: FadeIn, SmoothEntryY;
-        animation-duration: 0.4s;
-        animation-delay: 0.5s;
-        animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-        animation-fill-mode: backwards; */
-
         @media screen and (min-width: 40em) {
             font-size: 1.75rem;
             line-height: 1.4;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        h1 span,
+        .logo,
+        p {
+            animation-name: FadeIn, SmoothEntryY;
+            animation-duration: 0.2s, 0.4s;
+            animation-delay: 0.2s;
+            animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+            animation-fill-mode: backwards;
+        }
+
+        h1 span {
+            --smooth-entry-from: 0.75rem;
+        }
+
+        .logo {
+            --smooth-entry-from: -0.75rem;
+        }
+
+        p {
+            --smooth-entry-from: -1rem;
+
+            animation-delay: 0.4s;
         }
     }
 }
@@ -449,7 +441,6 @@ nav {
 }
 
 .post__image {
-    position: relative;
     display: block;
 
     transition-property: scale, box-shadow;
@@ -465,22 +456,6 @@ nav {
         transition-duration: 0.25s;
     }
 
-    @media (prefers-reduced-motion: no-preference) {
-        [data-animate] & {
-            --smooth-entry-from: -1rem;
-
-            /* animation-name: FadeIn, SmoothEntryY; */
-            animation-duration: 0.4s;
-            animation-delay: 0.25s;
-            animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-            animation-fill-mode: both;
-        }
-
-        [data-animate]:nth-child(1) & {
-            animation-delay: 0.75s;
-        }
-    }
-
     img {
         width: 100%;
         aspect-ratio: 3 / 2;
@@ -490,20 +465,6 @@ nav {
         box-shadow: 
             0px 9px 18px -9px var(--de-post-soft-shadow-color), 
             0px 12px 24px -12px var(--de-post-sharp-shadow-color);
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 0.25rem;
-        border: 1px solid transparent;
-        background: linear-gradient(rgb(255 255 255 / 0.15), rgb(255 255 255 / 0)) border-box;
-        mask: 
-            linear-gradient(black, black) border-box,
-            linear-gradient(black, black) padding-box;
-        mask-composite: subtract;
-        pointer-events: none;
     }
 }
 
@@ -517,22 +478,6 @@ nav {
         translate: 0 1rem;
 
         transition-duration: 0.25s;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-        [data-animate] & {
-            --smooth-entry-from: -1rem;
-
-            /* animation-name: FadeIn, SmoothEntryY; */
-            animation-duration: 0.4s;
-            animation-delay: 0.4s;
-            animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-            animation-fill-mode: both;
-
-            [data-animate]:nth-child(1) & {
-                animation-delay: 0.9s;
-            }
-        }
     }
 }
 
@@ -564,12 +509,35 @@ nav {
     font-size: 1.125rem;
 }
 
-/* .posts {
+html:not(.is-view-transition) .posts {
     animation-name: FadeIn;
     animation-duration: 0.4s;
-    animation-delay: 0.5s;
+    animation-delay: 0.2s;
     animation-fill-mode: both;
-} */
+}
+
+
+
+
+/* Post page
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media (prefers-reduced-motion: no-preference) {
+    html:not(.is-view-transition) .page-post main {
+        animation-name: FadeIn;
+        animation-duration: 0.4s;
+        animation-delay: 0.2s;
+        animation-fill-mode: both;
+    }
+
+    .is-view-transition .page-post h1 {
+        animation-name: FadeIn, SmoothEntryY;
+        animation-duration: 0.4s;
+        animation-delay: 0.4s;
+        animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+        animation-fill-mode: backwards;
+    }
+}
 
 
 
@@ -640,7 +608,6 @@ nav {
     img, video {
         width: 100%; 
         height: auto;
-        background-color: var(--de-figure-bg-color);
     }
 
     figcaption {
@@ -721,8 +688,9 @@ pre {
     border-radius: 0.25rem;
     background-color: rgb(0 0 0 / 0.2);
     color: rgb(from var(--de-off-white) r g b / 0.8);
-    font-family: "Source Code Pro";
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 0.875rem;
+    line-height: 1.5;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
@@ -920,34 +888,36 @@ footer {
     }
 }
 
+/* :root {
+    view-transition-name: none;
+} */
+
 ::view-transition-group(root) {
-    /* animation: none; */
     animation-duration: 0.4s;
     animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
 }
 
 ::view-transition-old(root) {
-    /* animation: none;
-    opacity: 0; */
-    animation-duration: 0.15s;
+    animation-duration: 0.2s;
 }
 
 ::view-transition-new(root) {
-    /* animation-name: FadeIn; */
-    /* animation-duration: 0.4s;
-    animation-timing-function: cubic-bezier(0.2, 0, 0, 1); */
-    animation-delay: 0.15s;
+    animation-delay: 0.2s;
 }
 
-/* header {
+header {
     view-transition-name: header;
-} */
+}
 
-/* ::view-transition-group(header),
-::view-transition-old(header),
+::view-transition-old(header) {
+    animation: none;
+    opacity: 0;
+}
+
 ::view-transition-new(header) {
     animation: none;
-} */
+    opacity: 1;
+}
 
 .post-hero img { 
     view-transition-name: post-hero; 
@@ -956,21 +926,10 @@ footer {
 ::view-transition-group(post-hero) {
     animation-duration: 0.4s; 
     animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
-    /* animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-    animation-delay: 0.15s;
+    animation-delay: 0.2s;
 }
 
-::view-transition-new(post-hero) {
-    /* animation-duration: 0.4s;  */
-    /* animation-timing-function: cubic-bezier(0.2, 0, 0, 1); */
-    /* animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-    /* animation-delay: 0.15s; */
-}
-
-::view-transition-old(post-hero) {
-    /* animation: none;
-    opacity: 0; */
-    /* animation-duration: 0.15s; */
-    /* animation-timing-function: linear; */
-    /* animation-timing-function: revert; */
+::view-transition-old(post-hero):only-child {
+    animation-duration: 0.2s;
+    animation-delay: 0s;
 }
